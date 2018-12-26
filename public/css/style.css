@@ -1,8 +1,32 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+.custom-text-shadow-1px {
+  text-shadow: 1px 1px 1px darkgray;
+  -webkit-text-shadow: 1px 1px 1px darkgray;
+  -moz-text-shadow: 1px 1px 1px darkgray;
+  -ms-text-shadow: 1px 1px 1px darkgray
+}
+.custom-text-shadow-2px {
+  text-shadow: 2px 2px 2px darkgray;
+  -webkit-text-shadow: 2px 2px 2px darkgray;
+  -moz-text-shadow: 2px 2px 2px darkgray;
+  -ms-text-shadow: 2px 2px 2px darkgray
+}
+.custom-text-shadow-3px {
+  text-shadow: 3px 3px 3px darkgray;
+  -webkit-text-shadow: 3px 3px 3px darkgray;
+  -moz-text-shadow: 3px 3px 3px darkgray;
+  -ms-text-shadow: 3px 3px 3px darkgray
 }
 
-a {
-  color: #00B7FF;
+.costom-text-darkgray {
+  color: darkgray
+}
+
+.costom-default-color-about {
+  color: #666
+}
+.custom-div-about:hover path {
+  fill: #76bb3e
+}
+.custom-div-about:hover h5 {
+  color: #76bb3e
 }

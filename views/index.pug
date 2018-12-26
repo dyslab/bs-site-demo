@@ -1,12 +1,19 @@
 extends layout
 
+block header-scripts
+  link(href="/static/css/all.min.css", rel="stylesheet")
+  link(href="/static/css/timeline.css", rel="stylesheet")
+  script(defer, src="/static/js/all.min.js")
+  script(defer, src="/static/js/timeline.min.js")
+
 block content
-  <!-- Sticky nav bar begin -->
-  nav.navbar.sticky-top.navbar-expand-lg.navbar-light.bg-light.p-0(style="height:80px")
-    div.container-fluid.pl-15.pr-15
-      a.navbar-brand(href="/", alt="Homepage")
-        img.d-inline-block.align-top(src="/imgs/bootstrap-solid.svg", width="30", height="30", alt="")
-        | &nbsp;#{title}
+  <!-- Sticky Nav Bar Begin -->
+  nav.navbar.sticky-top.navbar-expand-lg.navbar-light.bg-light.p-3
+    div.d-flex.container-fluid
+      div.flex-row
+        a.navbar-brand(href="/", alt="Homepage")
+          img.d-inline-block.align-top(src="/imgs/bootstrap-solid.svg", width="30", height="30", alt="")
+          | &nbsp;#{title}
       button.navbar-toggler(type="button", data-toggle="collapse", data-target="#bs-navbarNav", aria-controls="bs-navbarNav", aria-expanded="false", aria-label="Toggle navigation")
         span.navbar-toggler-icon
       div.flex-row-reverse.collapse.navbar-collapse.bg-light(id="bs-navbarNav")
@@ -32,29 +39,99 @@ block content
             a.nav-link(href="/news") NEWS
           li.nav-item
             a.nav-link(href="/contact") CONTACT
-          form.form-inline(action="/search", post="GET")
+          form.form-inline.mt-2.mt-md-0(action="/search", post="GET")
             input.form-control.mr-sm-2(type="search", name="search", placeholder="Search", aria-label="Search")
             button.btn.btn-outline-success.my-2.my-sm-0(type="submit") Search
-  <!-- Sticky nav bar end -->
+  <!-- Sticky Nav Bar End -->
 
-  div.carousel.slide(id="bs-carouselSlides", data-ride="carousel")
-    ol.carousel-indicators
-      li.active(data-target="#bs-carouselSlides", data-slide-to="0")
-      li(data-target="#bs-carouselSlides", data-slide-to="1")
-      li(data-target="#bs-carouselSlides", data-slide-to="2")
-      li(data-target="#bs-carouselSlides", data-slide-to="3")
-    div.carousel-inner(style="height:600px")
-      div.carousel-item.active
-        img.d-block(src="/imgs/promotion-carousel-01.jpg" alt="promotion 01")
-      div.carousel-item
-        img.d-block(src="/imgs/promotion-carousel-02.jpg" alt="promotion 02")
-      div.carousel-item
-        img.d-block(src="/imgs/promotion-carousel-03.jpg" alt="promotion 03")
-      div.carousel-item
-        img.d-block(src="/imgs/promotion-carousel-04.jpg" alt="promotion 04")
-    a.carousel-control-prev(href="#bs-carouselSlides", role="button", data-slide="prev")
-      span.carousel-control-prev-icon(aria-hidden="true")
-      span.sr-only Previous
-    a.carousel-control-next(href="#bs-carouselSlides", role="button", data-slide="next")
-      span.carousel-control-next-icon(aria-hidden="true")
-      span.sr-only Next
+  <!-- Carousel Banner Part Begin -->
+  div.container-fluid.p-0
+    div.carousel.slide(id="bs-carouselSlides", data-ride="carousel")
+      ol.carousel-indicators
+        li.active(data-target="#bs-carouselSlides", data-slide-to="0")
+        li(data-target="#bs-carouselSlides", data-slide-to="1")
+        li(data-target="#bs-carouselSlides", data-slide-to="2")
+        li(data-target="#bs-carouselSlides", data-slide-to="3")
+      div.carousel-inner(style="height:600px")
+        div.carousel-item.active
+          img.d-block(src="/imgs/promotion-carousel-01.jpg" alt="promotion 01")
+          div.carousel-caption.d-none.d-md-block
+            h1.font-weight-bolder Imagination, Inspiration, Innovation
+            div(style="height:450px")
+        div.carousel-item
+          img.d-block(src="/imgs/promotion-carousel-02.jpg" alt="promotion 02")
+          div.carousel-caption.d-none.d-md-block
+            h1.font-weight-bolder 想象, 灵感, 创意
+            div(style="height:450px")
+        div.carousel-item
+          img.d-block(src="/imgs/promotion-carousel-03.jpg" alt="promotion 03")
+          div.carousel-caption.d-none.d-md-block
+            h1.text-dark.font-weight-bolder Passion, Energy, Future
+            div(style="height:450px")
+        div.carousel-item
+          img.d-block(src="/imgs/promotion-carousel-04.jpg" alt="promotion 04")
+          div.carousel-caption.d-none.d-md-block
+            h1.text-dark.font-weight-bolder 激情, 活力, 未来
+            div(style="height:450px")
+      a.carousel-control-prev(href="#bs-carouselSlides", role="button", data-slide="prev")
+        span.carousel-control-prev-icon(aria-hidden="true")
+        span.sr-only Previous
+      a.carousel-control-next(href="#bs-carouselSlides", role="button", data-slide="next")
+        span.carousel-control-next-icon(aria-hidden="true")
+        span.sr-only Next
+  <!-- Carousel Banner Part End -->
+
+  <!-- About Part Begin -->
+  div.container-fluid.bg-light
+    div.container.pt-3.pb-3
+      div.row.justify-content-center
+        div.col.text-center.pt-3.pb-3
+          h2.font-weight-bolder.custom-text-shadow-2px ABOUT US
+          h6.text-secondary.custom-text-shadow-1px OUR MISSIONS
+      div.row.justify-content-center
+        div.col.pt-3.pb-3
+          span.h5 This is a web page demo powered by Bootstrap.This is a web page demo powered by Bootstrap.This is a web page demo powered by Bootstrap.This is a web page demo powered by Bootstrap.This is a web page demo powered by Bootstrap.这是一个使用Bootstrap的网页示例。这是一个使用Bootstrap的网页示例。这是一个使用Bootstrap的网页示例。
+      div.row.justify-content-center
+        div.col.pt-3.pb-3
+          div.row
+            div.col
+              img.img-fluid.rounded(src="/imgs/aboutus-02.jpg", alt="about us")
+            div.col
+              img.img-fluid.rounded(src="/imgs/aboutus-01.jpg", alt="about us")
+        div.col-md-auto
+        div.col.pt-3.pb-3
+          div.row
+            div.col.mt-0.mb-3
+              div.card-deck.p-0
+                div.card.bg-light.border-light.custom-div-about
+                  div.card-body.pt-0.pl-0.pb-3.pr-3
+                    i.fab.fa-font-awesome.fa-3x.costom-default-color-about
+                    h5.card-title.font-weight-bold.custom-text-shadow-1px.costom-default-color-about Font Awesome
+                    p.card-text Fontawesome helps us stepping upon the stage, able to get to the upper hand. 
+                      br 
+                      | Fontawesome图标助我们高飞。
+                div.card.bg-light.border-light.custom-div-about
+                  div.card-body.pt-0.pl-0.pb-3.pr-3
+                    i.fab.fa-weixin.fa-3x.costom-default-color-about
+                    h5.card-title.font-weight-bold.custom-text-shadow-1px.costom-default-color-about Tencent Wechat
+                    p.card-text Used by largest population around the world. Wechat makes communication easier ever never.
+                      br 
+                      | 微信提升沟通效率。
+          div.row
+            div.col
+              div.card-deck.p-0
+                div.card.bg-light.border-light.custom-div-about
+                  div.card-body.pt-0.pl-0.pb-3.pr-3
+                    i.fab.fa-alipay.fa-3x.costom-default-color-about
+                    h5.card-title.font-weight-bold.custom-text-shadow-1px.costom-default-color-about Alipay
+                    p.card-text Jack Ma's contribution: Money is no longer money. It's becoming a number. 
+                      br 
+                      | 支付宝，剁手党，你懂的。
+                div.card.bg-light.border-light.custom-div-about
+                  div.card-body.pt-0.pl-0.pb-3.pr-3
+                    i.fab.fa-apple.fa-3x.costom-default-color-about
+                    h5.card-title.font-weight-bold.custom-text-shadow-1px.costom-default-color-about Apple
+                    p.card-text The Apple without Steve Jobs is no longer Apple. Who will be the next?
+                      br 
+                      | 没有了乔布斯，苹果创意不再。
+  <!-- About Part End -->
