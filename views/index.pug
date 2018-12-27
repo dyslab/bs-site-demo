@@ -3,8 +3,7 @@ extends layout
 block header-scripts
   link(href="/static/css/all.min.css", rel="stylesheet")
   link(href="/static/css/timeline.css", rel="stylesheet")
-  script(defer, src="/static/js/all.min.js")
-  script(defer, src="/static/js/timeline.min.js")
+  link(href="/static/css/slider-pro.css", rel="stylesheet")
 
 block content
   <!-- Sticky Nav Bar Begin -->
@@ -13,7 +12,7 @@ block content
       div.flex-row
         a.navbar-brand(href="/", alt="Homepage")
           img.d-inline-block.align-top(src="/imgs/bootstrap-solid.svg", width="30", height="30", alt="")
-          | &nbsp;#{title}
+          span.custom-text-shadow-1px &nbsp;#{title}
       button.navbar-toggler(type="button", data-toggle="collapse", data-target="#bs-navbarNav", aria-controls="bs-navbarNav", aria-expanded="false", aria-label="Toggle navigation")
         span.navbar-toggler-icon
       div.flex-row-reverse.collapse.navbar-collapse.bg-light(id="bs-navbarNav")
@@ -60,7 +59,7 @@ block content
         div.carousel-item
           img.d-block.w-100(src="/imgs/promotion-carousel-02.jpg" alt="promotion 02")
           div.carousel-caption.d-none.d-md-block
-            h1.font-weight-bolder.text-secondary 想象, 灵感, 创意
+            h1.font-weight-bolder.text-secondary 想象, 灵感, 创新
         div.carousel-item
           img.d-block.w-100(src="/imgs/promotion-carousel-03.jpg" alt="promotion 03")
           div.carousel-caption.d-none.d-md-block
@@ -79,7 +78,7 @@ block content
 
   <!-- About Part Begin -->
   div.container-fluid.bg-light
-    div.container.pt-3.pb-3
+    div.container.pt-5.pb-5
       div.row.justify-content-center
         div.col.text-center.pt-3.pb-3
           h2.font-weight-bolder.custom-text-shadow-2px ABOUT US
@@ -131,3 +130,293 @@ block content
                       br 
                       | 没有了乔布斯，苹果创意不再。
   <!-- About Part End -->
+
+  <!-- Timeline Part Begin -->
+  div.container-fluid.custom-timeline-bgcolor
+    div.container-fluid.p-5
+      div.text-center.custom-text-shadow-3px
+        span TIMELINE
+        h3.font-weight-bolder HISTORICAL EVENTS
+      div.timeline
+        div.timeline__wrap
+          div.timeline__items
+            div.timeline__item
+              div.timeline__content
+                h5.custom-text-shadow-1px 2018.12
+                p CCC v3.0 released.CC v3.0 released.CCC v3.0 released.CC v3.0 released.CCC v3.0 released.CC v3.0 released.
+            div.timeline__item
+              div.timeline__content
+                h5.custom-text-shadow-1px 2018.8
+                p CCC v2.0 released.CCC v2.0 released.CCC v2.0 released.CCC v2.0 released.
+            div.timeline__item
+              div.timeline__content
+                h5.custom-text-shadow-1px 2018.2
+                p CCC 
+            div.timeline__item
+              div.timeline__content
+                h5.custom-text-shadow-1px 2017.12
+                p BBB v2.0 released.
+            div.timeline__item
+              div.timeline__content
+                h5.custom-text-shadow-1px 2016.12
+                p BBB v1.0 released.
+            div.timeline__item
+              div.timeline__content
+                h5.custom-text-shadow-1px 2016.3
+                p AAA v3.0 released.AAA v3.0 released.
+            div.timeline__item
+              div.timeline__content
+                h5.custom-text-shadow-1px 2015.11
+                p AAA v2.0 released.AAA v2.0 released.
+            div.timeline__item
+              div.timeline__content
+                h5.custom-text-shadow-1px 2015.5
+                p AAA v1.0 released. BBB project started.
+        button.timeline-nav-button.timeline-nav-button--prev
+        button.timeline-nav-button.timeline-nav-button--next
+        span.timeline-divider
+  <!-- Timeline Part End -->
+  
+  <!-- Team Part Begin -->
+  div.container-fluid.bg-light
+    div.container.pt-5.pb-5
+      div.text-center.custom-text-shadow-2px.pb-3
+        h2.font-weight-bolder ELITE TEAM
+        p WE ARE READY
+      div.card-deck.pb-4
+        div.card.text-center.rounded.shadow.pl-3.pr-3.pt-3
+          img.img-fluid.rounded-circle(src="/imgs/team-p1.jpg", alt="Elite")
+          div.card-body
+            h5.card-title.custom-text-shadow-1px Kongfu Panda
+            p.card-text You know who I am.
+              br
+              br
+            ul.list-inline
+              li.list-inline-item
+                a.costom-team-color(href="#", target="_blank", rel="noopener noreferrer")
+                  i.fab.fa-qq.fa-lg
+              li.list-inline-item
+              li.list-inline-item
+                a.costom-team-color(href="mailto:#", rel="noopener noreferrer")
+                  i.fas.fa-envelope.fa-lg
+        div.card.text-center.rounded.shadow.pl-3.pr-3.pt-3
+          img.img-fluid.rounded-circle(src="/imgs/team-p2.jpg", alt="Elite")
+          div.card-body
+            h5.card-title.custom-text-shadow-1px Ninja Elder
+            p.card-text You know who I am.You know who I am.You know who I am.
+            ul.list-inline
+              li.list-inline-item
+                a.costom-team-color(href="#", target="_blank", rel="noopener noreferrer")
+                  i.fab.fa-qq.fa-lg
+              li.list-inline-item
+              li.list-inline-item
+                a.costom-team-color(href="mailto:#", rel="noopener noreferrer")
+                  i.fas.fa-envelope.fa-lg
+        div.card.text-center.rounded.shadow.pl-3.pr-3.pt-3
+          img.img-fluid.rounded-circle(src="/imgs/team-p3.jpg", alt="Elite")
+          div.card-body
+            h5.card-title.custom-text-shadow-1px Unknown Celebrity
+            p.card-text You know who I am.
+              br 
+              | You know who I am.
+            ul.list-inline
+              li.list-inline-item
+                a.costom-team-color(href="#", target="_blank", rel="noopener noreferrer")
+                  i.fab.fa-qq.fa-lg
+              li.list-inline-item
+              li.list-inline-item
+                a.costom-team-color(href="mailto:#", rel="noopener noreferrer")
+                  i.fas.fa-envelope.fa-lg
+      div.card-deck.pb-4
+        div.card.text-center.rounded.shadow.pl-3.pr-3.pt-3
+          img.img-fluid.rounded-circle(src="/imgs/team-p4.jpg", alt="Elite")
+          div.card-body
+            h5.card-title.custom-text-shadow-1px A Beauty
+            p.card-text You know who I am.
+            ul.list-inline
+              li.list-inline-item
+                a.costom-team-color(href="#", target="_blank", rel="noopener noreferrer")
+                  i.fab.fa-qq.fa-lg
+              li.list-inline-item
+              li.list-inline-item
+                a.costom-team-color(href="mailto:#", rel="noopener noreferrer")
+                  i.fas.fa-envelope.fa-lg
+        div.card.text-center.rounded.shadow.pl-3.pr-3.pt-3
+          img.img-fluid.rounded-circle(src="/imgs/team-p5.jpg", alt="Elite")
+          div.card-body
+            h5.card-title.custom-text-shadow-1px Military Officer
+            p.card-text You know who I am.
+            ul.list-inline
+              li.list-inline-item
+                a.costom-team-color(href="#", target="_blank", rel="noopener noreferrer")
+                  i.fab.fa-qq.fa-lg
+              li.list-inline-item
+              li.list-inline-item
+                a.costom-team-color(href="mailto:#", rel="noopener noreferrer")
+                  i.fas.fa-envelope.fa-lg
+        div.card.text-center.rounded.shadow.pl-3.pr-3.pt-3
+          img.img-fluid.rounded-circle(src="/imgs/team-p6.jpg", alt="Elite")
+          div.card-body
+            h5.card-title.custom-text-shadow-1px A Man
+            p.card-text You know who I am.
+            ul.list-inline
+              li.list-inline-item
+                a.costom-team-color(href="#", target="_blank", rel="noopener noreferrer")
+                  i.fab.fa-qq.fa-lg
+              li.list-inline-item
+              li.list-inline-item
+                a.costom-team-color(href="mailto:#", rel="noopener noreferrer")
+                  i.fas.fa-envelope.fa-lg
+  <!-- Team Part End -->
+
+  <!-- News Part Begin -->
+  div.container-fluid.custom-news-bgcolor
+    div.container.pt-5.pb-3
+      div.text-center.custom-text-shadow-2px.pb-3
+        p 关注我们
+        h2.font-weight-bolder LATEST NEWS
+      div.card-deck.pb-4
+        div.card.border-0.custom-news-bgcolor.pl-3.pr-3.pt-3
+          div.card-body
+            a.custom-news-title-color(href="#", target="_blank", rel="news")
+              h4.card-title.custom-text-shadow-1px 28 injured in Sicily in earthquake triggered by volcano eruption
+            ui.list-inline
+              li.list-inline-item
+                i.far.fa-newspaper.fa-lg.custom-news-content-color
+              li.list-inline-item
+                h6.card-text.custom-news-content-color 2018-12-28
+            p.card-text.custom-news-content-color Twenty-eight people were injured in Italy's Sicily on Wednesday in an earthquake triggered by the eruption of Mount Etna, Italian authorities said...
+        div.card.border-0.custom-news-bgcolor.pl-3.pr-3.pt-3
+          div.card-body
+            a.custom-news-title-color(href="#", target="_blank", rel="news")
+              h4.card-title.custom-text-shadow-1px 告别2018，人类群星远行时<br>Condolence to the stars...
+            ui.list-inline
+              li.list-inline-item 
+                i.far.fa-newspaper.fa-lg.custom-news-content-color
+              li.list-inline-item
+                h6.card-text.custom-news-content-color 2018-12-25
+            p.card-text.custom-news-content-color 星星沉落在海洋中央，一支支歌曲在我心中消亡。——卡尔杜齐《离别》节选...创伤的世界与幻想的江湖...微小至纤维，无垠至宇宙...世界大爆炸...生活在别处...
+      div.card-deck.pb-4
+        div.card.border-0.custom-news-bgcolor.pl-3.pr-3.pt-3
+          div.card-body
+            a.custom-news-title-color(href="#", target="_blank", rel="news")
+              h4.card-title.custom-text-shadow-1px 中国海军非洲之角护航记事之一：10年护航显成效
+            ui.list-inline
+              li.list-inline-item 
+                i.far.fa-newspaper.fa-lg.custom-news-content-color
+              li.list-inline-item
+                h6.card-text.custom-news-content-color 2018-10-8
+            p.card-text.custom-news-content-color 2008年12月26日，中国海军首批护航编队解缆起航，赴亚丁湾、索马里海域执行护航任务。回看过去10年间，中国海军护航亚丁湾的成效已经显现...
+        div.card.border-0.custom-news-bgcolor.pl-3.pr-3.pt-3
+          div.card-body
+            a.custom-news-title-color(href="#", target="_blank", rel="news")
+              h4.card-title.custom-text-shadow-1px China, U.S. may meet in January for trade negotiation
+            ui.list-inline
+              li.list-inline-item 
+                i.far.fa-newspaper.fa-lg.custom-news-content-color
+              li.list-inline-item
+                h6.card-text.custom-news-content-color 2018-9-25
+            p.card-text.custom-news-content-color The delegations of China and the U.S. have stayed in close communication and have made plans to meet face-to-face in January...
+  <!-- News Part End -->
+             
+  <!-- Slider Part Begin -->
+  div.container-fluid.bg-white
+    div.container-fluid.p-5
+      div.container.pb-3
+        div.text-center.custom-text-shadow-2px.pb-3
+          p VISIT
+          h2.font-weight-bolder HOTTEST PRODUCTS
+      div.slider-pro(id="bs-hot-slider")
+        div.sp-slides
+          div.sp-slide
+            a(href="/imgs/hot-p1.jpg") 
+              img.sp-image.img-fluid(src="/imgs/hot-p1.jpg")
+              p.sp-caption HM0752
+          div.sp-slide
+            a(href="/imgs/hot-p2.jpg") 
+              img.sp-image.img-fluid(src="/imgs/hot-p2.jpg")
+              p.sp-caption HM0903
+          div.sp-slide
+            a(href="/imgs/hot-p3.jpg") 
+              img.sp-image.img-fluid(src="/imgs/hot-p3.jpg")
+              p.sp-caption HM0739
+          div.sp-slide
+            a(href="/imgs/hot-p4.jpg") 
+              img.sp-image.img-fluid(src="/imgs/hot-p4.jpg")
+              p.sp-caption HM0725
+          div.sp-slide
+            a(href="/imgs/hot-p5.jpg") 
+              img.sp-image.img-fluid(src="/imgs/hot-p5.jpg")
+              p.sp-caption HM0810
+          div.sp-slide
+            a(href="/imgs/hot-p6.jpg") 
+              img.sp-image.img-fluid(src="/imgs/hot-p6.jpg")
+              p.sp-caption HM0747
+  <!-- Slider Part End -->
+
+  <!-- Testimonial Part Begin -->
+  div.container-fluid.custom-testimonial-bg
+    div.container.pt-5.pb-5
+      div.text-center.pb-3.text-dark.custom-text-shadow-white-1px
+        h2.font-weight-bolder TESTIMONIALS
+        p 客户感言
+      div.carousel.slide(id="bs-testimonial-slide", data-ride="carousel")
+        div.carousel-inner
+          div.carousel-item.active
+            div.text-center
+              h3.font-weight-bold.text-success.custom-text-shadow-white-1px Mrs.Hoorazar
+              h5.text-white comes from 
+                span.text-warning.custom-text-shadow-white-1px United State
+              div.container-fluid.w-75(style="height:140px")
+                p.text-light The items are good. It made me feel like over the moon. The items are good. It made me feel like over the moon. The items are good. It made me feel like over the moon.
+          div.carousel-item
+            div.text-center
+              h3.font-weight-bold.text-success.custom-text-shadow-white-1px 章小姐
+              h5.text-white comes from 
+                span.text-warning.custom-text-shadow-white-1px 中国
+              div.container-fluid.w-75(style="height:140px")
+                p.text-light 超级棒的鞋子，买一百双都不够。超级棒的鞋子，买一百双都不够。超级棒的鞋子，买一百双都不够。重要的事情说三遍。超级棒的鞋子，买一百双都不够。超级棒的鞋子，买一百双都不够。超级棒的鞋子，买一百双都不够。重要的事情说三遍。
+          div.carousel-item
+            div.text-center
+              h3.font-weight-bold.text-success.custom-text-shadow-white-1px Diana Horwell
+              h5.text-white comes from 
+                span.text-warning.custom-text-shadow-white-1px France
+              div.container-fluid.w-75(style="height:140px")
+                p.text-light De très bonnes chaussures m'ont rendu heureux. Je vous remercie. De très bonnes chaussures m'ont rendu heureux. Je vous remercie. De très bonnes chaussures m'ont rendu heureux. De très bonnes chaussures m'ont rendu heureux. Je vous remercie. De très bonnes chaussures m'ont rendu heureux. Je vous remercie.
+        a.carousel-control-prev(href="#bs-testimonial-slide", role="button", data-slide="prev")
+          span.carousel-control-prev-icon(aria-hidden="true")
+          span.sr-only Previous
+        a.carousel-control-next(href="#bs-testimonial-slide", role="button", data-slide="next")
+          span.carousel-control-next-icon(aria-hidden="true")
+          span.sr-only Next
+  <!-- Testimonial Part End -->
+
+block footer-scripts
+  <!-- FontAwesome Script -->
+  script(src="/static/js/all.min.js")
+
+  <!-- Timeline Script Begin -->
+  script(src="/static/js/timeline.min.js")
+  script.
+    timeline(document.querySelectorAll('.timeline'), {
+      forceVerticalMode: 700,
+      mode: 'horizontal',
+      verticalStartPosition: 'left',
+      visibleItems: 5
+    });
+  <!-- Timeline Script End -->
+
+  <!-- Slider Script Begin -->
+  script(src="/static/js/jquery.sliderPro.min.js")
+  script.
+    $(document).ready(function($) {
+      $('#bs-hot-slider').sliderPro({
+        width: 400,
+        height: 400,
+        visibleSize: '50%',
+        forceSize: 'fullWidth',
+        autoSlideSize: true
+      });
+    });
+  <!-- Slider Script End -->
+    

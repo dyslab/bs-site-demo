@@ -16,6 +16,18 @@
   -moz-text-shadow: 3px 3px 3px darkgray;
   -ms-text-shadow: 3px 3px 3px darkgray
 }
+.custom-text-shadow-white-1px {
+  text-shadow: 1px 1px 1px white;
+  -webkit-text-shadow: 1px 1px 1px white;
+  -moz-text-shadow: 1px 1px 1px white;
+  -ms-text-shadow: 1px 1px 1px white;
+}
+.custom-text-shadow-white-2px {
+  text-shadow: 2px 2px 2px white;
+  -webkit-text-shadow: 2px 2px 2px white;
+  -moz-text-shadow: 2px 2px 2px white;
+  -ms-text-shadow: 2px 2px 2px white;
+}
 
 .costom-text-darkgray {
   color: darkgray
@@ -29,4 +41,30 @@
 }
 .custom-div-about:hover h5 {
   color: #76bb3e
+}
+
+.custom-timeline-bgcolor {
+  background: #ecf0f1
+}
+
+.costom-team-color {
+  color: rgb(92, 116, 146)
+}
+
+.custom-news-bgcolor {
+  background: #e7ecd1
+}
+.custom-news-title-color {
+  color: #000000
+}
+.custom-news-title-color:hover {
+  color: #186918;
+  text-decoration: none 
+}
+.custom-news-content-color {
+  color: #666
+}
+
+.custom-testimonial-bg {
+  background: url("/imgs/testimonial-bg.jpg")
 }
