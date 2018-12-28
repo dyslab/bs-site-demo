@@ -1,4 +1,4 @@
-extends layout
+extends template1-layout
 
 block header-scripts
   link(href="/static/css/all.min.css", rel="stylesheet")
@@ -6,43 +6,6 @@ block header-scripts
   link(href="/static/css/slider-pro.css", rel="stylesheet")
 
 block content
-  <!-- Sticky Nav Bar Begin -->
-  nav.navbar.sticky-top.navbar-expand-lg.navbar-light.bg-light.p-3
-    div.d-flex.container-fluid
-      div.flex-row
-        a.navbar-brand(href="/", alt="Homepage")
-          img.d-inline-block.align-top(src="/imgs/bootstrap-solid.svg", width="30", height="30", alt="")
-          span.custom-text-shadow-1px &nbsp;#{title}
-      button.navbar-toggler(type="button", data-toggle="collapse", data-target="#bs-navbarNav", aria-controls="bs-navbarNav", aria-expanded="false", aria-label="Toggle navigation")
-        span.navbar-toggler-icon
-      div.flex-row-reverse.collapse.navbar-collapse.bg-light(id="bs-navbarNav")
-        ul.navbar-nav
-          li.nav-item.active
-            a.nav-link(href="#") HOME
-              span.sr-only (current)
-          li.nav-item
-            a.nav-link(href="/about") ABOUT
-          li.nav-item
-            div.dropdown
-              a.nav-link.dropdown-toggle(href="#", id="bs-dropdownMenuLink", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false") PRODUCTS
-              div.dropdown-menu(aria-labelledby="bs-dropdownMenuLink")
-                a.dropdown-item(href="/product/cat1") Product Category 1
-                a.dropdown-item(href="/product/cat2") Product Category 2
-                a.dropdown-item(href="/product/cat3") Product Category 3
-                div.dropdown-divider
-                a.dropdown-item(href="/product/cat11") Product Category 11
-                a.dropdown-item(href="/product/cat12") Product Category 12
-          li.nav-item
-            a.nav-link(href="/projects") PROJECTS
-          li.nav-item
-            a.nav-link(href="/news") NEWS
-          li.nav-item
-            a.nav-link(href="/contact") CONTACT
-          form.form-inline.mt-2.mt-md-0(action="/search", post="GET")
-            input.form-control.mr-sm-2(type="search", name="search", placeholder="Search", aria-label="Search")
-            button.btn.btn-outline-success.my-2.my-sm-0(type="submit") Search
-  <!-- Sticky Nav Bar End -->
-
   <!-- Carousel Banner Part Begin -->
   div.container-fluid.p-0
     div.carousel.slide(id="bs-carouselSlides", data-ride="carousel")
@@ -175,6 +138,7 @@ block content
         button.timeline-nav-button.timeline-nav-button--prev
         button.timeline-nav-button.timeline-nav-button--next
         span.timeline-divider
+  <!-- Note: Need to add script part below the body -->
   <!-- Timeline Part End -->
   
   <!-- Team Part Begin -->
@@ -352,6 +316,7 @@ block content
             a(href="/imgs/hot-p6.jpg") 
               img.sp-image.img-fluid(src="/imgs/hot-p6.jpg")
               p.sp-caption HM0747
+  <!-- Note: Need to add script part below the body -->
   <!-- Slider Part End -->
 
   <!-- Testimonial Part Begin -->
@@ -392,9 +357,6 @@ block content
   <!-- Testimonial Part End -->
 
 block footer-scripts
-  <!-- FontAwesome Script -->
-  script(src="/static/js/all.min.js")
-
   <!-- Timeline Script Begin -->
   script(src="/static/js/timeline.min.js")
   script.
@@ -419,4 +381,12 @@ block footer-scripts
       });
     });
   <!-- Slider Script End -->
-    
+
+  <!-- Go To Top Script Begin -->
+  script(src="/static/js/hs.core.js")
+  script(src="/static/js/hs.go-to.js")
+  script.
+    $(document).ready(function($) {
+      $.HSCore.components.HSGoTo.init('.js-go-to');
+    });
+  <!-- Go To Top Script End -->

@@ -1,0 +1,46 @@
+<!-- Footer Part Begin -->
+div.container-fluid.custom-footer-bgcolor
+  div.container.pt-5.pb-5
+    div.d-flex.justify-content-between.row
+      div.col-lg-6.text-left.text-light.pb-3
+        h3.font-weight-bolder.custom-text-shadow-1px Email Subscription
+        form.form-inline(action="#", method="GET")
+          div.form-group.mb-2
+            input.form-control.rounded-0(type="email", id="email", aria-describedby="emailHelp", placeholder="Email address", data-toggle="tooltip", data-placement="bottom", title="Input your email here")
+            button.btn.rounded-0.btn-primary(type="submit") Subscribe
+          small.form-text.text-muted(id="emailHelp") Subsribe to our product monthly information. We'll never share your email with anyone else.
+      div.col-lg-6.text-right.text-light.custom-text-shadow-1px.pb-3
+        div
+          h3.font-weight-bolder Get In Touch
+        div.social_media
+          ul.list-inline
+            li.list-inline-item
+              a(href="#", target="_blank", rel="social media")
+                i.fab.fa-facebook-f.fa-lg.text-white
+            li.list-inline-item
+            li.list-inline-item
+              a(href="#", target="_blank", rel="social media")
+                i.fab.fa-qq.fa-lg.text-white
+            li.list-inline-item
+            li.list-inline-item
+              a(href="#", target="_blank", rel="social media")
+                i.fab.fa-weixin.fa-lg.text-white
+            li.list-inline-item
+            li.list-inline-item
+              a(href="#", target="_blank", rel="social media")
+                i.fas.fa-envelope.fa-lg.text-white
+    hr.bg-dark
+    div.d-flex.justify-content-center.row
+      div.col.text-center.custom-footer-color
+        span Copyright © 2018. &nbsp;
+          a.custom-footer-brand(href="/", alt="Homepage")
+            img.d-inline-block.align-top(src="/imgs/bootstrap-solid.svg", width="20", height="20", alt="company logo")
+            span &nbsp;#{title}
+        span &nbsp;All rights reserved.
+
+<!-- Go to Top -->
+a.js-go-to.u-go-to(href="javascript:;", data-position='{"bottom": 15, "right": 15 }', data-type="fixed", data-offset-top="400",
+  data-compensation="#header", data-show-effect="slideInUp", data-hide-effect="slideOutDown")
+  span.fa.fa-arrow-up.fa-2x.u-go-to__inner
+<!-- Note: Need to add script part below the body -->
+<!-- End Go to Top -->
