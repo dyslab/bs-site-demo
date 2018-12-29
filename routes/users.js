@@ -3,7 +3,7 @@ var router = express.Router()
 
 /* GET users listing. */
 router.get('/', function (req, res, next) {
-  res.send('This is a userless static website template.')
+  res.send('This is an userless static website template.')
 })
 
 module.exports = router

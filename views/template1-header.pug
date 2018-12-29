@@ -1,35 +1,50 @@
 <!-- Sticky Nav Bar Begin -->
+//- setNavItem Declaration Begin
+mixin setNavItem
+  each menuitem, index in navMenu
+    if menuitem.submenu.length > 0
+      if menuitem.active
+        li.nav-item.active
+          div.dropdown
+            a.nav-link.dropdown-toggle(href=menuitem.href, id="bs-submenu-" + index, data-toggle="dropdown", aria-haspopup="true", aria-expanded="false") #{menuitem.name}
+              span.sr-only (current)
+            div.dropdown-menu(aria-labelledby="bs-submenu-" + index)
+              each submenuitem in menuitem.submenu
+                if submenuitem.name == "---"
+                  div.dropdown-divider
+                else
+                  a.dropdown-item(href=submenuitem.href) #{submenuitem.name}
+      else
+        li.nav-item
+          div.dropdown
+            a.nav-link.dropdown-toggle(href=menuitem.href, id="bs-submenu-" + index, data-toggle="dropdown", aria-haspopup="true", aria-expanded="false") #{menuitem.name}
+            div.dropdown-menu(aria-labelledby="bs-submenu-" + index)
+              each submenuitem in menuitem.submenu
+                if submenuitem.name == "---"
+                  div.dropdown-divider
+                else
+                  a.dropdown-item(href=submenuitem.href) #{submenuitem.name}
+    else
+      if menuitem.active
+        li.nav-item.active
+          a.nav-link(href=menuitem.href) #{menuitem.name}
+            span.sr-only (current)
+      else
+        li.nav-item
+          a.nav-link(href=menuitem.href) #{menuitem.name}
+//- setNavItem Declaration End
+
 nav.navbar.sticky-top.navbar-expand-lg.navbar-light.bg-light.p-3
   div.d-flex.container-fluid
     div.flex-row
       a.navbar-brand(href="/", alt="Homepage")
         img.d-inline-block.align-top(src="/imgs/bootstrap-solid.svg", width="30", height="30", alt="")
-        span.custom-text-shadow-1px &nbsp;#{title}
+        span.custom-text-shadow-1px &nbsp;#{sitename}
     button.navbar-toggler(type="button", data-toggle="collapse", data-target="#bs-navbarNav", aria-controls="bs-navbarNav", aria-expanded="false", aria-label="Toggle navigation")
       span.navbar-toggler-icon
     div.flex-row-reverse.collapse.navbar-collapse.bg-light(id="bs-navbarNav")
       ul.navbar-nav
-        li.nav-item.active
-          a.nav-link(href="#") HOME
-            span.sr-only (current)
-        li.nav-item
-          a.nav-link(href="/about") ABOUT
-        li.nav-item
-          div.dropdown
-            a.nav-link.dropdown-toggle(href="#", id="bs-dropdownMenuLink", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false") PRODUCTS
-            div.dropdown-menu(aria-labelledby="bs-dropdownMenuLink")
-              a.dropdown-item(href="/product/cat1") Product Category 1
-              a.dropdown-item(href="/product/cat2") Product Category 2
-              a.dropdown-item(href="/product/cat3") Product Category 3
-              div.dropdown-divider
-              a.dropdown-item(href="/product/cat11") Product Category 11
-              a.dropdown-item(href="/product/cat12") Product Category 12
-        li.nav-item
-          a.nav-link(href="/projects") PROJECTS
-        li.nav-item
-          a.nav-link(href="/news") NEWS
-        li.nav-item
-          a.nav-link(href="/contact") CONTACT
+        +setNavItem
         form.form-inline.mt-2.mt-md-0(action="/search", post="GET")
           input.form-control.mr-sm-2(type="search", name="search", placeholder="Search", aria-label="Search")
           button.btn.btn-outline-success.my-2.my-sm-0(type="submit") Search
