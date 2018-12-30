@@ -1,6 +1,6 @@
 /*-----------------------------------------------------------------------------------------
   Common part.
--------------------------------------------------------------------------------------------*/
+-----------------------------------------------------------------------------------------*/
 .custom-text-shadow-1px {
   text-shadow: 1px 1px 1px darkgray;
   -webkit-text-shadow: 1px 1px 1px darkgray;
@@ -32,11 +32,57 @@
   -ms-text-shadow: 2px 2px 2px white;
 }
 
+/*---------------------------------------
+  Go To Top, code comes from Bootdtrap
+---------------------------------------*/
+.u-go-to {
+  display: none;
+  position: relative;
+  z-index: 100;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: #25d825;
+  color: #fff;
+  font-size: 0.75rem;
+  border-radius: 0.25rem;
+  opacity: 0.5;
+  transition: 0.3s ease-out;
+}
+.u-go-to__inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.u-go-to:hover, .u-go-to:focus:hover {
+  color: #fff;
+  opacity: 1;
+}
 
+/*---------------------------------------
+  social_media_icons_style
+---------------------------------------*/
+.social_media ul li a {
+  text-align: center;
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  line-height: 34px;
+  background: transparent;
+  border: 2px solid #fff;
+}
+.social_media ul li a:hover path {
+  fill: #15e99d;
+}
 
 /*-----------------------------------------------------------------------------------------
   For index page.
--------------------------------------------------------------------------------------------*/
+-----------------------------------------------------------------------------------------*/
 .costom-text-darkgray {
   color: darkgray
 }
@@ -73,8 +119,8 @@
   color: #666
 }
 
-.custom-testimonial-bg {
-  background: url("/imgs/testimonial-bg.jpg")
+.custom-testimonial-height {
+  min-height: 360px
 }
 
 .custom-footer-bgcolor {
@@ -89,60 +135,9 @@
   color: white;
 }
 
-/*--social_media_icons_style--*/
-.social_media ul li a {
-  text-align: center;
-  display: block;
-  color: #fff;
-  text-decoration: none;
-  font-size: 14px;
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  line-height: 34px;
-  background: transparent;
-  border: 2px solid #fff;
-}
-
-.social_media ul li a:hover path {
-  fill: #15e99d;
-}
-/*--//social_media_icons_style--*/
-
-/*------------------------------------
-  Go To Top, code comes from Bootdtrap
-------------------------------------*/
-.u-go-to {
-  display: none;
-  position: relative;
-  z-index: 100;
-  width: 2.5rem;
-  height: 2.5rem;
-  background-color: #25d825;
-  color: #fff;
-  font-size: 0.75rem;
-  border-radius: 0.25rem;
-  opacity: 0.5;
-  transition: 0.3s ease-out;
-}
-
-.u-go-to__inner {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-
-.u-go-to:hover, .u-go-to:focus:hover {
-  color: #fff;
-  opacity: 1;
-}
-
 /*-----------------------------------------------------------------------------------------
   For about page.
 -------------------------------------------------------------------------------------------*/
-.custom-about-title-bg {
-  background: url("/imgs/testimonial-bg.jpg");
-  min-height: 400px
+.custom-about-title-height {
+  min-height: 300px
 }

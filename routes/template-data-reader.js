@@ -5,6 +5,23 @@ exports.getTemplateID = function () {
   return 1
 }
 
+// read site infomation and return
+exports.getSiteInfo = function () {
+  var siteinfoObj = {
+    sitename: 'BS DEMO SITE',
+  }
+
+  var dateObj = new Date()
+  var thisYear = dateObj.getFullYear()
+  if (thisYear > 2018) {
+    siteinfoObj.copyright = 'Copyright © 2018-' + thisYear + '.'
+  } else {
+    siteinfoObj.copyright = 'Copyright © ' + thisYear + '.'
+  }
+
+  return siteinfoObj
+}
+
 // read NavMenu data and return
 exports.getNavMenu = function (currentPage) {
   var menuObj = [
@@ -21,7 +38,7 @@ exports.getNavMenu = function (currentPage) {
         { name: 'PRODUCT CATEGORY 12', href: '/product/category12' }
       ]
     },
-    { name: 'SERVICE',
+    { name: 'SERVICES',
       href: '#',
       submenu: [
         { name: 'CUSTOMER SERVICE', href: '/service/id1' },

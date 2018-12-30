@@ -2,19 +2,23 @@ var express = require('express')
 var router = express.Router()
 
 var TemplateDataReader = require('./template-data-reader')
-// var IndexDataReader = require('./index-data-reader')
+var IndexDataReader = require('./index-data-reader')
+var AboutDataReader = require('./about-data-reader')
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
   // index-data-reader
-  var templateID = TemplateDataReader.getTemplateID()
+  var siteInfo = TemplateDataReader.getSiteInfo()
   var navMenu = TemplateDataReader.getNavMenu('/')
+  var pageInfo = IndexDataReader.getPageInfo()
+  var aboutPartInfo = AboutDataReader.getPageInfoForIndex()
 
   // index page render
-  res.render('template' + templateID + '-index', {
-    title: 'HOME',
+  res.render('template' + TemplateDataReader.getTemplateID() + '-index', {
+    siteinfo: siteInfo,
     navMenu: navMenu,
-    sitename: 'BS Demo Site #' + templateID
+    pageinfo: pageInfo,
+    aboutpartinfo: aboutPartInfo
   })
 })
 

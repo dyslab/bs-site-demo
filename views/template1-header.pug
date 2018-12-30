@@ -1,6 +1,6 @@
 <!-- Sticky Nav Bar Begin -->
-//- setNavItem Declaration Begin
-mixin setNavItem
+//- setNavItems Declaration Begin
+mixin setNavItems
   each menuitem, index in navMenu
     if menuitem.submenu.length > 0
       if menuitem.active
@@ -32,19 +32,19 @@ mixin setNavItem
       else
         li.nav-item
           a.nav-link(href=menuitem.href) #{menuitem.name}
-//- setNavItem Declaration End
+//- setNavItems Declaration End
 
 nav.navbar.sticky-top.navbar-expand-lg.navbar-light.bg-light.p-3
   div.d-flex.container-fluid
     div.flex-row
       a.navbar-brand(href="/", alt="Homepage")
         img.d-inline-block.align-top(src="/imgs/bootstrap-solid.svg", width="30", height="30", alt="")
-        span.custom-text-shadow-1px &nbsp;#{sitename}
+        span.custom-text-shadow-1px &nbsp;#{siteinfo.sitename}
     button.navbar-toggler(type="button", data-toggle="collapse", data-target="#bs-navbarNav", aria-controls="bs-navbarNav", aria-expanded="false", aria-label="Toggle navigation")
       span.navbar-toggler-icon
     div.flex-row-reverse.collapse.navbar-collapse.bg-light(id="bs-navbarNav")
       ul.navbar-nav
-        +setNavItem
+        +setNavItems
         form.form-inline.mt-2.mt-md-0(action="/search", post="GET")
           input.form-control.mr-sm-2(type="search", name="search", placeholder="Search", aria-label="Search")
           button.btn.btn-outline-success.my-2.my-sm-0(type="submit") Search
