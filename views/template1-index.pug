@@ -1,7 +1,6 @@
 extends template1-layout
 
 block header-scripts
-  link(href="/static/css/all.min.css", rel="stylesheet")
   link(href="/static/css/timeline.min.css", rel="stylesheet")
   link(href="/static/css/slider-pro.css", rel="stylesheet")
 
@@ -279,12 +278,3 @@ block footer-scripts
       });
     });
   <!-- Slider Script End -->
-
-  <!-- Go To Top Script Begin -->
-  script(src="/static/js/hs.core.js")
-  script(src="/static/js/hs.go-to.js")
-  script.
-    $(document).ready(function($) {
-      $.HSCore.components.HSGoTo.init('.js-go-to');
-    });
-  <!-- Go To Top Script End -->

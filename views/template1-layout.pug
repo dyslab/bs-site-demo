@@ -9,18 +9,38 @@ html
     
     link(rel='stylesheet', href='/static/css/bootstrap.min.css')
     link(rel='stylesheet', href='/css/template1-style.css')
-    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+
+    link(href="/static/css/all.min.css", rel="stylesheet")
     block header-scripts
+
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
   body.p-0
     include template1-header.pug
     block content
     include template1-footer.pug
 
-
     <!-- Base support javascript libs. JQuery, Bootstrap, FontAwesome Script Begin -->
+    //- JQuery Script
     script(src='/static/js/jquery-3.3.1.min.js')
+    //- BootStrap Script
     script(src='/static/js/bootstrap.bundle.min.js')
+    //- FontAwesome Script
     script(src="/static/js/all.min.js")
-    <!-- Base support javascript libs. JQuery, Bootstrap, FontAwesome Script End -->
+    //- Go To Top Script
+    script(src="/static/js/hs.core.js")
+    script(src="/static/js/hs.go-to.js")
+    script.
+      $(document).ready(function() {
+        //- Go To Top Script
+        $.HSCore.components.HSGoTo.init('.js-go-to')
 
+        //- Subscribe Script
+        $('#subscribeForm').submit(function(event) {
+          event.preventDefault();
+          $.get('/subscribe', { email: $('#subscribemail').val() }, function(data) {
+            $('#modalSubscribeResponseDialog').modal('show')
+          })
+        })
+      })
+    <!-- Base support javascript libs. JQuery, Bootstrap, FontAwesome Script End -->
     block footer-scripts

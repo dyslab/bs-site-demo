@@ -38,15 +38,16 @@ nav.navbar.sticky-top.navbar-expand-lg.navbar-light.bg-light.p-3
   div.d-flex.container-fluid
     div.flex-row
       a.navbar-brand(href="/", alt="Homepage")
-        img.d-inline-block.align-top(src="/imgs/bootstrap-solid.svg", width="30", height="30", alt="")
-        span.custom-text-shadow-1px &nbsp;#{siteinfo.sitename}
+        img.d-inline-block.align-top(src="/imgs/bootstrap-solid.svg", width="30", height="30", alt=copyrightsiteInfo.sitename)
+        |  
+        span.custom-text-shadow-1px #{copyrightsiteInfo.sitename}
     button.navbar-toggler(type="button", data-toggle="collapse", data-target="#bs-navbarNav", aria-controls="bs-navbarNav", aria-expanded="false", aria-label="Toggle navigation")
       span.navbar-toggler-icon
     div.flex-row-reverse.collapse.navbar-collapse.bg-light(id="bs-navbarNav")
       ul.navbar-nav
         +setNavItems
         form.form-inline.mt-2.mt-md-0(action="/search", post="GET")
-          input.form-control.mr-sm-2(type="search", name="search", placeholder="Search", aria-label="Search")
-          button.btn.btn-outline-success.my-2.my-sm-0(type="submit") Search
+          input.form-control.mr-sm-2(type="search", name="search", placeholder=searchInfo.holder, aria-label=searchInfo.caption)
+          button.btn.btn-outline-success.my-2.my-sm-0(type="submit") #{searchInfo.caption}
 <!-- Sticky Nav Bar End -->
 

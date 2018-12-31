@@ -8,15 +8,21 @@ var AboutDataReader = require('./about-data-reader')
 /* GET home page. */
 router.get('/', function (req, res, next) {
   // index-data-reader
-  var siteInfo = TemplateDataReader.getSiteInfo()
+  var copyrightsiteInfo = TemplateDataReader.getCopyrightSiteInfo()
   var navMenu = TemplateDataReader.getNavMenu('/')
+  var searchInfo = TemplateDataReader.getSearchInfo()
+  var subscribeInfo = TemplateDataReader.getSubscribeInfo()
+  var getintouchInfo = TemplateDataReader.getGetInTouchInfo()
   var pageInfo = IndexDataReader.getPageInfo()
   var aboutPartInfo = AboutDataReader.getPageInfoForIndex()
 
   // index page render
   res.render('template' + TemplateDataReader.getTemplateID() + '-index', {
-    siteinfo: siteInfo,
+    copyrightsiteInfo: copyrightsiteInfo,
     navMenu: navMenu,
+    searchInfo: searchInfo,
+    subscribeInfo: subscribeInfo,
+    getintouchInfo: getintouchInfo,
     pageinfo: pageInfo,
     aboutpartinfo: aboutPartInfo
   })
