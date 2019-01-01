@@ -5,6 +5,16 @@ exports.getTemplateID = function () {
   return 1
 }
 
+// return true value if it is using file system to read and save data currently. or else return false.
+exports.isFileMode = function () {
+  return true
+}
+
+// return true value if it is using sqlite3 db to read and save data currently. or else return false.
+exports.isSQLiteMode = function () {
+  return false
+}
+
 // read site infomation and return
 exports.getCopyrightSiteInfo = function () {
   var copyrightsiteinfoObj = {

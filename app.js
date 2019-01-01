@@ -9,6 +9,7 @@ var indexRouter = require('./routes/index')
 var subscribeRouter = require('./routes/subscribe')
 var aboutRouter = require('./routes/about')
 var contactRouter = require('./routes/contact')
+var NewsRouter = require('./routes/news')
 
 var app = express()
 
@@ -30,6 +31,7 @@ app.use('/', indexRouter)
 app.use('/subscribe', subscribeRouter)
 app.use('/about', aboutRouter)
 app.use('/contact', contactRouter)
+app.use('/news', NewsRouter)
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
