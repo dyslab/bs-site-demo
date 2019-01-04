@@ -90,6 +90,22 @@ mixin setTestimonialPartItems
             p.text-light!= tpitem.content
 //- setTestimonialPartItems Declaration End
 
+//- setNewsPartItems Declaration Begin
+mixin setNewsPartItems
+  each npitem in newsPartInfo.part2data
+    div.col-lg-6.col-sm-12.pl-3.pr-3.pt-3.pl-sm-1.pr-sm-1.pt-sm-1
+      div.card.border-0.custom-news-bgcolor
+        div.card-body
+          a.custom-news-title-color(href=npitem.link, rel=npitem.headline)
+            h4.card-title.custom-text-shadow-1px #{npitem.headline}
+          ui.list-inline
+            li.list-inline-item
+              i(class=npitem.faicon + " fa-lg custom-news-content-color")
+            li.list-inline-item
+              h6.card-text.custom-news-content-color #{npitem.date}
+          p.card-text.custom-news-content-color!= npitem.shorttext
+//- setNewsPartItems Declaration End
+
 block content
   <!-- Carousel Banner Part Begin -->
   div.container-fluid.p-0
@@ -154,50 +170,10 @@ block content
   div.container-fluid.custom-news-bgcolor
     div.container.pt-5.pb-3
       div.text-center.custom-text-shadow-2px.pb-3
-        p 关注我们
-        h2.font-weight-bolder LATEST NEWS
+        p= newsPartInfo.part2subtitle
+        h2.font-weight-bolder= newsPartInfo.part2title
       div.card-deck.pb-4
-        div.card.border-0.custom-news-bgcolor.pl-3.pr-3.pt-3
-          div.card-body
-            a.custom-news-title-color(href="#", target="_blank", rel="news")
-              h4.card-title.custom-text-shadow-1px 28 injured in Sicily in earthquake triggered by volcano eruption
-            ui.list-inline
-              li.list-inline-item
-                i.far.fa-newspaper.fa-lg.custom-news-content-color
-              li.list-inline-item
-                h6.card-text.custom-news-content-color 2018-12-28
-            p.card-text.custom-news-content-color Twenty-eight people were injured in Italy's Sicily on Wednesday in an earthquake triggered by the eruption of Mount Etna, Italian authorities said...
-        div.card.border-0.custom-news-bgcolor.pl-3.pr-3.pt-3
-          div.card-body
-            a.custom-news-title-color(href="#", target="_blank", rel="news")
-              h4.card-title.custom-text-shadow-1px 告别2018，人类群星远行时<br>Condolence to the stars...
-            ui.list-inline
-              li.list-inline-item 
-                i.far.fa-newspaper.fa-lg.custom-news-content-color
-              li.list-inline-item
-                h6.card-text.custom-news-content-color 2018-12-25
-            p.card-text.custom-news-content-color 星星沉落在海洋中央，一支支歌曲在我心中消亡。——卡尔杜齐《离别》节选...创伤的世界与幻想的江湖...微小至纤维，无垠至宇宙...世界大爆炸...生活在别处...
-      div.card-deck.pb-4
-        div.card.border-0.custom-news-bgcolor.pl-3.pr-3.pt-3
-          div.card-body
-            a.custom-news-title-color(href="#", target="_blank", rel="news")
-              h4.card-title.custom-text-shadow-1px 中国海军非洲之角护航记事之一：10年护航显成效
-            ui.list-inline
-              li.list-inline-item 
-                i.far.fa-newspaper.fa-lg.custom-news-content-color
-              li.list-inline-item
-                h6.card-text.custom-news-content-color 2018-10-8
-            p.card-text.custom-news-content-color 2008年12月26日，中国海军首批护航编队解缆起航，赴亚丁湾、索马里海域执行护航任务。回看过去10年间，中国海军护航亚丁湾的成效已经显现...
-        div.card.border-0.custom-news-bgcolor.pl-3.pr-3.pt-3
-          div.card-body
-            a.custom-news-title-color(href="#", target="_blank", rel="news")
-              h4.card-title.custom-text-shadow-1px China, U.S. may meet in January for trade negotiation
-            ui.list-inline
-              li.list-inline-item 
-                i.far.fa-newspaper.fa-lg.custom-news-content-color
-              li.list-inline-item
-                h6.card-text.custom-news-content-color 2018-9-25
-            p.card-text.custom-news-content-color The delegations of China and the U.S. have stayed in close communication and have made plans to meet face-to-face in January...
+        +setNewsPartItems
   <!-- News Part End -->
              
   <!-- Slider Part Begin -->

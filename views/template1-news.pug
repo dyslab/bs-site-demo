@@ -6,7 +6,7 @@ mixin setPart2Items
     div.col-lg-6.col-sm-12.pl-3.pr-3.pt-3.pl-sm-1.pr-sm-1.pt-sm-1
       div.card.border-0.custom-news-bgcolor
         div.card-body
-          a.custom-news-title-color(href=p2item.link, target="_blank", rel=p2item.headline)
+          a.custom-news-title-color(href=p2item.link, rel=p2item.headline)
             h4.card-title.custom-text-shadow-1px #{p2item.headline}
           ui.list-inline
             li.list-inline-item
@@ -39,4 +39,20 @@ block content
         div.col.pt-3.pb-3
           div.card-deck.pb-4
             +setPart2Items
+      if pageinfo.maxpage > 1             
+        div.row
+          div.col.pt-3.pb-3
+            nav(aria-label="Page navigation")
+              ul.pagination.justify-content-center
+                if pageinfo.pageid > 1
+                  li.page-item
+                    a.page-link(href="/news?page=" + (pageinfo.pageid-1), aria-label="Previous") 
+                      span(aria-hidden="true") &laquo;
+                - for (var p = 1; p <= pageinfo.maxpage; p++)
+                  li.page-item
+                    a.page-link(href="/news?page=" + p)= p
+                if pageinfo.pageid < pageinfo.maxpage
+                  li.page-item
+                    a.page-link(href="/news?page=" + (pageinfo.pageid+1), aria-label="Next") 
+                      span(aria-hidden="true") &raquo;
   <!-- Part 2 End -->

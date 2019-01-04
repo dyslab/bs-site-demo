@@ -4,6 +4,7 @@ var router = express.Router()
 var TemplateDataReader = require('./template-data-reader')
 var IndexDataReader = require('./index-data-reader')
 var AboutDataReader = require('./about-data-reader')
+var NewsDataReader = require('./news-data-reader')
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
@@ -15,6 +16,7 @@ router.get('/', function (req, res, next) {
   var getintouchInfo = TemplateDataReader.getGetInTouchInfo()
   var pageInfo = IndexDataReader.getPageInfo()
   var aboutPartInfo = AboutDataReader.getPageInfoForIndex()
+  var newsPartInfo = NewsDataReader.getPageInfoForIndex()
 
   // index page render
   res.render('template' + TemplateDataReader.getTemplateID() + '-index', {
@@ -24,7 +26,8 @@ router.get('/', function (req, res, next) {
     subscribeInfo: subscribeInfo,
     getintouchInfo: getintouchInfo,
     pageinfo: pageInfo,
-    aboutpartinfo: aboutPartInfo
+    aboutpartinfo: aboutPartInfo,
+    newsPartInfo: newsPartInfo
   })
 })
 
