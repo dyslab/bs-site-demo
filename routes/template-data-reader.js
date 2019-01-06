@@ -53,8 +53,8 @@ exports.getNavMenu = function (currentPage) {
     { name: 'SERVICES',
       href: '#',
       submenu: [
-        { name: 'CUSTOMER SERVICE', href: '/service/id1' },
-        { name: 'DISTRIBUTOR SERVICE', href: '/service/id2' }
+        { name: 'CUSTOMER SERVICE', href: '/service/customer' },
+        { name: 'DISTRIBUTOR SERVICE', href: '/service/distributor' }
       ]
     },
     { name: 'NEWS', href: '/news', submenu: [] },

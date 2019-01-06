@@ -3,8 +3,8 @@ extends template1-layout
 block content
   <!-- Title Banner Part Begin -->
   div.container-fluid.custom-title-height(style="background: url('" + pageinfo.part1background + "')")
-    div.container.h-100
-      div.row.justify-content-center.pt-5
+    div.container.h-100.pt-md-5.pt-3
+      div.row.justify-content-center.pt-md-5.pt-3
         div.col.text-center.text-light
           h1.font-weight-bolder.custom-text-shadow-2px #{pageinfo.part1title}
           h5.font-weight-bold.custom-text-shadow-1px #{pageinfo.part1subtitle}
@@ -42,12 +42,12 @@ block content
                       tr
                         td.text-right Email:
                         td
-                          a(href="mailto:" + p2item.email) #{p2item.email}
+                          a.custom-contact-link(href="mailto:" + p2item.email) #{p2item.email}
                       tr
                         td.text-right Work Time:
                         td!= p2item.worktime
                 div.col-md-5
-                  a(href=p2item.imagelink, target="_blank", rel=p2item.title)
+                  a.custom-contact-link(href=p2item.imagelink, target="_blank", rel=p2item.title)
                     img.img-fluid.custom-contact-map-height.rounded(src=p2item.image, alt=p2item.title)
   <!-- Part 2 End -->
 
