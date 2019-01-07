@@ -15,6 +15,11 @@ exports.isSQLiteMode = function () {
   return false
 }
 
+// return true value if it is using file system to read and save data currently. or else return false.
+exports.getLanguageID = function () {
+  return 'en'
+}
+
 // read site infomation and return
 exports.getCopyrightSiteInfo = function () {
   var copyrightsiteinfoObj = {
@@ -42,12 +47,11 @@ exports.getNavMenu = function (currentPage) {
     { name: 'PRODUCTS',
       href: '#',
       submenu: [
-        { name: 'PRODUCT CATEGORY 1', href: '/product/category1' },
-        { name: 'PRODUCT CATEGORY 2', href: '/product/category2' },
-        { name: 'PRODUCT CATEGORY 3', href: '/product/category3' },
+        { name: 'HOTSALE PRODUCTS', href: '/product/hotsale/' },
+        { name: 'PRODUCT CATEGORY 1', href: '/product/cat1' },
+        { name: 'PRODUCT CATEGORY 2', href: '/product/cat2' },
         { name: '---', href: '#' },
-        { name: 'PRODUCT CATEGORY 11', href: '/product/category11' },
-        { name: 'PRODUCT CATEGORY 12', href: '/product/category12' }
+        { name: 'ALL PRODUCTS', href: '/product/all/' }
       ]
     },
     { name: 'SERVICES',

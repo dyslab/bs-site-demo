@@ -13,7 +13,7 @@ router.get('/:serviceid', function (req, res, next) {
   var subscribeInfo = TemplateDataReader.getSubscribeInfo()
   var getintouchInfo = TemplateDataReader.getGetInTouchInfo()
   var pageInfo = ServiceDataReader.getPageInfo(req.params.serviceid)
-  console.log(req.params.serviceid)
+  // console.log(req.params.serviceid)
 
   // service page render
   res.render('template' + TemplateDataReader.getTemplateID() + '-service', {

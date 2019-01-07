@@ -77,26 +77,26 @@ exports.getPageInfo = function (serviceid) {
       content: 'Of course YES. you know we can never cover fire with paper.'
     }, {
       faicon: 'far fa-question-circle',
-      title: 'Okay, I admit I am an idiot. But why did you create a such stupid section though?',
-      content: 'Ummm...I have to say that, sometimes I am an idiot too.'
+      title: 'Okay, I admit I am a idiot. But why did you create a such stupid section though?',
+      content: 'Ummm...I have to say that, sometimes I am a idiot too.'
     }],
     part5title: 'NEED MORE HELP?',
     part5data: [{
-      faicon: 'far fa-weixin',
+      faicon: 'fab fa-weixin',
       title: 'SCAN and JOIN our wechat discussion group',
-      popuphref: '#'
+      popuphref: '/imgs/qrcode-wx-test.png'
     }, {
-      faicon: 'far fa-weibo',
+      faicon: 'fab fa-weibo',
       title: 'SCAN and JOIN our weibo user group',
-      popuphref: '#'
+      popuphref: '/imgs/qrcode-wx-test.png'
     }, {
-      faicon: 'far fa-qq',
+      faicon: 'fab fa-qq',
       title: 'SCAN and JOIN our QQ user group',
-      popuphref: '#'
+      popuphref: '/imgs/qrcode-qq-test.png'
     }, {
-      faicon: 'far fa-hands-helping',
+      faicon: 'fas fa-phone',
       title: 'Call our C.S.D. hotline directly',
-      popuphref: '#'
+      popuphref: '/imgs/callnow400.jpg'
     }]
   }
 
