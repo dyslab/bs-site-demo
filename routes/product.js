@@ -4,28 +4,30 @@ var router = express.Router()
 var TemplateDataReader = require('./template-data-reader')
 var ProductDataReader = require('./product-data-reader')
 
-/* GET hotsale product page. */
-router.get('/hotsale/', function (req, res, next) {
-  res.send('Hotsale products page.')
+/* GET product item page by product id. */
+router.get('/item/:productid', function (req, res, next) {
+  // view: template1-product-item.pug
+  res.send('Product "' + req.params.productid + '" page.')
 })
 
-/* GET all product page. */
-router.get('/all/', function (req, res, next) {
-  res.send('All products page.')
+/* GET all product page by page id. */
+router.get('/all/:pageid', function (req, res, next) {
+  // view: template1-product-all.pug
+  res.send('All products "' + req.params.pageid + '" page.')
 })
 
-/* GET product page by product category id. */
-router.get('/:categoryid', function (req, res, next) {
+/* GET category page by category id. */
+router.get('/category/:categoryid', function (req, res, next) {
   // product-data-reader
   var copyrightsiteInfo = TemplateDataReader.getCopyrightSiteInfo()
   var navMenu = TemplateDataReader.getNavMenu('/product')
   var searchInfo = TemplateDataReader.getSearchInfo()
   var subscribeInfo = TemplateDataReader.getSubscribeInfo()
   var getintouchInfo = TemplateDataReader.getGetInTouchInfo()
-  var pageInfo = ProductDataReader.getPageInfo(req.params.categoryid)
+  var pageInfo = ProductDataReader.getCategoryPageInfo(req.params.categoryid)
 
-  // product page render
-  res.render('template' + TemplateDataReader.getTemplateID() + '-product', {
+  // category page render
+  res.render('template' + TemplateDataReader.getTemplateID() + '-product-category', {
     copyrightsiteInfo: copyrightsiteInfo,
     navMenu: navMenu,
     searchInfo: searchInfo,

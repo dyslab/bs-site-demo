@@ -47,11 +47,11 @@ exports.getNavMenu = function (currentPage) {
     { name: 'PRODUCTS',
       href: '#',
       submenu: [
-        { name: 'HOTSALE PRODUCTS', href: '/product/hotsale/' },
-        { name: 'PRODUCT CATEGORY 1', href: '/product/cat1' },
-        { name: 'PRODUCT CATEGORY 2', href: '/product/cat2' },
+        { name: 'HOTSALE PRODUCTS', href: '/product/category/hotsale' },
+        { name: 'PRODUCT CATEGORY 1', href: '/product/category/cat1' },
+        { name: 'PRODUCT CATEGORY 2', href: '/product/category/cat2' },
         { name: '---', href: '#' },
-        { name: 'ALL PRODUCTS', href: '/product/all/' }
+        { name: 'ALL PRODUCTS', href: '/product/all/first' }
       ]
     },
     { name: 'SERVICES',

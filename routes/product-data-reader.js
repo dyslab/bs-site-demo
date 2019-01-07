@@ -1,7 +1,7 @@
 // product page data reader
 
 // read page infomation and return
-exports.getPageInfo = function (categoryid) {
+exports.getCategoryPageInfo = function (categoryid) {
   var pageinfoObj = {
     pagetitle: 'PRODUCTS',
     part1title: 'OUR AMAZING PRODUCTS',
