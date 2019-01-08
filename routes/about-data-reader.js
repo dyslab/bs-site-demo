@@ -4,10 +4,12 @@
 exports.getPageInfo = function () {
   var pageinfoObj = {
     pagetitle: 'ABOUT US',
+    part1visible: 'true',
     part1title: 'ABOUT US',
     part1subtitle: 'OUR MISSIONS',
     part1content: 'This is a web page demo powered by Bootstrap.This is a web page demo powered by Bootstrap.This is a web page demo powered by Bootstrap.This is a web page demo powered by Bootstrap.This is a web page demo powered by Bootstrap.这是一个使用Bootstrap的实践网页。这是一个使用Bootstrap的实践网页。这是一个使用Bootstrap的实践网页。',
     part1background: '/imgs/template1-about-title-bg.jpg',
+    part2visible: 'true',
     part2title: 'THE ICONIC STORIES',
     part2data: [{
       faicon: 'fas fa-lightbulb',
@@ -38,6 +40,7 @@ exports.getPageInfo = function () {
       faicontitle: 'Apple',
       faiconcontent: 'The Apple without Steve Jobs is no longer Apple. We are not the Apple fans whereas the creator of Apple is worth to be esteemed.<br>没有了乔布斯的苹果不再是苹果。'
     }],
+    part3visible: 'true',
     part3title: 'HISTORICAL EVENTS',
     part3subtitle: 'TIMELINE',
     part3data: [{
@@ -65,45 +68,77 @@ exports.getPageInfo = function () {
       headline: '2015.10',
       content: 'AAA v1.0 Beta Test. Team group created.'
     }],
+    part4visible: 'true',
     part4title: 'OUR ELITE TEAM',
     part4subtitle: 'WE ARE READY FOR SERVING YOU',
     part4data: [{
       image: '/imgs/team-p1.jpg',
       headline: 'Kongfu Panda',
       content: 'You know who I am.',
-      qqlink: '#',
-      email: 'kongfupanda@unknow.company'
+      links: [{
+        faicon: 'fab fa-qq',
+        href: '#qqlink'
+      }, {
+        faicon: 'fas fa-envelope',
+        href: 'mailto:kongfupanda@unknow.company'
+      }]
     }, {
       image: '/imgs/team-p2.jpg',
       headline: 'Ninja Elder',
       content: 'You know who I am.',
-      qqlink: '#',
-      email: 'ninjaelder@unknow.company'
+      links: [{
+        faicon: 'fab fa-qq',
+        href: '#qqlink'
+      }, {
+        faicon: 'fas fa-envelope',
+        href: 'mailto:ninjaelder@unknow.company'
+      }]
     }, {
       image: '/imgs/team-p3.jpg',
       headline: 'Im Celebrity',
       content: 'You know who I am.',
-      qqlink: '#',
-      email: 'imcelebrity@unknow.company'
+      links: [{
+        faicon: 'fab fa-qq',
+        href: '#qqlink'
+      }, {
+        faicon: 'fas fa-envelope',
+        href: 'mailto:imcelebrity@unknow.company'
+      }]
     }, {
       image: '/imgs/team-p4.jpg',
       headline: 'A Beauty',
       content: 'You know who I am.',
-      qqlink: '#',
-      email: 'abeauty@unknow.company'
+      links: [{
+        faicon: 'fab fa-qq',
+        href: '#qqlink'
+      }, {
+        faicon: 'fas fa-envelope',
+        href: 'mailto:abeauty@unknow.company'
+      }]
     }, {
       image: '/imgs/team-p5.jpg',
       headline: 'Military Officer',
       content: 'You know who I am.',
-      qqlink: '#',
-      email: 'militaryofficer@unknow.company'
+      links: [{
+        faicon: 'fab fa-qq',
+        href: '#qqlink'
+      }, {
+        faicon: 'fas fa-envelope',
+        href: 'mailto:officer@unknow.company'
+      }]
     }, {
       image: '/imgs/team-p6.jpg',
       headline: 'A Man',
       content: 'You know who I am.',
-      qqlink: '#',
-      email: 'aman@unknow.company'
+      links: [{
+        faicon: 'fab fa-qq',
+        href: '#qqlink'
+      }, {
+        faicon: 'fas fa-envelope',
+        href: 'mailto:aman@unknow.company'
+      }]
     }],
+    part5visible: 'true',
     part5title: 'TESTIMONIALS',
     part5subtitle: '客户感言',
     part5background: '/imgs/template1-testimonial-bg.jpg',

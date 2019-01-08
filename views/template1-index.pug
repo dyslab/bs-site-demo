@@ -1,9 +1,5 @@
 extends template1-layout
 
-block header-scripts
-  link(href="/static/css/timeline.min.css", rel="stylesheet")
-  link(href="/static/css/slider-pro.css", rel="stylesheet")
-
 //- setCarouselIndicators Declaration Begin
 mixin setCarouselIndicators
   each cbitem, index in pageinfo.carouseldata
@@ -58,13 +54,10 @@ mixin setTeamPartItems
           h5.card-title.custom-text-shadow-1px #{tpitem.headline}
           p.card-text!= tpitem.content
           ul.list-inline
-            li.list-inline-item
-              a.costom-team-color(href=tpitem.qqlink, target="_blank", rel=tpitem.headline)
-                i.fab.fa-qq.fa-lg
-            li.list-inline-item
-            li.list-inline-item
-              a.costom-team-color(href="mailto:" + tpitem.email, rel=tpitem.headline)
-                i.fas.fa-envelope.fa-lg
+            each linkitem in tpitem.links
+              li.list-inline-item.pl-1.pr-1
+                a.costom-team-color(href=linkitem.href, target="_blank")
+                  i(class=linkitem.faicon + " fa-lg")
 //- setTeamPartItems Declaration End
 
 //- setTestimonialPartItems Declaration Begin
@@ -106,127 +99,126 @@ mixin setNewsPartItems
           p.card-text.custom-news-content-color!= npitem.shorttext
 //- setNewsPartItems Declaration End
 
+block header-scripts
+  link(href="/static/css/timeline.min.css", rel="stylesheet")
+  link(href="/static/css/slider-pro.css", rel="stylesheet")
+
 block content
   <!-- Carousel Banner Part Begin -->
-  div.container-fluid.p-0
-    div.carousel.slide(id="bs-carouselSlides", data-ride="carousel")
-      ol.carousel-indicators
-        +setCarouselIndicators
-      div.carousel-inner
-        +setCarouselBannerItems
-      a.carousel-control-prev(href="#bs-carouselSlides", role="button", data-slide="prev")
-        span.carousel-control-prev-icon(aria-hidden="true")
-        span.sr-only Previous
-      a.carousel-control-next(href="#bs-carouselSlides", role="button", data-slide="next")
-        span.carousel-control-next-icon(aria-hidden="true")
-        span.sr-only Next
+  if pageinfo.carouselpartvisible.toUpperCase() == 'TRUE'
+    section(id="carousel")
+      div.container-fluid.p-0
+        div.carousel.slide(id="bs-carouselSlides", data-ride="carousel")
+          ol.carousel-indicators
+            +setCarouselIndicators
+          div.carousel-inner
+            +setCarouselBannerItems
+          a.carousel-control-prev(href="#bs-carouselSlides", role="button", data-slide="prev")
+            span.carousel-control-prev-icon(aria-hidden="true")
+            span.sr-only Previous
+          a.carousel-control-next(href="#bs-carouselSlides", role="button", data-slide="next")
+            span.carousel-control-next-icon(aria-hidden="true")
+            span.sr-only Next
   <!-- Carousel Banner Part End -->
 
   <!-- About Part Begin -->
-  div.container-fluid.bg-light
-    div.container.pt-5.pb-5
-      div.row.justify-content-center
-        div.col.text-center.pt-3.pb-3
-          h2.font-weight-bolder.custom-text-shadow-2px #{aboutpartinfo.part1title}
-          h6.text-secondary.custom-text-shadow-1px #{aboutpartinfo.part1subtitle}
-      div.row.justify-content-center
-        div.col.pt-3.pb-3
-          span.h5 #{aboutpartinfo.part1content}
-      div.row.justify-content-center
-        div.col-lg-5.col-md-12.pt-3.pb-3
-          img.img-fluid.rounded(src="/imgs/template1-aboutus.jpg", alt="about us")
-        div.col-lg-7.col-md-12.pt-3.pb-3
-          div.row
-            +setAboutPartItems
+  if pageinfo.aboutpartvisible.toUpperCase() == 'TRUE'
+    section(id="about")
+      div.container-fluid.bg-light
+        div.container.pt-5.pb-5
+          div.row.justify-content-center
+            div.col.text-center.pt-3.pb-3
+              h2.font-weight-bolder.custom-text-shadow-2px #{aboutpartinfo.part1title}
+              h6.text-secondary.custom-text-shadow-1px #{aboutpartinfo.part1subtitle}
+          div.row.justify-content-center
+            div.col.pt-3.pb-3
+              span.h5 #{aboutpartinfo.part1content}
+          div.row.justify-content-center
+            div.col-lg-5.col-md-12.pt-3.pb-3
+              img.img-fluid.rounded(src="/imgs/template1-aboutus.jpg", alt="about us")
+            div.col-lg-7.col-md-12.pt-3.pb-3
+              div.row
+                +setAboutPartItems
   <!-- About Part End -->
 
   <!-- Timeline Part Begin -->
-  div.container-fluid.custom-timeline-bgcolor
-    div.container-fluid.p-3
-      div.text-center.custom-text-shadow-3px
-        span #{aboutpartinfo.part3subtitle}
-        h3.font-weight-bolder #{aboutpartinfo.part3title}
-      div.timeline
-        div.timeline__wrap
-          div.timeline__items
-            +setTimelinePartItems
-        button.timeline-nav-button.timeline-nav-button--prev
-        button.timeline-nav-button.timeline-nav-button--next
-        span.timeline-divider
+  if pageinfo.timelinepartvisible.toUpperCase() == 'TRUE'
+    section(id="timeline")
+      div.container-fluid.custom-timeline-bgcolor
+        div.container-fluid.p-3
+          div.text-center.custom-text-shadow-3px
+            span #{aboutpartinfo.part3subtitle}
+            h3.font-weight-bolder #{aboutpartinfo.part3title}
+          div.timeline
+            div.timeline__wrap
+              div.timeline__items
+                +setTimelinePartItems
+            button.timeline-nav-button.timeline-nav-button--prev
+            button.timeline-nav-button.timeline-nav-button--next
+            span.timeline-divider
   <!-- Note: Need to add script part below the body -->
   <!-- Timeline Part End -->
   
   <!-- Team Part Begin -->
-  div.container-fluid.bg-light
-    div.container.pt-5.pb-5
-      div.text-center.custom-text-shadow-2px.pb-3
-        h2.font-weight-bolder #{aboutpartinfo.part4title}
-        p #{aboutpartinfo.part4subtitle}
-      div.card-deck.pb-4
-        +setTeamPartItems
+  if pageinfo.teampartvisible.toUpperCase() == 'TRUE'
+    section(id="team")
+      div.container-fluid.bg-light
+        div.container.pt-5.pb-5
+          div.text-center.custom-text-shadow-2px.pb-3
+            h2.font-weight-bolder #{aboutpartinfo.part4title}
+            p #{aboutpartinfo.part4subtitle}
+          div.card-deck.pb-4
+            +setTeamPartItems
   <!-- Team Part End -->
 
   <!-- News Part Begin -->
-  div.container-fluid.custom-news-bgcolor
-    div.container.pt-5.pb-3
-      div.text-center.custom-text-shadow-2px.pb-3
-        p= newsPartInfo.part2subtitle
-        h2.font-weight-bolder= newsPartInfo.part2title
-      div.card-deck.pb-4
-        +setNewsPartItems
+  if pageinfo.newspartvisible.toUpperCase() == 'TRUE'
+    section(id="news")
+      div.container-fluid.custom-news-bgcolor
+        div.container.pt-5.pb-3
+          div.text-center.custom-text-shadow-2px.pb-3
+            p= newsPartInfo.part2subtitle
+            h2.font-weight-bolder= newsPartInfo.part2title
+          div.card-deck.pb-4
+            +setNewsPartItems
   <!-- News Part End -->
              
   <!-- Slider Part Begin -->
-  div.container-fluid.bg-white
-    div.container-fluid.p-5
-      div.container.pb-3
-        div.text-center.custom-text-shadow-2px.pb-3
-          p VISIT
-          h2.font-weight-bolder HOTTEST PRODUCTS
-      div.slider-pro(id="bs-hot-slider")
-        div.sp-slides
-          div.sp-slide
-            a(href="/imgs/hot-p1.jpg") 
-              img.sp-image.img-fluid(src="/imgs/hot-p1.jpg")
-              p.sp-caption HM0752
-          div.sp-slide
-            a(href="/imgs/hot-p2.jpg") 
-              img.sp-image.img-fluid(src="/imgs/hot-p2.jpg")
-              p.sp-caption HM0903
-          div.sp-slide
-            a(href="/imgs/hot-p3.jpg") 
-              img.sp-image.img-fluid(src="/imgs/hot-p3.jpg")
-              p.sp-caption HM0739
-          div.sp-slide
-            a(href="/imgs/hot-p4.jpg") 
-              img.sp-image.img-fluid(src="/imgs/hot-p4.jpg")
-              p.sp-caption HM0725
-          div.sp-slide
-            a(href="/imgs/hot-p5.jpg") 
-              img.sp-image.img-fluid(src="/imgs/hot-p5.jpg")
-              p.sp-caption HM0810
-          div.sp-slide
-            a(href="/imgs/hot-p6.jpg") 
-              img.sp-image.img-fluid(src="/imgs/hot-p6.jpg")
-              p.sp-caption HM0747
+  if pageinfo.sliderpartvisible.toUpperCase() == 'TRUE'
+    section(id="slider")
+      div.container-fluid.bg-white
+        div.container-fluid.p-5
+          div.container.pb-3
+            div.text-center.custom-text-shadow-2px.pb-3
+              p #{pageinfo.slidersubtitle}
+              h2.font-weight-bolder #{pageinfo.slidertitle}
+          div.slider-pro(id="bs-hot-slider")
+            div.sp-slides
+              each sditem in pageinfo.sliderdata
+                div.sp-slide
+                  a(href=sditem.href)
+                    img.sp-image.img-fluid(src=sditem.image)
+                    p.sp-caption!= sditem.caption
   <!-- Note: Need to add script part below the body -->
   <!-- Slider Part End -->
 
   <!-- Testimonial Part Begin -->
-  div.container-fluid.custom-testimonial-height(style="background: url('" + aboutpartinfo.part5background + "')")
-    div.container.pt-5.pb-5
-      div.text-center.pb-3.text-dark.custom-text-shadow-white-1px
-        h2.font-weight-bolder #{aboutpartinfo.part5title}
-        p #{aboutpartinfo.part5subtitle}
-      div.carousel.slide(id="bs-testimonial-slide", data-ride="carousel")
-        div.carousel-inner
-          +setTestimonialPartItems
-        a.carousel-control-prev(href="#bs-testimonial-slide", role="button", data-slide="prev")
-          span.carousel-control-prev-icon(aria-hidden="true")
-          span.sr-only Previous
-        a.carousel-control-next(href="#bs-testimonial-slide", role="button", data-slide="next")
-          span.carousel-control-next-icon(aria-hidden="true")
-          span.sr-only Next
+  if pageinfo.testimonialpartvisible.toUpperCase() == 'TRUE'
+    section(id="testimonial")
+      div.container-fluid.custom-testimonial-height(style="background: url('" + aboutpartinfo.part5background + "')")
+        div.container.pt-5.pb-5
+          div.text-center.pb-3.text-dark.custom-text-shadow-white-1px
+            h2.font-weight-bolder #{aboutpartinfo.part5title}
+            p #{aboutpartinfo.part5subtitle}
+          div.carousel.slide(id="bs-testimonial-slide", data-ride="carousel")
+            div.carousel-inner
+              +setTestimonialPartItems
+            a.carousel-control-prev(href="#bs-testimonial-slide", role="button", data-slide="prev")
+              span.carousel-control-prev-icon(aria-hidden="true")
+              span.sr-only Previous
+            a.carousel-control-next(href="#bs-testimonial-slide", role="button", data-slide="next")
+              span.carousel-control-next-icon(aria-hidden="true")
+              span.sr-only Next
   <!-- Testimonial Part End -->
 
 block footer-scripts

@@ -4,10 +4,12 @@
 exports.getPageInfo = function (serviceid) {
   var pageinfoObj = {
     pagetitle: 'SERVICES',
+    part1visible: 'true',
     part1title: 'SERVICES',
     part1subtitle: 'WE ARE READY FOR SERVING YOU',
     part1content: 'Welcome to the services page, feel free to contact us or our branch office during work time, or you\'re able to write a message to us in the form below as you wish.',
     part1background: '/imgs/template1-service-title-bg.jpg',
+    part2visible: 'true',
     part2title: 'CUSTOMER PRIVILEGE',
     part2data: [{
       image: '/imgs/template1-service-privilege2.png',
@@ -40,6 +42,7 @@ exports.getPageInfo = function (serviceid) {
       linktext: 'Send Callback Request NOW >',
       href: '/contact'
     }],
+    part3visible: 'true',
     part3title: 'SELF-SERVICE',
     part3data: [{
       image: '/imgs/template1-service-function1.jpg',
@@ -62,6 +65,7 @@ exports.getPageInfo = function (serviceid) {
       title: 'Price Inquiry',
       href: '/contact'
     }],
+    part4visible: 'true',
     part4title: 'F A Q',
     part4data: [{
       faicon: 'fas fa-question-circle',
@@ -80,6 +84,7 @@ exports.getPageInfo = function (serviceid) {
       title: 'Okay, I admit I am a idiot. But why did you create a such stupid section though?',
       content: 'Ummm...I have to say that, sometimes I am a idiot too.'
     }],
+    part5visible: 'true',
     part5title: 'NEED MORE HELP?',
     part5data: [{
       faicon: 'fab fa-weixin',
@@ -88,7 +93,7 @@ exports.getPageInfo = function (serviceid) {
     }, {
       faicon: 'fab fa-weibo',
       title: 'SCAN and JOIN our weibo user group',
-      popuphref: '/imgs/qrcode-wx-test.png'
+      popuphref: ''
     }, {
       faicon: 'fab fa-qq',
       title: 'SCAN and JOIN our QQ user group',

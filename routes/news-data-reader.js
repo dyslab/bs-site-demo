@@ -1,14 +1,16 @@
 // news page data reader
-const RecordsPerPage = 30
 
 // read page infomation and return
 exports.getPageInfo = function (pageid, getall) {
   var pageinfoObj = {
     pagetitle: 'NEWS',
+    newsperpage: 10,
+    part1visible: 'true',
     part1title: 'NEWS',
     part1subtitle: '',
     part1content: 'Check out the latest news and events about us below. Feel free to subscribe our monthly mail news and product information if you would like to know us more.',
     part1background: '/imgs/template1-news-title-bg.jpg',
+    part2visible: 'true',
     part2title: 'LASTEST NEWS',
     part2subtitle: 'FOLLOW US',
     part2data: [{
@@ -48,6 +50,14 @@ exports.getPageInfo = function (pageid, getall) {
   for (var i = 0; i < pageinfoObj.part2data.length; i++) {
     pageinfoObj.part2data[i].newsid = i // news id is zero-base
     pageinfoObj.part2data[i].link = '/news/details?newsid=' + pageinfoObj.part2data[i].newsid
+  }
+
+  // get the news count for each page.
+  var RecordsPerPage
+  if (pageinfoObj.newsperpage && pageinfoObj.newsperpage !== undefined) {
+    RecordsPerPage = pageinfoObj.newsperpage
+  } else {
+    RecordsPerPage = 30
   }
 
   if (!getall || getall === undefined) {

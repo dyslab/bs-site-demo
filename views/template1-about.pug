@@ -1,8 +1,5 @@
 extends template1-layout
 
-block header-scripts
-  link(href="/static/css/timeline.min.css", rel="stylesheet")
-
 //- setPart2Items Declaration Begin
 mixin setPart2Items
   each p2item in pageinfo.part2data
@@ -33,13 +30,10 @@ mixin setPart4Items
           h5.card-title.custom-text-shadow-1px #{p4item.headline}
           p.card-text!= p4item.content
           ul.list-inline
-            li.list-inline-item
-              a.costom-team-color(href=p4item.qqlink, target="_blank", rel=p4item.headline)
-                i.fab.fa-qq.fa-lg
-            li.list-inline-item
-            li.list-inline-item
-              a.costom-team-color(href="mailto:" + p4item.email, rel=p4item.headline)
-                i.fas.fa-envelope.fa-lg
+            each linkitem in p4item.links
+              li.list-inline-item.pl-1.pr-1
+                a.costom-team-color(href=linkitem.href, target="_blank")
+                  i(class=linkitem.faicon + " fa-lg")
 //- setPart4Items Declaration End
 
 //- setPart5Items Declaration Begin
@@ -65,72 +59,85 @@ mixin setPart5Items
             p.text-light!= p5item.content
 //- setPart5Items Declaration End
 
+block header-scripts
+  link(href="/static/css/timeline.min.css", rel="stylesheet")
+
 block content
-  <!-- Title Banner Part Begin -->
-  div.container-fluid.custom-title-height(style="background: url('" + pageinfo.part1background + "')")
-    div.container.h-100.pt-md-5.pt-3.pb-3
-      div.row.justify-content-center.pt-md-5.pt-3
-        div.col.text-center.text-light
-          h1.font-weight-bolder.custom-text-shadow-2px #{pageinfo.part1title}
-          h5.font-weight-bold.custom-text-shadow-1px #{pageinfo.part1subtitle}
-      div.row.justify-content-center.pt-5.pb-5
-        div.col
-          span.h5.text-light #{pageinfo.part1content}
-  <!-- Title Banner Part End -->
+  <!-- Part 1 Begin -->
+  if pageinfo.part1visible.toUpperCase() == 'TRUE'
+    section(id="part1")
+      div.container-fluid.custom-title-height(style="background: url('" + pageinfo.part1background + "')")
+        div.container.h-100.pt-md-5.pt-3.pb-3
+          div.row.justify-content-center.pt-md-5.pt-3
+            div.col.text-center.text-light
+              h1.font-weight-bolder.custom-text-shadow-2px #{pageinfo.part1title}
+              h5.font-weight-bold.custom-text-shadow-1px #{pageinfo.part1subtitle}
+          div.row.justify-content-center.pt-5.pb-5
+            div.col
+              span.h5.text-light #{pageinfo.part1content}
+  <!-- Part 1 End -->
 
   <!-- Part 2 Begin -->
-  div.container-fluid.bg-light
-    div.container.pt-5.pb-5
-      div.row.justify-content-center
-        div.col.text-dark.text-center.pt-3.pb-3
-          h5.font-weight-bold.custom-text-shadow-1px #{pageinfo.part2title}
-      div.row.justify-content-center
-        div.col.pt-3.pb-3
-          div.row
-            +setPart2Items
+  if pageinfo.part2visible.toUpperCase() == 'TRUE'
+    section(id="part2")
+      div.container-fluid.bg-light
+        div.container.pt-5.pb-5
+          div.row.justify-content-center
+            div.col.text-dark.text-center.pt-3.pb-3
+              h5.font-weight-bold.custom-text-shadow-1px #{pageinfo.part2title}
+          div.row.justify-content-center
+            div.col.pt-3.pb-3
+              div.row
+                +setPart2Items
   <!-- Part 2 End -->
 
   <!-- Part 3 Begin -->
-  div.container-fluid.custom-timeline-bgcolor
-    div.container-fluid.p-3
-      div.text-center.custom-text-shadow-3px
-        span #{pageinfo.part3subtitle}
-        h3.font-weight-bolder #{pageinfo.part3title}
-      div.timeline
-        div.timeline__wrap
-          div.timeline__items
-            +setPart3Items
-        button.timeline-nav-button.timeline-nav-button--prev
-        button.timeline-nav-button.timeline-nav-button--next
-        span.timeline-divider
+  if pageinfo.part3visible.toUpperCase() == 'TRUE'
+    section(id="part3")
+      div.container-fluid.custom-timeline-bgcolor
+        div.container-fluid.p-3
+          div.text-center.custom-text-shadow-3px
+            span #{pageinfo.part3subtitle}
+            h3.font-weight-bolder #{pageinfo.part3title}
+          div.timeline
+            div.timeline__wrap
+              div.timeline__items
+                +setPart3Items
+            button.timeline-nav-button.timeline-nav-button--prev
+            button.timeline-nav-button.timeline-nav-button--next
+            span.timeline-divider
   <!-- Note: Need to add timeline script part below the body -->
   <!-- Part 3 End -->
   
   <!-- Part 4 Begin -->
-  div.container-fluid.bg-light
-    div.container.pt-5.pb-5
-      div.text-center.custom-text-shadow-2px.pb-3
-        h2.font-weight-bolder #{pageinfo.part4title}
-        p #{pageinfo.part4subtitle}
-      div.card-deck.pb-4
-        +setPart4Items
+  if pageinfo.part4visible.toUpperCase() == 'TRUE'
+    section(id="part4")
+      div.container-fluid.bg-light
+        div.container.pt-5.pb-5
+          div.text-center.custom-text-shadow-2px.pb-3
+            h2.font-weight-bolder #{pageinfo.part4title}
+            p #{pageinfo.part4subtitle}
+          div.card-deck.pb-4
+            +setPart4Items
   <!-- Part 4 End -->
 
   <!-- Part 5 Begin -->
-  div.container-fluid.custom-testimonial-height(style="background: url('" + pageinfo.part5background + "')")
-    div.container.pt-5.pb-5
-      div.text-center.pb-3.text-dark.custom-text-shadow-white-1px
-        h2.font-weight-bolder #{pageinfo.part5title}
-        p #{pageinfo.part5subtitle}
-      div.carousel.slide(id="bs-testimonial-slide", data-ride="carousel")
-        div.carousel-inner
-          +setPart5Items
-        a.carousel-control-prev(href="#bs-testimonial-slide", role="button", data-slide="prev")
-          span.carousel-control-prev-icon(aria-hidden="true")
-          span.sr-only Previous
-        a.carousel-control-next(href="#bs-testimonial-slide", role="button", data-slide="next")
-          span.carousel-control-next-icon(aria-hidden="true")
-          span.sr-only Next
+  if pageinfo.part5visible.toUpperCase() == 'TRUE'
+    section(id="part5")
+      div.container-fluid.custom-testimonial-height(style="background: url('" + pageinfo.part5background + "')")
+        div.container.pt-5.pb-5
+          div.text-center.pb-3.text-dark.custom-text-shadow-white-1px
+            h2.font-weight-bolder #{pageinfo.part5title}
+            p #{pageinfo.part5subtitle}
+          div.carousel.slide(id="bs-testimonial-slide", data-ride="carousel")
+            div.carousel-inner
+              +setPart5Items
+            a.carousel-control-prev(href="#bs-testimonial-slide", role="button", data-slide="prev")
+              span.carousel-control-prev-icon(aria-hidden="true")
+              span.sr-only Previous
+            a.carousel-control-next(href="#bs-testimonial-slide", role="button", data-slide="next")
+              span.carousel-control-next-icon(aria-hidden="true")
+              span.sr-only Next
   <!-- Part 5 End -->
 
 block footer-scripts

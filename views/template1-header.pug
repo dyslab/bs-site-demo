@@ -1,4 +1,3 @@
-<!-- Sticky Nav Bar Begin -->
 //- setNavItems Declaration Begin
 mixin setNavItems
   each menuitem, index in navMenu
@@ -34,6 +33,7 @@ mixin setNavItems
           a.nav-link(href=menuitem.href) #{menuitem.name}
 //- setNavItems Declaration End
 
+<!-- Sticky Nav Bar Begin -->
 nav.navbar.sticky-top.navbar-expand-lg.navbar-light.bg-light.p-3
   div.d-flex.container-fluid
     div.flex-row
@@ -50,4 +50,3 @@ nav.navbar.sticky-top.navbar-expand-lg.navbar-light.bg-light.p-3
           input.form-control.mr-sm-2(type="search", name="search", placeholder=searchInfo.holder, aria-label=searchInfo.caption)
           button.btn.btn-outline-success.my-2.my-sm-0(type="submit") #{searchInfo.caption}
 <!-- Sticky Nav Bar End -->
-
