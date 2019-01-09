@@ -15,12 +15,12 @@ mixin setCarouselBannerItems
     if index == 0
       div.carousel-item.active
         img.d-block.w-100(src=cbitem.image, alt=cbitem.caption)
-        div.carousel-caption.d-none.d-md-block
+        div.carousel-caption.d-none.d-md-block(style="height:" + cbitem.captionpos)
           h1.font-weight-bolder.text-white.custom-text-shadow-2px!= cbitem.caption
     else
       div.carousel-item
         img.d-block.w-100(src=cbitem.image, alt=cbitem.caption)
-        div.carousel-caption.d-none.d-md-block
+        div.carousel-caption.d-none.d-md-block(style="height:" + cbitem.captionpos)
           h1.font-weight-bolder.text-white.custom-text-shadow-2px!= cbitem.caption
 //- setCarouselBannerItems Declaration End
 
@@ -187,7 +187,7 @@ block content
   if pageinfo.sliderpartvisible.toUpperCase() == 'TRUE'
     section(id="slider")
       div.container-fluid.bg-white
-        div.container-fluid.p-5
+        div.container-fluid.pt-3.pb-3
           div.container.pb-3
             div.text-center.custom-text-shadow-2px.pb-3
               p #{pageinfo.slidersubtitle}

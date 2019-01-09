@@ -51,7 +51,7 @@ exports.getNavMenu = function (currentPage) {
         { name: 'PRODUCT CATEGORY 1', href: '/product/category/cat1' },
         { name: 'PRODUCT CATEGORY 2', href: '/product/category/cat2' },
         { name: '---', href: '#' },
-        { name: 'ALL PRODUCTS', href: '/product/all/first' }
+        { name: 'ALL PRODUCTS', href: '/product/all/' }
       ]
     },
     { name: 'SERVICES',

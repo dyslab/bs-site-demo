@@ -6,14 +6,44 @@ var ProductDataReader = require('./product-data-reader')
 
 /* GET product item page by product id. */
 router.get('/item/:productid', function (req, res, next) {
-  // view: template1-product-item.pug
-  res.send('Product "' + req.params.productid + '" page.')
+  // product-data-reader
+  var copyrightsiteInfo = TemplateDataReader.getCopyrightSiteInfo()
+  var navMenu = TemplateDataReader.getNavMenu('/product')
+  var searchInfo = TemplateDataReader.getSearchInfo()
+  var subscribeInfo = TemplateDataReader.getSubscribeInfo()
+  var getintouchInfo = TemplateDataReader.getGetInTouchInfo()
+  var pageInfo = ProductDataReader.getItemPageInfo(req.params.productid)
+
+  // all page render
+  res.render('template' + TemplateDataReader.getTemplateID() + '-product-item', {
+    copyrightsiteInfo: copyrightsiteInfo,
+    navMenu: navMenu,
+    searchInfo: searchInfo,
+    subscribeInfo: subscribeInfo,
+    getintouchInfo: getintouchInfo,
+    pageinfo: pageInfo
+  })
 })
 
-/* GET all product page by page id. */
-router.get('/all/:pageid', function (req, res, next) {
-  // view: template1-product-all.pug
-  res.send('All products "' + req.params.pageid + '" page.')
+/* GET all product page */
+router.get('/all/', function (req, res, next) {
+  // product-data-reader
+  var copyrightsiteInfo = TemplateDataReader.getCopyrightSiteInfo()
+  var navMenu = TemplateDataReader.getNavMenu('/product')
+  var searchInfo = TemplateDataReader.getSearchInfo()
+  var subscribeInfo = TemplateDataReader.getSubscribeInfo()
+  var getintouchInfo = TemplateDataReader.getGetInTouchInfo()
+  var pageInfo = ProductDataReader.getAllPageInfo()
+
+  // all page render
+  res.render('template' + TemplateDataReader.getTemplateID() + '-product-all', {
+    copyrightsiteInfo: copyrightsiteInfo,
+    navMenu: navMenu,
+    searchInfo: searchInfo,
+    subscribeInfo: subscribeInfo,
+    getintouchInfo: getintouchInfo,
+    pageinfo: pageInfo
+  })
 })
 
 /* GET category page by category id. */

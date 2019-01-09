@@ -221,7 +221,11 @@
   transition: .1s;
   margin-bottom: .21rem;
   width: 98%;
-  color: #145070;
+  color: #016b4b;
+  text-shadow: 1px 1px 1px white;
+  -webkit-text-shadow: 1px 1px 1px white;
+  -moz-text-shadow: 1px 1px 1px white;
+  -ms-text-shadow: 1px 1px 1px white;
   cursor:pointer
 }
 .custom-product-cat-link:hover { 
@@ -233,7 +237,11 @@
   -webkit-box-shadow: 0 20px 20px 3px rgba(0,0,0,.1); 
   -moz-box-shadow: 0 20px 20px 3px rgba(0,0,0,.1); 
   box-shadow: 0 20px 20px 3px rgba(0,0,0,.1);
-  color: #186918
+  color: #991616;
+  text-shadow: 1px 1px 1px white;
+  -webkit-text-shadow: 1px 1px 1px white;
+  -moz-text-shadow: 1px 1px 1px white;
+  -ms-text-shadow: 1px 1px 1px white
 }
 
 .custom-product-cat-link2-height {
