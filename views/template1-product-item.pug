@@ -6,8 +6,8 @@ block content
   <!-- Part 1 Begin -->
   if pageinfo.part1visible.toUpperCase() == 'TRUE'
     section(id="part1")
-      div.container-fluid.custom-title-height(style="background: url('" + pageinfo.part1background + "')")
-        div.container.h-100.pt-md-5.pt-3.pb-3
+      div.container-fluid.custom-title-height.pt-5.pb-5(style="background: url('" + pageinfo.part1background + "')")
+        div.container
           div.row.justify-content-center.pt-md-5.pt-3
             div.col.text-center.text-light
               h1.font-weight-bolder.custom-text-shadow-2px #{pageinfo.part1title}
@@ -20,8 +20,8 @@ block content
   <!-- Part 2 Begin -->
   if pageinfo.part2visible.toUpperCase() == 'TRUE'
     section(id="part2")
-      div.container-fluid.bg-white
-        div.container.pt-3.pb-3
+      div.container-fluid.bg-white.pt-5.pb-5
+        div.container
           div.row.justify-content-center
             div.col.text-dark.text-center.pt-3.pb-3
               h4.font-weight-bold.custom-text-shadow-1px #{pageinfo.part2title}
@@ -34,8 +34,8 @@ block content
               div.row.pt-5
                 each p2img in pageinfo.part2images
                   div.col-4.col-md-3.p-2
-                    button.btn.custom-alter-image.custom-product-cat-link
-                      img.custom-thumbnail-img.img-fluid(src=p2img)
+                    button.btn.custom-alter-image.custom-product-cat-link.p-0
+                      img.img-fluid.img-thumbnail.custom-thumbnail-img(src=p2img)
             div.col-md-6.p-1.p-md-3
               table.table.table-borderless.table-hover
                 tbody
@@ -54,7 +54,7 @@ block content
   if pageinfo.part3visible.toUpperCase() == 'TRUE'
     section(id="part3")
       div.container-fluid.p-0.bg-white
-        div.container.pt-3.pb-3
+        div.container
           div.row.justify-content-center
             div.col.text-dark.text-center.pt-3.pb-3
               h4.font-weight-bold.custom-text-shadow-1px #{pageinfo.part3title}

@@ -16,10 +16,10 @@ router.get('/', function (req, res, next) {
   // get page id
   var pageID = 1
   if (req.query.page && req.query.page !== undefined) pageID = parseInt(req.query.page)
-  var pageInfo = NewsDataReader.getPageInfo(pageID)
+  var pageInfo = NewsDataReader.getNewsListInfo(pageID)
 
   // news page render
-  res.render('template' + TemplateDataReader.getTemplateID() + '-news', {
+  res.render('template' + TemplateDataReader.getTemplateID() + '-news-list', {
     copyrightsiteInfo: copyrightsiteInfo,
     navMenu: navMenu,
     searchInfo: searchInfo,
@@ -30,7 +30,7 @@ router.get('/', function (req, res, next) {
 })
 
 /* GET news details page. */
-router.get('/details', function (req, res, next) {
+router.get('/details/:newsid', function (req, res, next) {
   // news-data-reader
   var copyrightsiteInfo = TemplateDataReader.getCopyrightSiteInfo()
   var navMenu = TemplateDataReader.getNavMenu('/news')
@@ -38,10 +38,8 @@ router.get('/details', function (req, res, next) {
   var subscribeInfo = TemplateDataReader.getSubscribeInfo()
   var getintouchInfo = TemplateDataReader.getGetInTouchInfo()
 
-  var newsID = 0
-  if (req.query.newsid && req.query.newsid !== undefined) newsID = parseInt(req.query.newsid)
-  var pageInfo = NewsDataReader.getNewsDetails(newsID)
-  console.log(pageInfo)
+  var newsID = parseInt(req.params.newsid)
+  var pageInfo = NewsDataReader.getNewsDetailsInfo(newsID)
 
   // news page render
   res.render('template' + TemplateDataReader.getTemplateID() + '-news-details', {

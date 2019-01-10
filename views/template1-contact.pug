@@ -6,8 +6,8 @@ block content
   <!-- Part 1 Begin -->
   if pageinfo.part1visible.toUpperCase() == 'TRUE'
     section(id="part1")
-      div.container-fluid.custom-title-height(style="background: url('" + pageinfo.part1background + "')")
-        div.container.h-100.pt-md-5.pt-3.pb-3
+      div.container-fluid.custom-title-height.pt-5.pt-5(style="background: url('" + pageinfo.part1background + "')")
+        div.container
           div.row.justify-content-center.pt-md-5.pt-3
             div.col.text-center.text-light
               h1.font-weight-bolder.custom-text-shadow-2px #{pageinfo.part1title}
@@ -20,8 +20,8 @@ block content
   <!-- Part 2 Begin -->
   if pageinfo.part2visible.toUpperCase() == 'TRUE'
     section(id="part2")
-      div.container-fluid.bg-light
-        div.container.pt-5.pb-5
+      div.container-fluid.bg-light.pt-5.pb-5
+        div.container
           div.row.justify-content-center
             div.col.text-dark.text-center.pt-3.pb-3
               h4.font-weight-bold.custom-text-shadow-1px #{pageinfo.part2title}
@@ -35,13 +35,13 @@ block content
                   div.row
                     div.col-md-7.text-dark
                       table.table.table-borderless.table-hover
-                        tbody
+                        tbody.col-11
                           each lineitem in p2item.lines
                             tr
                               td.col-lg-3.col-md-4.text-right #{lineitem.caption}
-                              if lineitem.text.indexOf('!') == 0
+                              if lineitem.link && lineitem.link != undefined
                                 td
-                                  a.custom-contact-link(href=lineitem.text.replace(/!/,""))= lineitem.text.replace(/!/,"").replace(/mailto:/i,"")
+                                  a.custom-contact-link(href=lineitem.link)!= lineitem.text
                               else
                                 td!= lineitem.text
                     div.col-md-5
@@ -52,8 +52,8 @@ block content
   <!-- Part 3 Begin -->
   if pageinfo.part3visible.toUpperCase() == 'TRUE'
     section(id="part3")
-      div.container-fluid.custom-contact-form-bgcolor
-        div.container.pt-5.pb-5
+      div.container-fluid.custom-contact-form-bgcolor.pt-5.pb-5
+        div.container
           form(action="#", id="sendmessageForm", method="POST")
             div.form-group
               div.form-row.justify-content-center

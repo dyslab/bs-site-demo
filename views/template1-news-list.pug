@@ -3,10 +3,10 @@ extends template1-layout
 //- setPart2Items Declaration Begin
 mixin setPart2Items
   each p2item in pageinfo.part2data
-    div.col-lg-6.col-sm-12.pl-3.pr-3.pt-3.pl-sm-1.pr-sm-1.pt-sm-1
+    div.col-lg-6.col-sm-12.p-0
       div.card.border-0.custom-news-bgcolor
         div.card-body
-          a.custom-news-title-color(href=p2item.link, rel=p2item.headline)
+          a.custom-news-title-color(href=p2item.href, rel=p2item.headline)
             h4.card-title.custom-text-shadow-1px #{p2item.headline}
           ui.list-inline
             li.list-inline-item
@@ -22,8 +22,8 @@ block content
   <!-- Part 1 Begin -->
   if pageinfo.part1visible.toUpperCase() == 'TRUE'
     section(id="part1")
-      div.container-fluid.custom-title-height(style="background: url('" + pageinfo.part1background + "')")
-        div.container.h-100.pt-md-5.pt-3.pb-3
+      div.container-fluid.custom-title-height.pt-5.pt-5(style="background: url('" + pageinfo.part1background + "')")
+        div.container
           div.row.justify-content-center.pt-md-5.pt-3
             div.col.text-center.text-light
               h1.font-weight-bolder.custom-text-shadow-2px #{pageinfo.part1title}
@@ -36,11 +36,11 @@ block content
   <!-- Part 2 Begin -->
   if pageinfo.part2visible.toUpperCase() == 'TRUE'
     section(id="part2")
-      div.container-fluid.custom-news-bgcolor
-        div.container.pt-5.pb-5
+      div.container-fluid.custom-news-bgcolor.pt-5.pb-5
+        div.container
           div.row.justify-content-center
             div.col.text-dark.text-center.pt-3.pb-3
-              h5.font-weight-bold.custom-text-shadow-1px #{pageinfo.part2title}
+              h3.font-weight-bold.custom-text-shadow-1px #{pageinfo.part2title}
           div.row.justify-content-center
             div.col.pt-3.pb-3
               div.card-deck.pb-4
@@ -49,18 +49,30 @@ block content
             div.row
               div.col.pt-3.pb-3
                 nav(aria-label="Page navigation")
-                  ul.pagination.justify-content-center
+                  ul.pagination.pagination-lg.justify-content-center
+                    if pageinfo.pageid > 2
+                      li.page-item
+                        a.page-link(href="/news?page=1", aria-label="First") 
+                          span(aria-hidden="true")
+                            i.fas.fa-step-backward
                     if pageinfo.pageid > 1
                       li.page-item
                         a.page-link(href="/news?page=" + (pageinfo.pageid-1), aria-label="Previous") 
-                          span(aria-hidden="true") &laquo;
-                    - for (var p = 1; p <= pageinfo.maxpage; p++)
-                      li.page-item
-                        a.page-link(href="/news?page=" + p)= p
+                          span(aria-hidden="true")
+                            i.fas.fa-backward
+                    li.page-item.disabled
+                      a.page-link(href="/news?page=" + pageinfo.pageid)= pageinfo.pageid
+                        span.sr-only (current)
                     if pageinfo.pageid < pageinfo.maxpage
                       li.page-item
                         a.page-link(href="/news?page=" + (pageinfo.pageid+1), aria-label="Next") 
-                          span(aria-hidden="true") &raquo;
+                          span(aria-hidden="true")
+                            i.fas.fa-forward
+                    if pageinfo.pageid < pageinfo.maxpage - 1
+                      li.page-item
+                        a.page-link(href="/news?page=" + pageinfo.maxpage, aria-label="Last") 
+                          span(aria-hidden="true")
+                            i.fas.fa-step-forward
   <!-- Part 2 End -->
 
 block footer-scripts

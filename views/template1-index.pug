@@ -86,10 +86,10 @@ mixin setTestimonialPartItems
 //- setNewsPartItems Declaration Begin
 mixin setNewsPartItems
   each npitem in newsPartInfo.part2data
-    div.col-lg-6.col-sm-12.pl-3.pr-3.pt-3.pl-sm-1.pr-sm-1.pt-sm-1
+    div.col-lg-6.col-sm-12.pl-1.pr-1
       div.card.border-0.custom-news-bgcolor
         div.card-body
-          a.custom-news-title-color(href=npitem.link, rel=npitem.headline)
+          a.custom-news-title-color(href=npitem.href, rel=npitem.headline)
             h4.card-title.custom-text-shadow-1px #{npitem.headline}
           ui.list-inline
             li.list-inline-item
@@ -124,8 +124,8 @@ block content
   <!-- About Part Begin -->
   if pageinfo.aboutpartvisible.toUpperCase() == 'TRUE'
     section(id="about")
-      div.container-fluid.bg-light
-        div.container.pt-5.pb-5
+      div.container-fluid.bg-light.pt-5.pb-5
+        div.container
           div.row.justify-content-center
             div.col.text-center.pt-3.pb-3
               h2.font-weight-bolder.custom-text-shadow-2px #{aboutpartinfo.part1title}
@@ -144,8 +144,8 @@ block content
   <!-- Timeline Part Begin -->
   if pageinfo.timelinepartvisible.toUpperCase() == 'TRUE'
     section(id="timeline")
-      div.container-fluid.custom-timeline-bgcolor
-        div.container-fluid.p-3
+      div.container-fluid.custom-timeline-bgcolor.pt-5.pb-5
+        div.container-fluid
           div.text-center.custom-text-shadow-3px
             span #{aboutpartinfo.part3subtitle}
             h3.font-weight-bolder #{aboutpartinfo.part3title}
@@ -162,8 +162,8 @@ block content
   <!-- Team Part Begin -->
   if pageinfo.teampartvisible.toUpperCase() == 'TRUE'
     section(id="team")
-      div.container-fluid.bg-light
-        div.container.pt-5.pb-5
+      div.container-fluid.bg-light.pt-5.pb-5
+        div.container
           div.text-center.custom-text-shadow-2px.pb-3
             h2.font-weight-bolder #{aboutpartinfo.part4title}
             p #{aboutpartinfo.part4subtitle}
@@ -174,39 +174,38 @@ block content
   <!-- News Part Begin -->
   if pageinfo.newspartvisible.toUpperCase() == 'TRUE'
     section(id="news")
-      div.container-fluid.custom-news-bgcolor
-        div.container.pt-5.pb-3
+      div.container-fluid.custom-news-bgcolor.pt-5.pb-5
+        div.container.p-0
           div.text-center.custom-text-shadow-2px.pb-3
             p= newsPartInfo.part2subtitle
             h2.font-weight-bolder= newsPartInfo.part2title
-          div.card-deck.pb-4
+          div.card-deck
             +setNewsPartItems
   <!-- News Part End -->
              
   <!-- Slider Part Begin -->
   if pageinfo.sliderpartvisible.toUpperCase() == 'TRUE'
     section(id="slider")
-      div.container-fluid.bg-white
-        div.container-fluid.pt-3.pb-3
-          div.container.pb-3
-            div.text-center.custom-text-shadow-2px.pb-3
-              p #{pageinfo.slidersubtitle}
-              h2.font-weight-bolder #{pageinfo.slidertitle}
-          div.slider-pro(id="bs-hot-slider")
-            div.sp-slides
-              each sditem in pageinfo.sliderdata
-                div.sp-slide
-                  a(href=sditem.href)
-                    img.sp-image.img-fluid(src=sditem.image)
-                    p.sp-caption!= sditem.caption
+      div.container-fluid.bg-white.pt-5.pb-5
+        div.container.p-0
+          div.text-center.custom-text-shadow-2px.pb-3
+            p #{pageinfo.slidersubtitle}
+            h2.font-weight-bolder #{pageinfo.slidertitle}
+        div.slider-pro(id="bs-hot-slider")
+          div.sp-slides
+            each sditem in pageinfo.sliderdata
+              div.sp-slide
+                a(href=sditem.href)
+                  img.sp-image.img-fluid(src=sditem.image)
+                  p.sp-caption!= sditem.caption
   <!-- Note: Need to add script part below the body -->
   <!-- Slider Part End -->
 
   <!-- Testimonial Part Begin -->
   if pageinfo.testimonialpartvisible.toUpperCase() == 'TRUE'
     section(id="testimonial")
-      div.container-fluid.custom-testimonial-height(style="background: url('" + aboutpartinfo.part5background + "')")
-        div.container.pt-5.pb-5
+      div.container-fluid.custom-testimonial-height.pt-5.pb-5(style="background: url('" + aboutpartinfo.part5background + "')")
+        div.container.p-0
           div.text-center.pb-3.text-dark.custom-text-shadow-white-1px
             h2.font-weight-bolder #{aboutpartinfo.part5title}
             p #{aboutpartinfo.part5subtitle}

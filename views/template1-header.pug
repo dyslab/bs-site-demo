@@ -34,7 +34,7 @@ mixin setNavItems
 //- setNavItems Declaration End
 
 <!-- Sticky Nav Bar Begin -->
-nav.navbar.sticky-top.navbar-expand-lg.navbar-light.bg-light.p-3
+nav.navbar.sticky-top.navbar-expand-lg.navbar-light.p-3.custom-white-transparency-95
   div.d-flex.container-fluid
     div.flex-row
       a.navbar-brand(href="/", alt="Homepage")
@@ -43,7 +43,7 @@ nav.navbar.sticky-top.navbar-expand-lg.navbar-light.bg-light.p-3
         span.custom-text-shadow-1px #{copyrightsiteInfo.sitename}
     button.navbar-toggler(type="button", data-toggle="collapse", data-target="#bs-navbarNav", aria-controls="bs-navbarNav", aria-expanded="false", aria-label="Toggle navigation")
       span.navbar-toggler-icon
-    div.flex-row-reverse.collapse.navbar-collapse.bg-light(id="bs-navbarNav")
+    div.flex-row-reverse.collapse.navbar-collapse(id="bs-navbarNav")
       ul.navbar-nav
         +setNavItems
         form.form-inline.mt-2.mt-md-0(action="/search", post="GET")

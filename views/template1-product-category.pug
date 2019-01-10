@@ -6,8 +6,8 @@ block content
   <!-- Part 1 Begin -->
   if pageinfo.part1visible.toUpperCase() == 'TRUE'
     section(id="part1")
-      div.container-fluid.custom-title-height(style="background: url('" + pageinfo.part1background + "')")
-        div.container.h-100.pt-md-5.pt-3.pb-3
+      div.container-fluid.custom-title-height.pt-5.pb-5(style="background: url('" + pageinfo.part1background + "')")
+        div.container
           div.row.justify-content-center.pt-md-5.pt-3
             div.col.text-center.text-light
               h1.font-weight-bolder.custom-text-shadow-2px #{pageinfo.part1title}
@@ -20,8 +20,8 @@ block content
   <!-- Part 2 Begin -->
   if pageinfo.part2visible.toUpperCase() == 'TRUE'
     section(id="part2")
-      div.container-fluid.bg-light
-        div.container.pt-5.pb-5
+      div.container-fluid.bg-light.pt-5.pb-5
+        div.container
           div.row.justify-content-center
             div.col.text-dark.text-center.pt-3.pb-3
               h4.font-weight-bold.custom-text-shadow-1px #{pageinfo.part2title}
@@ -40,8 +40,8 @@ block content
   <!-- Part 3 Begin -->
   if pageinfo.part3visible.toUpperCase() == 'TRUE'
     section(id="part3")
-      div.container-fluid.bg-light.pb-3
-        div.container.p-3
+      div.container-fluid.bg-light.pt-5.pb-5
+        div.container
           ul.list-unstyled.justify-content-end.row
             each p3item in pageinfo.part3data
               li

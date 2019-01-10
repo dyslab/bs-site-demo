@@ -1,10 +1,34 @@
 // news page data reader
 
+// read news details and return
+exports.getNewsDetailsInfo = function (newsid) {
+  var newsDetailsObj = {
+    pagetitle: 'NEWS DETAILS',
+    part1visible: 'true',
+    part1title: 'NEWS',
+    part1subtitle: 'NEWS SUBTITLE',
+    part1content: 'Check out the latest news and events about us below. Feel free to subscribe our monthly mail news and product information if you would like to know us more.',
+    part1background: '/imgs/template1-news-details-title-bg.jpg',
+    part2visible: 'true',
+    part2data: {
+      headline: 'TEST TITLE : First probe lands on moon\'s \'dark\' side',
+      faicon: 'far fa-newspaper',
+      date: '2019-1-4',
+      text: '<B>Breakthrough opens new page in historyof space exploration,</B> A new chapter opened in mankind\'s exploration of the moon on Thursday morning as the first probe to land on the moon\'s far side reached its destination after a 26-day journey. <br><br>The Chang\'e 4 lunar probe, representing China\'s latest step in lunar investigation, landed at 10:26 am at the Von Karman crater in the South Pole-Aitken basin and then sent back three photos of the landing site shot by cameras on the probe\'s lander, marking the world\'s first images taken on the surface of the far side.<br><br> One of the photos, published by the China National Space Administration, shows the place where Chang\'e 4\'s rover, which was named Yutu 2 on Thursday night, will be heading to explore and survey.<br><br> Thus began the first expedition to the side of the moon that faces away from the Earth.<br><br> It is meant to fulfill scientists\' long-held aspiration to closely observe the lesser known region.<br><br> Tidal forces on Earth slow the moon\'s rotation to the point that the same side always faces Earth.<br><br> Most of the far side is never visible from Earth.<br><br> While it has been extensively photographed by spacecraft, starting with a Soviet probe in 1959, no probe had ever made a soft landing there, so scientists had not been able to conduct surface-level observations and surveys of the region.<br><br> According to the China National Space Administration, Chang\'e 4\'s landing procedure started at 10:15 am, when it began its descent from an orbit 15 kilometers above the surface, following control signals from the Beijing Aerospace Control Center transmitted through China\'s Queqiao relay satellite.<br><br> The probe made position adjustments when it reached 6 to 8 kilometers above the moon.<br><br> The descent then paused at about 100 meters above the surface as the spacecraft analyzed the gradient of the preset landing site as well as any possible obstacles in order to avoid hazards.<br><br> After an exact landing area was determined, Chang\'e 4 resumed its descent at a slow velocity and finally touched down, the administration said in a statement. <p><figure class="figure"><img class="figure-img img-fluid rounded" src="/imgs/news-5c2e6213a310686029de4ab7.jpg"><figcaption class="figure-caption">The first closeup image ever taken of the far side’s surface, photographed by the lunar lander, shows the route planned for the rover. </figcaption></figure></p>XINHUA Shortly afterward, the probe unfolded its solar arrays and antennas and established a high-speed data link through Queqiao, it said. Wu Weiren, chief designer of China\'s lunar program, said in Beijing on Thursday after the landing that the descent and landing "were perfect". <br><br>He called the event "an important milestone for China\'s space exploration", adding that it has made a good start for future lunar exploration efforts. <br><br>With its investigation of the far side, particularly the Von Karman crater, the Chang\'e 4 mission will enable scientists to find out what they haven\'t known about the moon and deepen their knowledge of its early history and of the solar system. <br><br>Researchers also can use the far side\'s shield against Earth\'s interference to make clearer observations into deep space, scientists expect. Zhang He, executive director of the Chang\'e 4 program at the China Academy of Space Technology, said, "As there had been no probe on the far side before us, all scientific information obtained by the Chang\'e 4 will be new to the world." <br><br>Next, Chang\'e 4 will start testing and fine-tuning its equipment under control from the Beijing Aerospace Control Center and will wait for suitable conditions to release its rover, officials said. Chang\'e 4 was launched atop a Long March 3B carrier rocket on Dec 8 at the Xichang Satellite Launch Center in Sichuan province. <br><br>Developed by the China Academy of Space Technology, the probe has two parts: a lander and a rover. <br><br>It is the fourth lunar probe China has launched since the country\'s lunar program began in 2004.'
+    },
+    part2backtext: ' GO BACK '
+  }
+
+  newsDetailsObj.part1title += ' ' + newsid
+
+  return newsDetailsObj
+}
+
 // read page infomation and return
-exports.getPageInfo = function (pageid, getall) {
+exports.getNewsListInfo = function (pageid, getall) {
   var pageinfoObj = {
     pagetitle: 'NEWS',
-    newsperpage: 10,
+    newsperpage: 12,
     part1visible: 'true',
     part1title: 'NEWS',
     part1subtitle: '',
@@ -18,47 +42,43 @@ exports.getPageInfo = function (pageid, getall) {
       faicon: 'far fa-newspaper',
       date: '2018-11-3',
       shorttext: 'The delegations of China and the U.S. have stayed in close communication and have made plans to meet face-to-face in January...',
-      text: 'The delegations of China and the U.S. have stayed in close communication and have made plans to meet face-to-face in January...2008年12月26日，中国海军首批护航编队解缆起航，赴亚丁湾、索马里海域执行护航任务。回看过去10年间，中国海军护航亚丁湾的成效已经显现...2008年12月26日，中国海军首批护航编队解缆起航，赴亚丁湾、索马里海域执行护航任务。回看过去10年间，中国海军护航亚丁湾的成效已经显现...2008年12月26日，中国海军首批护航编队解缆起航，赴亚丁湾、索马里海域执行护航任务。回看过去10年间，中国海军护航亚丁湾的成效已经显现。'
+      href: '/news/details/2018110300'
     }, {
       headline: '中国海军非洲之角护航记事之一：10年护航显成效',
       faicon: 'fas fa-newspaper',
       date: '2018-12-16',
       shorttext: '2008年12月26日，中国海军首批护航编队解缆起航，赴亚丁湾、索马里海域执行护航任务。回看过去10年间，中国海军护航亚丁湾的成效已经显现...',
-      text: '2008年12月26日，中国海军首批护航编队解缆起航，赴亚丁湾、索马里海域执行护航任务。回看过去10年间，中国海军护航亚丁湾的成效已经显现...2008年12月26日，中国海军首批护航编队解缆起航，赴亚丁湾、索马里海域执行护航任务。回看过去10年间，中国海军护航亚丁湾的成效已经显现...2008年12月26日，中国海军首批护航编队解缆起航，赴亚丁湾、索马里海域执行护航任务。回看过去10年间，中国海军护航亚丁湾的成效已经显现...<br><br>2008年12月26日，中国海军首批护航编队解缆起航，赴亚丁湾、索马里海域执行护航任务。回看过去10年间，中国海军护航亚丁湾的成效已经显现...2008年12月26日，中国海军首批护航编队解缆起航，赴亚丁湾、索马里海域执行护航任务。回看过去10年间，中国海军护航亚丁湾的成效已经显现...2008年12月26日，中国海军首批护航编队解缆起航，赴亚丁湾、索马里海域执行护航任务。回看过去10年间，中国海军护航亚丁湾的成效已经显现...'
+      href: '/news/details/2018121600'
     }, {
       headline: '告别2018，人类群星远行时Condolence to the stars...',
       faicon: 'fas fa-newspaper',
       date: '2018-12-26',
       shorttext: '<b>星星沉落在海洋中央，一支支歌曲在我心中消亡。</b>——卡尔杜齐《离别》节选...创伤的世界与幻想的江湖...微小至纤维，无垠至宇宙...世界大爆炸...生活在别处...',
-      text: '<b>星星沉落在海洋中央，一支支歌曲在我心中消亡。</b>——卡尔杜齐《离别》节选...创伤的世界与幻想的江湖...微小至纤维，无垠至宇宙...世界大爆炸...生活在别处...Twenty-eight people were injured in Italy\'s Sicily on Wednesday in an earthquake triggered by the eruption of Mount Etna, Italian authorities said...<br>The inspiration just like a light bulb, always driving us creatively productive. This story comes from 2018...<br>灵感就像电灯泡。故事源于2018年...'
+      href: '/news/details/2018122600'
     }, {
       headline: '28 injured in Sicily in earthquake triggered by volcano eruption',
       faicon: 'far fa-newspaper',
       date: '2018-12-28',
       shorttext: 'Twenty-eight people were injured in Italy\'s Sicily on Wednesday in an earthquake triggered by the eruption of Mount Etna, Italian authorities said...',
-      text: 'Twenty-eight people were injured in Italy\'s Sicily on Wednesday in an earthquake triggered by the eruption of Mount Etna, Italian authorities said...<br>The inspiration just like a light bulb, always driving us creatively productive. This story comes from 2018...<br>灵感就像电灯泡。故事源于2018年...'
+      href: '/news/details/2018122820'
     }, {
       headline: 'First probe lands on moon\'s \'dark\' side',
       faicon: 'far fa-newspaper',
       date: '2019-1-4',
       shorttext: '<b>Breakthrough opens new page in historyof space exploration,</b><br><br> A new chapter opened in mankind\'s exploration of the moon on Thursday morning as the first probe to land on the moon\'s far side reached its destination after a 26-day journey...',
-      text: '<B>Breakthrough opens new page in historyof space exploration,</B> A new chapter opened in mankind\'s exploration of the moon on Thursday morning as the first probe to land on the moon\'s far side reached its destination after a 26-day journey. <br><br>The Chang\'e 4 lunar probe, representing China\'s latest step in lunar investigation, landed at 10:26 am at the Von Karman crater in the South Pole-Aitken basin and then sent back three photos of the landing site shot by cameras on the probe\'s lander, marking the world\'s first images taken on the surface of the far side.<br><br> One of the photos, published by the China National Space Administration, shows the place where Chang\'e 4\'s rover, which was named Yutu 2 on Thursday night, will be heading to explore and survey.<br><br> Thus began the first expedition to the side of the moon that faces away from the Earth.<br><br> It is meant to fulfill scientists\' long-held aspiration to closely observe the lesser known region.<br><br> Tidal forces on Earth slow the moon\'s rotation to the point that the same side always faces Earth.<br><br> Most of the far side is never visible from Earth.<br><br> While it has been extensively photographed by spacecraft, starting with a Soviet probe in 1959, no probe had ever made a soft landing there, so scientists had not been able to conduct surface-level observations and surveys of the region.<br><br> According to the China National Space Administration, Chang\'e 4\'s landing procedure started at 10:15 am, when it began its descent from an orbit 15 kilometers above the surface, following control signals from the Beijing Aerospace Control Center transmitted through China\'s Queqiao relay satellite.<br><br> The probe made position adjustments when it reached 6 to 8 kilometers above the moon.<br><br> The descent then paused at about 100 meters above the surface as the spacecraft analyzed the gradient of the preset landing site as well as any possible obstacles in order to avoid hazards.<br><br> After an exact landing area was determined, Chang\'e 4 resumed its descent at a slow velocity and finally touched down, the administration said in a statement. <br><img class="img-fluid" src="/imgs/news-5c2e6213a310686029de4ab7.jpg"><br><br><br>The first closeup image ever taken of the far side’s surface, photographed by the lunar lander, shows the route planned for the rover. <br><br>XINHUA Shortly afterward, the probe unfolded its solar arrays and antennas and established a high-speed data link through Queqiao, it said. Wu Weiren, chief designer of China\'s lunar program, said in Beijing on Thursday after the landing that the descent and landing "were perfect". <br><br>He called the event "an important milestone for China\'s space exploration", adding that it has made a good start for future lunar exploration efforts. <br><br>With its investigation of the far side, particularly the Von Karman crater, the Chang\'e 4 mission will enable scientists to find out what they haven\'t known about the moon and deepen their knowledge of its early history and of the solar system. <br><br>Researchers also can use the far side\'s shield against Earth\'s interference to make clearer observations into deep space, scientists expect. Zhang He, executive director of the Chang\'e 4 program at the China Academy of Space Technology, said, "As there had been no probe on the far side before us, all scientific information obtained by the Chang\'e 4 will be new to the world." <br><br>Next, Chang\'e 4 will start testing and fine-tuning its equipment under control from the Beijing Aerospace Control Center and will wait for suitable conditions to release its rover, officials said. Chang\'e 4 was launched atop a Long March 3B carrier rocket on Dec 8 at the Xichang Satellite Launch Center in Sichuan province. <br><br>Developed by the China Academy of Space Technology, the probe has two parts: a lander and a rover. <br><br>It is the fourth lunar probe China has launched since the country\'s lunar program began in 2004.'
+      href: '/news/details/2019010401'
+    }, {
+      headline: 'Xi, Kim hold talks, reaching important consensus',
+      faicon: 'far fa-newspaper',
+      date: '2019-1-11',
+      shorttext: 'The two leaders of China and DPRK had an in-depth exchange of views on bilateral relations and issues of common concern, and reached important consensus....',
+      href: '/news/details/2019011100'
     }]
   }
 
-  // set newsid for each news item.
-  for (var i = 0; i < pageinfoObj.part2data.length; i++) {
-    pageinfoObj.part2data[i].newsid = i // news id is zero-base
-    pageinfoObj.part2data[i].link = '/news/details?newsid=' + pageinfoObj.part2data[i].newsid
-  }
-
   // get the news count for each page.
-  var RecordsPerPage
-  if (pageinfoObj.newsperpage && pageinfoObj.newsperpage !== undefined) {
-    RecordsPerPage = pageinfoObj.newsperpage
-  } else {
-    RecordsPerPage = 30
-  }
+  var RecordsPerPage = 30
+  if (pageinfoObj.newsperpage && pageinfoObj.newsperpage > 0) RecordsPerPage = pageinfoObj.newsperpage
 
   if (!getall || getall === undefined) {
     // set return object's pageid, maxpage and the exact records for specific page by input patameter 'pageid'. maximum count per page is defined by 'RecordsPerPage'.
@@ -82,24 +102,11 @@ exports.getPageInfo = function (pageid, getall) {
 
 // read page infomation for index page and return
 exports.getPageInfoForIndex = function () {
-  var pageObj = this.getPageInfo(1)
+  var pageObj = this.getNewsListInfo(1)
 
   if (pageObj.part2data.length > 4) {
     pageObj.part2data = pageObj.part2data.slice(0, 4)
   }
 
   return pageObj
-}
-
-// read news details and return
-exports.getNewsDetails = function (newsid) {
-  var pageObj = this.getPageInfo(0, true) // get all news
-
-  if (newsid >= 0 && newsid < pageObj.part2data.length) {
-    pageObj.maxnewsid = pageObj.part2data.length
-    pageObj.currentnewsid = newsid
-    pageObj.part2data = pageObj.part2data.slice(newsid, newsid + 1)
-
-    return pageObj
-  }
 }

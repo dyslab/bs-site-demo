@@ -38,7 +38,7 @@ exports.getPageInfo = function () {
     }, {
       faicon: 'fab  fa-apple',
       faicontitle: 'Apple',
-      faiconcontent: 'The Apple without Steve Jobs is no longer Apple. We are not the Apple fans whereas the creator of Apple is worth to be esteemed.<br>没有了乔布斯的苹果不再是苹果。'
+      faiconcontent: 'The Apple without Steve Jobs is no longer Apple. We are not the Apple fans whereas the creator of Apple deserves to be esteemed.<br>没有了乔布斯的苹果不再是苹果。'
     }],
     part3visible: 'true',
     part3title: 'HISTORICAL EVENTS',

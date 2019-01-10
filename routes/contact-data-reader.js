@@ -24,7 +24,8 @@ exports.getPageInfo = function () {
         text: '010-12345699'
       }, {
         caption: 'EMAIL:',
-        text: '!mailto:image@unknow.company'
+        text: 'image@unknow.company',
+        link: 'mailto:image@unknow.company'
       }, {
         caption: 'WORK TIME:',
         text: 'Mon. - Sat. Local Time 9AM - 7PM'
@@ -44,7 +45,8 @@ exports.getPageInfo = function () {
         text: '021-12345699'
       }, {
         caption: 'EMAIL:',
-        text: '!mailto:image.sh@unknow.company'
+        text: 'image.sh@unknow.company',
+        link: 'mailto:image.sh@unknow.company'
       }, {
         caption: 'WORK TIME:',
         text: 'Mon. - Sat. Local Time 9AM - 7PM'
@@ -64,13 +66,15 @@ exports.getPageInfo = function () {
         text: '01-123-456-00'
       }, {
         caption: 'EMAIL:',
-        text: '!mailto:image.la@unknow.company'
+        text: 'image.la@unknow.company',
+        link: 'mailto:image.la@unknow.company'
       }, {
         caption: 'WORK TIME:',
         text: 'Mon. - Sat. Local Time 10AM - 8PM'
       }, {
         caption: 'WEBSITE:',
-        text: '!http://welcometo.imagination.us'
+        text: '<b>Imagenation US Inc.</b>',
+        link: 'http://www.xxxxxxxx.us'
       }],
       image: '/imgs/address-p3.jpg',
       imagelink: 'https://goo.gl/maps/1w32VkVhigD2'
@@ -87,7 +91,8 @@ exports.getPageInfo = function () {
         text: '0123-456-999'
       }, {
         caption: 'EMAIL:',
-        text: '!mailto:image.jp@unknow.company'
+        text: 'image.jp@unknow.company',
+        link: 'mailto:image.jp@unknow.company'
       }, {
         caption: 'WORK TIME:',
         text: 'Mon. - Sat. Local Time 9AM - 9PM'
