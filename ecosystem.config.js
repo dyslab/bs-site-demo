@@ -1,12 +1,16 @@
+/* eslint-disable */
 module.exports = {
   apps : [{
-    name: 'API',
-    script: 'app.js',
+    name: 'bs-site-demo',
+    script: './bin/www',
+    watch: true,
+    log_date_format: 'YYYY-MM-DD HH:mm:ssZ',
 
     // Options reference: https://pm2.io/doc/en/runtime/reference/ecosystem-file/
     args: 'one two',
     instances: 1,
     autorestart: true,
+    restart_delay: 1000,
     watch: false,
     max_memory_restart: '1G',
     env: {
