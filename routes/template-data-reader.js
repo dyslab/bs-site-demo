@@ -97,7 +97,7 @@ exports.getSubscribeInfo = function () {
     caption: 'SUBSCRIBE',
     holder: 'Email address',
     hint: 'Input your email here',
-    smalltips: 'Subsribe to our product monthly information. We\'ll never ever share your email with anyone else.',
+    smalltips: 'Your privacy information will be legally protected.',
     responsetitle: 'THANKS FOR YOUR SUBSCRIPTION',
     responsecontent: 'Your email address has been enrolled to our database successfully. We will keep your privacy and will never share your email address with others.',
     responsebuttoncaption: 'CLOSE'

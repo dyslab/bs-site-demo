@@ -47,6 +47,6 @@ nav.navbar.sticky-top.navbar-expand-lg.navbar-light.p-3.custom-white-transparenc
       ul.navbar-nav
         +setNavItems
         form.form-inline.mt-2.mt-md-0(action="/search", post="GET")
-          input.form-control.mr-sm-2(type="search", name="term", placeholder=searchInfo.holder, aria-label=searchInfo.caption)
-          button.btn.btn-outline-success.my-2.my-sm-0(type="submit") #{searchInfo.caption}
+          input.form-control.rounded-0.col-8(type="search", name="term", placeholder=searchInfo.holder, aria-label=searchInfo.caption)
+          button.btn.btn-success.rounded-0(type="submit") #{searchInfo.caption}
 <!-- Sticky Nav Bar End -->

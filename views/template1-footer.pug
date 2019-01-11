@@ -4,15 +4,14 @@ section(id="foot")
     div.container.pt-5.pb-5
       div.d-flex.justify-content-between.row
         div.col-lg-6.col-md-12.text-left.text-light.pb-3
-          h3.font-weight-bolder.custom-text-shadow-1px #{subscribeInfo.headline}
-          form.form-inline(action="#", id="subscribeForm", method="GET")
-            div.form-group.mb-2
-              input.form-control.rounded-0(type="email", name="subscribemail", id="subscribemail", aria-describedby="emailHelp", placeholder=subscribeInfo.holder, data-toggle="tooltip", data-placement="bottom", title=subscribeInfo.hint, required)
-              button.btn.rounded-0.btn-primary(type="submit") #{subscribeInfo.caption}
-            small.form-text.text-muted(id="emailHelp")!= subscribeInfo.smalltips
+          h5.font-weight-bolder.custom-text-shadow-1px #{subscribeInfo.headline}
+          form.form-inline.mt-2.mt-md-0(action="#", id="subscribeForm", method="GET")
+            input.form-control.rounded-0.col-7(type="email", name="subscribemail", id="subscribemail", aria-describedby="emailHelp", placeholder=subscribeInfo.holder, data-toggle="tooltip", data-placement="bottom", title=subscribeInfo.hint, required)
+            button.btn.rounded-0.btn-primary(type="submit") #{subscribeInfo.caption}
+          small.form-text.text-muted(id="emailHelp")!= subscribeInfo.smalltips
         div.col-lg-6.col-md-12.text-lg-right.text-md-left.text-light.custom-text-shadow-1px.pb-3
           div
-            h3.font-weight-bolder #{getintouchInfo.headline}
+            h5.font-weight-bolder #{getintouchInfo.headline}
           div.social_media
             ul.list-inline
               each gitem in getintouchInfo.data
