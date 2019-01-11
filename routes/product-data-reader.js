@@ -1,7 +1,9 @@
 // product page data reader
 
-// get product category list
-function getCatergoryList (categoryid, limitcount) {
+// get product category list by categoryid and limitcount
+//  categoryid: category id/name.
+//  limitcount: the quantity of return items. eg. 0,1,2,3,4... Note: 0 means unlimited.
+exports.getCatergoryList = function (categoryid, limitcount) {
   var catgoryListObj = [{
     image: '/imgs/products/product-prod001-t1.jpg',
     title: 'PROD001',
@@ -35,7 +37,7 @@ function getCatergoryList (categoryid, limitcount) {
   }, {
     image: '/imgs/products/product-prod010-t1.jpg',
     title: 'PROD010',
-    content: 'X-ray Sunglasses, Penetrate any barrier betwenn you and the target',
+    content: 'X-ray Sunglasses, Penetrate any barrier between you and the target',
     href: '/product/item/prod010'
   }, {
     image: '/imgs/products/product-cake001-t1.jpg',
@@ -84,7 +86,7 @@ exports.getCategoryPageInfo = function (categoryid) {
   }
 
   pageinfoObj.part2title = categoryid.toUpperCase()
-  pageinfoObj.part2data = getCatergoryList(categoryid, pageinfoObj.part2count)
+  pageinfoObj.part2data = this.getCatergoryList(categoryid, pageinfoObj.part2count)
 
   return pageinfoObj
 }
@@ -102,18 +104,18 @@ exports.getAllPageInfo = function () {
     part2data: [{
       id: 'cat1',
       title: 'CAT1 - category 1',
-      count: 0, // the quantity of visible items. eg. 0:unlimited, the number greater than 0 is the count of visible items.
+      count: 0, // the quantity of visible items. eg. 0: unlimited, the number greater than 0 is the count of visible items.
       data: []
     }, {
       id: 'cat2',
       title: 'CAT2 - category 2',
-      count: 4, // the quantity of visible items. eg. 0:unlimited, the number greater than 0 is the count of visible items.
+      count: 4, // the quantity of visible items. eg. 0: unlimited, the number greater than 0 is the count of visible items.
       data: []
     }]
   }
 
   for (var i = 0; i < pageinfoObj.part2data.length; i++) {
-    pageinfoObj.part2data[i].data = getCatergoryList(
+    pageinfoObj.part2data[i].data = this.getCatergoryList(
       pageinfoObj.part2data[i].id.toLocaleLowerCase(),
       pageinfoObj.part2data[i].count
     )

@@ -269,3 +269,35 @@
   -webkit-filter: grayscale(0%);
   opacity: 1;
 }
+
+/*-----------------------------------------------------------------------------------------
+  For search pages.
+-----------------------------------------------------------------------------------------*/
+.custom-search-term { 
+  background: yellow
+}
+
+.custom-search-result-title { 
+  font-size: 110%
+}
+.custom-search-result-text { 
+  font-size: 100%
+}
+
+.custom-search-link {
+  text-decoration: none;
+  color: #686868;
+}
+.custom-search-link:hover {
+  text-decoration: none;
+  color: #118324;
+}
+.custom-search-link:hover div {
+  background: white;
+}
+.custom-search-link:hover .custom-search-result-title {
+  text-shadow: 0px 0px 1px darkgray;
+  -webkit-text-shadow: 0px 0px 1px rgb(7, 5, 5);
+  -moz-text-shadow: 0px 0px 1px darkgray;
+  -ms-text-shadow: 0px 0px 1px darkgray;
+}

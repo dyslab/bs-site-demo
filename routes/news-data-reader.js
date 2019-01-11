@@ -1,6 +1,6 @@
 // news page data reader
 
-// read news details and return
+// read news details page information and return
 exports.getNewsDetailsInfo = function (newsid) {
   var newsDetailsObj = {
     pagetitle: 'NEWS DETAILS',
@@ -24,7 +24,7 @@ exports.getNewsDetailsInfo = function (newsid) {
   return newsDetailsObj
 }
 
-// read page infomation and return
+// read news list page infomation and return
 exports.getNewsListInfo = function (pageid, getall) {
   var pageinfoObj = {
     pagetitle: 'NEWS',
@@ -38,23 +38,17 @@ exports.getNewsListInfo = function (pageid, getall) {
     part2title: 'LASTEST NEWS',
     part2subtitle: 'FOLLOW US',
     part2data: [{
-      headline: 'China, U.S. may meet in January for trade negotiation',
+      headline: 'Xi, Kim hold talks, reaching important consensus',
       faicon: 'far fa-newspaper',
-      date: '2018-11-3',
-      shorttext: 'The delegations of China and the U.S. have stayed in close communication and have made plans to meet face-to-face in January...',
-      href: '/news/details/2018110300'
+      date: '2019-1-11',
+      shorttext: 'The two leaders of China and DPRK had an in-depth exchange of views on bilateral relations and issues of common concern, and reached important consensus....',
+      href: '/news/details/2019011100'
     }, {
-      headline: '中国海军非洲之角护航记事之一：10年护航显成效',
-      faicon: 'fas fa-newspaper',
-      date: '2018-12-16',
-      shorttext: '2008年12月26日，中国海军首批护航编队解缆起航，赴亚丁湾、索马里海域执行护航任务。回看过去10年间，中国海军护航亚丁湾的成效已经显现...',
-      href: '/news/details/2018121600'
-    }, {
-      headline: '告别2018，人类群星远行时Condolence to the stars...',
-      faicon: 'fas fa-newspaper',
-      date: '2018-12-26',
-      shorttext: '<b>星星沉落在海洋中央，一支支歌曲在我心中消亡。</b>——卡尔杜齐《离别》节选...创伤的世界与幻想的江湖...微小至纤维，无垠至宇宙...世界大爆炸...生活在别处...',
-      href: '/news/details/2018122600'
+      headline: 'First probe lands on moon\'s \'dark\' side',
+      faicon: 'far fa-newspaper',
+      date: '2019-1-4',
+      shorttext: '<b>Breakthrough opens new page in historyof space exploration,</b><br> A new chapter opened in mankind\'s exploration of the moon on Thursday morning as the first probe to land on the moon\'s far side reached its destination after a 26-day journey...',
+      href: '/news/details/2019010401'
     }, {
       headline: '28 injured in Sicily in earthquake triggered by volcano eruption',
       faicon: 'far fa-newspaper',
@@ -62,25 +56,31 @@ exports.getNewsListInfo = function (pageid, getall) {
       shorttext: 'Twenty-eight people were injured in Italy\'s Sicily on Wednesday in an earthquake triggered by the eruption of Mount Etna, Italian authorities said...',
       href: '/news/details/2018122820'
     }, {
-      headline: 'First probe lands on moon\'s \'dark\' side',
-      faicon: 'far fa-newspaper',
-      date: '2019-1-4',
-      shorttext: '<b>Breakthrough opens new page in historyof space exploration,</b><br><br> A new chapter opened in mankind\'s exploration of the moon on Thursday morning as the first probe to land on the moon\'s far side reached its destination after a 26-day journey...',
-      href: '/news/details/2019010401'
+      headline: '告别2018，人类群星远行时Condolence to the stars...',
+      faicon: 'fas fa-newspaper',
+      date: '2018-12-26',
+      shorttext: '<b>星星沉落在海洋中央，一支支歌曲在我心中消亡。</b>——卡尔杜齐《离别》节选...创伤的世界与幻想的江湖...微小至纤维，无垠至宇宙...世界大爆炸...生活在别处...',
+      href: '/news/details/2018122600'
     }, {
-      headline: 'Xi, Kim hold talks, reaching important consensus',
+      headline: '中国海军非洲之角护航记事之一：10年护航显成效',
+      faicon: 'fas fa-newspaper',
+      date: '2018-12-16',
+      shorttext: '2008年12月16日，中国海军首批护航编队解缆起航，赴亚丁湾、索马里海域执行护航任务。回看过去10年间，中国海军护航亚丁湾的成效已经显现...',
+      href: '/news/details/2018121600'
+    }, {
+      headline: 'China, U.S. may meet in January for trade negotiation',
       faicon: 'far fa-newspaper',
-      date: '2019-1-11',
-      shorttext: 'The two leaders of China and DPRK had an in-depth exchange of views on bilateral relations and issues of common concern, and reached important consensus....',
-      href: '/news/details/2019011100'
+      date: '2018-9-13',
+      shorttext: 'The delegations of China and the U.S. have stayed in close communication and have made plans to meet face-to-face in January...',
+      href: '/news/details/2018091300'
     }]
   }
 
-  // get the news count for each page.
-  var RecordsPerPage = 30
-  if (pageinfoObj.newsperpage && pageinfoObj.newsperpage > 0) RecordsPerPage = pageinfoObj.newsperpage
-
   if (!getall || getall === undefined) {
+    // get the news count for each page.
+    var RecordsPerPage = 30
+    if (pageinfoObj.newsperpage && pageinfoObj.newsperpage > 0) RecordsPerPage = pageinfoObj.newsperpage
+
     // set return object's pageid, maxpage and the exact records for specific page by input patameter 'pageid'. maximum count per page is defined by 'RecordsPerPage'.
     pageinfoObj.pageid = pageid
     if (pageinfoObj.part2data.length > RecordsPerPage) {
@@ -92,9 +92,6 @@ exports.getNewsListInfo = function (pageid, getall) {
     } else {
       pageinfoObj.maxpage = 1
     }
-
-    // reverse to sort news from new to old.
-    pageinfoObj.part2data.reverse()
   }
 
   return pageinfoObj

@@ -10,11 +10,6 @@ exports.isFileMode = function () {
   return true
 }
 
-// return true value if it is using sqlite3 db to read and save data currently. or else return false.
-exports.isSQLiteMode = function () {
-  return false
-}
-
 // return true value if it is using file system to read and save data currently. or else return false.
 exports.getLanguageID = function () {
   return 'en'
