@@ -5,7 +5,7 @@ var ProductDataReader = require('./product-data-reader')
 const SearchTextSperator = '#|#'
 
 function searchNews (term) {
-  var nlpageobj = NewsDataReader.getNewsListInfo(0, true)
+  var nlpageobj = NewsDataReader.getNewsListPageInfo(0, true)
 
   var termreg = new RegExp(term, 'i')
   var returnList = []
@@ -72,7 +72,7 @@ function getSearchResultObj (term, fieldname) {
 }
 
 // read page infomation and return
-exports.getPageInfo = function (term) {
+exports.getPageInfo = function (term, langid, datamode) {
   var pageinfoObj = {
     pagetitle: 'SEARCH',
     part1visible: 'true',
@@ -85,9 +85,12 @@ exports.getPageInfo = function (term) {
     part2data: [],
     searchfields: [ '/product/category/cat1', '/product/category/cat2', '/news' ],
     resultcount: 50, // return results limited count. eg. 0,10,20,30.... 0 means unlimited.
-    noresulttext: 'Sorry, there\'s no matched item found.'
+    resulttipsprefix: 'Totally ',
+    resulttipssuffix: ' records found.',
+    noresulttips: 'Sorry, there\'s no matched record found.'
   }
 
+  // get search result
   pageinfoObj.part2title += '"' + term + '"'
   for (var i = 0; i < pageinfoObj.searchfields.length; i++) {
     var tmpListObj = getSearchResultObj(term, pageinfoObj.searchfields[i])
@@ -98,6 +101,13 @@ exports.getPageInfo = function (term) {
       }
       if (pageinfoObj.part2data.length >= pageinfoObj.resultcount) break
     }
+  }
+
+  // set result tips
+  if (pageinfoObj.part2data && pageinfoObj.part2data.length > 0) {
+    pageinfoObj.resulttips = pageinfoObj.resulttipsprefix + pageinfoObj.part2data.length + pageinfoObj.resulttipssuffix
+  } else {
+    pageinfoObj.resulttips = pageinfoObj.noresulttips
   }
 
   return pageinfoObj

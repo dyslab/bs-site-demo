@@ -1,7 +1,7 @@
 // about page data reader
 
 // read page infomation and return
-exports.getPageInfo = function () {
+exports.getPageInfo = function (langid, datamode) {
   var pageinfoObj = {
     pagetitle: 'ABOUT US',
     part1visible: 'true',
@@ -164,8 +164,8 @@ exports.getPageInfo = function () {
 }
 
 // read page infomation for index page and return
-exports.getPageInfoForIndex = function () {
-  var pageObj = this.getPageInfo()
+exports.getPageInfoForIndex = function (langid, datamode) {
+  var pageObj = this.getPageInfo(langid, datamode)
 
   if (pageObj.part2data.length > 4) {
     pageObj.part2data = pageObj.part2data.slice(0, 4)

@@ -1,0 +1,67 @@
+{
+  "pagetitle": "PRODUCT",
+  "part1visible": "true",
+  "part1title": "PRODUCT",
+  "part1subtitle": "",
+  "part1content": "Welcome to check this out! We are just selling the blow-up-minding, innovative and creative products. Pick up your favorite items and take them back home...",
+  "part1background": "/imgs/template1-product-item-title-bg.jpg",
+  "part2visible": "true",
+  "part2title": "PRODUCT",
+  "part2images": [
+    "/imgs/products/product-v20-p1.png",
+    "/imgs/products/product-v20-p2.png",
+    "/imgs/products/product-v20-p3.jpg",
+    "/imgs/products/product-v20-p4.jpg"
+  ],
+  "part2lines": [
+    {
+      "caption": "Features:",
+      "text": "Kirin 980 Processor|4800 MPixels Camera|4000 mAh Battery|Super Charge"
+    },
+    {
+      "caption": "Services:",
+      "text": "Free Shipping|Free Return"
+    },
+    {
+      "caption": "Services:",
+      "text": "Free Shipping|Free Return"
+    },
+    {
+      "caption": "SKU:",
+      "text": "HUAWEI-V20"
+    },
+    {
+      "caption": "UPC/EAN:",
+      "text": "07629872545727<br>07629872545755"
+    },
+    {
+      "caption": "Color:",
+      "text": "Blue|Red|Black"
+    },
+    {
+      "caption": "Size:",
+      "text": "34/35/36/37/38/39/40/41 EU"
+    },
+    {
+      "caption": "Pattern:",
+      "text": "Double V Shape"
+    },
+    {
+      "caption": "Purchase:",
+      "text": "<b>Click here</b>",
+      "link": "/product/all/"
+    }
+  ],
+  "part3visible": "true",
+  "part3title": "PRODUCT DETAILS",
+  "part3images": [
+    "/imgs/products/product-v20-d1.jpg",
+    "/imgs/products/product-v20-d2.jpg",
+    "/imgs/products/product-v20-d3.jpg",
+    "/imgs/products/product-v20-d4.jpg",
+    "/imgs/products/product-v20-d5.jpg",
+    "/imgs/products/product-v20-d6.jpg",
+    "/imgs/products/product-v20-d7.jpg",
+    "/imgs/products/product-v20-d8.jpg"
+  ]
+}

@@ -25,19 +25,15 @@ block content
           div.row.justify-content-start
             div.col.text-dark.pt-3.pb-3
               h5.font-weight-bold.custom-text-shadow-1px #{pageinfo.part2title}
+              p.text-dark.font-italic!= pageinfo.resulttips
         div.container.w-100
-          if pageinfo.part2data.length > 0
-            each p2item in pageinfo.part2data
-              div.row.justify-content-start.pt-3.pb-3
-                a.custom-search-link.w-100(href=p2item.href)
-                  div.col.border.p-3
-                    span.custom-search-result-title!= p2item.title
-                    br
-                    span.custom-search-result-text!= p2item.text
-          else
-            div.row.justify-content-start
-              div.col.w-100.border.p-3
-                span.custom-search-result-title!= pageinfo.noresulttext
+          each p2item in pageinfo.part2data
+            div.row.justify-content-start.pt-3.pb-3
+              a.custom-search-link.w-100(href=p2item.href)
+                div.col.border.p-3
+                  span.custom-search-result-title!= p2item.title
+                  br
+                  span.custom-search-result-text!= p2item.text
 
   <!-- Part 2 End -->
 

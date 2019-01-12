@@ -1,7 +1,7 @@
 // contact page data reader
 
 // read page infomation and return
-exports.getPageInfo = function () {
+exports.getPageInfo = function (langid, datamode) {
   var pageinfoObj = {
     pagetitle: 'CONTACT US',
     part1visible: 'true',

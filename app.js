@@ -13,6 +13,8 @@ var newsRouter = require('./routes/news')
 var serviceRouter = require('./routes/service')
 var productRouter = require('./routes/product')
 var searchRouter = require('./routes/search')
+var outputjsondemoRouter = require('./routes/output-json-sample')
+var switchRouter = require('./routes/switch')
 
 var app = express()
 
@@ -38,6 +40,8 @@ app.use('/news', newsRouter)
 app.use('/service', serviceRouter)
 app.use('/product', productRouter)
 app.use('/search', searchRouter)
+app.use('/output-json-sample', outputjsondemoRouter)
+app.use('/switch', switchRouter)
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

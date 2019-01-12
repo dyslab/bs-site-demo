@@ -5,26 +5,20 @@ var TemplateDataReader = require('./template-data-reader')
 var IndexDataReader = require('./index-data-reader')
 var AboutDataReader = require('./about-data-reader')
 var NewsDataReader = require('./news-data-reader')
+var CookieHandler = require('./cookie-handler.js')
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
-  // index-data-reader
-  var copyrightsiteInfo = TemplateDataReader.getCopyrightSiteInfo()
-  var navMenu = TemplateDataReader.getNavMenu('/')
-  var searchInfo = TemplateDataReader.getSearchInfo()
-  var subscribeInfo = TemplateDataReader.getSubscribeInfo()
-  var getintouchInfo = TemplateDataReader.getGetInTouchInfo()
-  var pageInfo = IndexDataReader.getPageInfo()
-  var aboutPartInfo = AboutDataReader.getPageInfoForIndex()
-  var newsPartInfo = NewsDataReader.getPageInfoForIndex()
+  // read page info
+  var cookieObj = CookieHandler.getCookies(req)
+  var templatePageInfo = TemplateDataReader.getTemplatePageInfo('/', cookieObj)
+  var pageInfo = IndexDataReader.getPageInfo(templatePageInfo.language.currentid, templatePageInfo.datamode)
+  var aboutPartInfo = AboutDataReader.getPageInfoForIndex(templatePageInfo.language.currentid, templatePageInfo.datamode)
+  var newsPartInfo = NewsDataReader.getPageInfoForIndex(templatePageInfo.language.currentid, templatePageInfo.datamode)
 
   // index page render
-  res.render('template' + TemplateDataReader.getTemplateID() + '-index', {
-    copyrightsiteInfo: copyrightsiteInfo,
-    navMenu: navMenu,
-    searchInfo: searchInfo,
-    subscribeInfo: subscribeInfo,
-    getintouchInfo: getintouchInfo,
+  res.render('template' + templatePageInfo.templateID + '-index', {
+    templatepageinfo: templatePageInfo,
     pageinfo: pageInfo,
     aboutpartinfo: aboutPartInfo,
     newsPartInfo: newsPartInfo

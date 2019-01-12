@@ -1,7 +1,7 @@
 // service page data reader
 
 // read page infomation and return
-exports.getPageInfo = function (serviceid) {
+exports.getPageInfo = function (serviceid, langid, datamode) {
   var pageinfoObj = {
     pagetitle: 'SERVICES',
     part1visible: 'true',
@@ -26,8 +26,8 @@ exports.getPageInfo = function (serviceid) {
     }, {
       image: '/imgs/template1-service-privilege4.png',
       title: 'Free Shipping',
-      content: 'We offer free shipping service for customers. Consult the front counter for further details please.',
-      linktext: 'Work time: Mon-Sun. 12:00 - 20:00 GST',
+      content: 'We offer free shipping service for customers. Consult the front counter for further details please.<p><I>Work time: Mon-Sun. 12:00 - 20:00 GST</I></p>',
+      linktext: '',
       href: '#'
     }, {
       image: '/imgs/template1-service-privilege5.png',

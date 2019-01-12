@@ -36,14 +36,14 @@ block content
   <!-- Part 2 Begin -->
   if pageinfo.part2visible.toUpperCase() == 'TRUE'
     section(id="part2")
-      div.container-fluid.custom-news-bgcolor.pt-5.pb-5
-        div.container
+      div.container-fluid.custom-news-bgcolor.p-0.p-md-3
+        div.container.pt-5.pb-5
           div.row.justify-content-center
             div.col.text-dark.text-center.pt-3.pb-3
               h3.font-weight-bold.custom-text-shadow-1px #{pageinfo.part2title}
           div.row.justify-content-center
-            div.col.pt-3.pb-3
-              div.card-deck.pb-4
+            div.col
+              div.card-deck
                 +setPart2Items
           if pageinfo.maxpage > 1             
             div.row

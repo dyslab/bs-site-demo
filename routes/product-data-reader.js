@@ -54,7 +54,7 @@ exports.getCatergoryList = function (categoryid, limitcount) {
 }
 
 // read category list page infomation and return
-exports.getCategoryPageInfo = function (categoryid) {
+exports.getCategoryPageInfo = function (categoryid, langid, datamode) {
   var pageinfoObj = {
     pagetitle: 'PRODUCT CATALOG',
     part1visible: 'true',
@@ -92,7 +92,7 @@ exports.getCategoryPageInfo = function (categoryid) {
 }
 
 // read all category list infomation and return
-exports.getAllPageInfo = function () {
+exports.getAllPageInfo = function (langid, datamode) {
   var pageinfoObj = {
     pagetitle: 'ALL PRODUCTS',
     part1visible: 'true',
@@ -125,7 +125,7 @@ exports.getAllPageInfo = function () {
 }
 
 // read item infomation and return
-exports.getItemPageInfo = function (productid) {
+exports.getItemPageInfo = function (productid, langid, datamode) {
   var pageinfoObj = {
     pagetitle: 'PRODUCT',
     part1visible: 'true',

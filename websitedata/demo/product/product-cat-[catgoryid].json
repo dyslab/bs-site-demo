@@ -1,0 +1,34 @@
+{
+  "pagetitle": "PRODUCT CATALOG",
+  "part1visible": "true",
+  "part1title": "OUR AMAZING PRODUCTS",
+  "part1subtitle": "CHECK OUT NOW",
+  "part1content": "Welcome to the products page, Pick up your favorite items and take them back home...Welcome to the products page, Pick up your favorite items and take them back home...Welcome to the products page, Pick up your favorite items and take them back home...<br>Welcome to the products page, Pick up your favorite items and take them back home...Welcome to the products page, Pick up your favorite items and take them back home...",
+  "part1background": "/imgs/template1-product-title-bg.jpg",
+  "part2visible": "true",
+  "part2title": "CATEGORY",
+  "part2count": 20,
+  "part3visible": "true",
+  "part3data": [
+    {
+      "image": "/imgs/products/product-cat-link-formore.png",
+      "href": ""
+    },
+    {
+      "image": "/imgs/products/product-cat-link-hot.png",
+      "href": "/product/category/hotsale"
+    },
+    {
+      "image": "/imgs/products/product-cat-link-cat1.png",
+      "href": "/product/category/cat1"
+    },
+    {
+      "image": "/imgs/products/product-cat-link-cat2.png",
+      "href": "/product/category/cat2"
+    },
+    {
+      "image": "/imgs/products/product-cat-link-all.png",
+      "href": "/product/all/"
+    }
+  ]
+}

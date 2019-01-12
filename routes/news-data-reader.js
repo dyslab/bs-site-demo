@@ -1,7 +1,7 @@
 // news page data reader
 
 // read news details page information and return
-exports.getNewsDetailsInfo = function (newsid) {
+exports.getNewsDetailsPageInfo = function (newsid, langid, datamode) {
   var newsDetailsObj = {
     pagetitle: 'NEWS DETAILS',
     part1visible: 'true',
@@ -25,7 +25,7 @@ exports.getNewsDetailsInfo = function (newsid) {
 }
 
 // read news list page infomation and return
-exports.getNewsListInfo = function (pageid, getall) {
+exports.getNewsListPageInfo = function (pageid, getall, langid, datamode) {
   var pageinfoObj = {
     pagetitle: 'NEWS',
     newsperpage: 12,
@@ -98,8 +98,8 @@ exports.getNewsListInfo = function (pageid, getall) {
 }
 
 // read page infomation for index page and return
-exports.getPageInfoForIndex = function () {
-  var pageObj = this.getNewsListInfo(1)
+exports.getPageInfoForIndex = function (langid, datamode) {
+  var pageObj = this.getNewsListPageInfo(1, false, langid, datamode)
 
   if (pageObj.part2data.length > 4) {
     pageObj.part2data = pageObj.part2data.slice(0, 4)

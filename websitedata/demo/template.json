@@ -1,0 +1,127 @@
+{
+  "siteinfo": {
+    "headersitelogo": "/imgs/bootstrap-solid.svg",
+    "headersitename": "BS DEMO SITE",
+    "footersitelogo": "/imgs/bootstrap-solid.svg",
+    "footersitename": "Bootstrap Demostration Website",
+    "copyrightprefix": "Copyright",
+    "copyrightsuffix": "All rights reserved."
+  },
+  "templateID": "1",
+  "datamode": "file",
+  "language": {
+    "currentid": "en",
+    "list": [
+      {
+        "caption": "中文",
+        "id": "cn"
+      },
+      {
+        "caption": "ENG",
+        "id": "en"
+      }
+    ]
+  },
+  "navmenu": [
+    {
+      "name": "HOME",
+      "href": "/",
+      "submenu": []
+    },
+    {
+      "name": "ABOUT",
+      "href": "/about",
+      "submenu": []
+    },
+    {
+      "name": "PRODUCTS",
+      "href": "#",
+      "submenu": [
+        {
+          "name": "HOTSALE PRODUCTS",
+          "href": "/product/category/hotsale"
+        },
+        {
+          "name": "PRODUCT CATEGORY 1",
+          "href": "/product/category/cat1"
+        },
+        {
+          "name": "PRODUCT CATEGORY 2",
+          "href": "/product/category/cat2"
+        },
+        {
+          "name": "---",
+          "href": "#"
+        },
+        {
+          "name": "ALL PRODUCTS",
+          "href": "/product/all/"
+        }
+      ]
+    },
+    {
+      "name": "SERVICES",
+      "href": "#",
+      "submenu": [
+        {
+          "name": "CUSTOMER SERVICE",
+          "href": "/service/customer"
+        },
+        {
+          "name": "DISTRIBUTOR SERVICE",
+          "href": "/service/distributor"
+        }
+      ]
+    },
+    {
+      "name": "NEWS",
+      "href": "/news",
+      "submenu": []
+    },
+    {
+      "name": "CONTACT",
+      "href": "/contact",
+      "submenu": []
+    }
+  ],
+  "searchinfo": {
+    "caption": "SEARCH",
+    "holder": "Search term",
+    "hint": "Input yout search term here"
+  },
+  "subscribeinfo": {
+    "headline": "SUBSCRIBE TO US",
+    "caption": "SUBSCRIBE",
+    "holder": "Email address",
+    "hint": "Input your email here",
+    "smalltips": "Your privacy information will be legally protected.",
+    "responsetitle": "THANKS FOR YOUR SUBSCRIPTION",
+    "responsecontent": "Your email address has been enrolled to our database successfully. We will keep your privacy and will never share your email address with others.",
+    "responsebuttoncaption": "CLOSE"
+  },
+  "getintouchinfo": {
+    "headline": "GET IN TOUCH WITH US",
+    "data": [
+      {
+        "faicon": "fab fa-facebook-f",
+        "href": "/news",
+        "ref": "Facebook Link"
+      },
+      {
+        "faicon": "fab fa-qq",
+        "href": "/contact",
+        "ref": "QQ Link"
+      },
+      {
+        "faicon": "fab fa-weixin",
+        "href": "/about",
+        "ref": "Wechat Link"
+      },
+      {
+        "faicon": "fas fa-envelope",
+        "href": "mailto:email@unknown.company",
+        "ref": "Email Link"
+      }
+    ]
+  }
+}

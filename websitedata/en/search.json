@@ -1,0 +1,20 @@
+{
+  "pagetitle": "SEARCH",
+  "part1visible": "true",
+  "part1title": "SEARCH RESULTS",
+  "part1subtitle": "CHECK OUT BELOW",
+  "part1content": "Thank you for being here! Search our products and news as you wish. You're able to check out anything here via the links below...",
+  "part1background": "/imgs/template1-search-title-bg.jpg",
+  "part2visible": "true",
+  "part2title": "Search Term: ",
+  "part2data": [],
+  "searchfields": [
+    "/product/category/cat1",
+    "/product/category/cat2",
+    "/news"
+  ],
+  "resultcount": 50,
+  "resulttipsprefix": "Totally ",
+  "resulttipssuffix": " records found.",
+  "noresulttips": "Sorry, there's no matched record found."
+}

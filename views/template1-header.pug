@@ -1,6 +1,6 @@
 //- setNavItems Declaration Begin
 mixin setNavItems
-  each menuitem, index in navMenu
+  each menuitem, index in templatepageinfo.navmenu
     if menuitem.submenu.length > 0
       if menuitem.active
         li.nav-item.active
@@ -37,16 +37,16 @@ mixin setNavItems
 nav.navbar.sticky-top.navbar-expand-lg.navbar-light.p-3.custom-white-transparency-95
   div.d-flex.container-fluid
     div.flex-row
-      a.navbar-brand(href="/", alt="Homepage")
-        img.d-inline-block.align-top(src="/imgs/bootstrap-solid.svg", width="30", height="30", alt=copyrightsiteInfo.sitename)
+      a.navbar-brand(href="/", alt=templatepageinfo.siteinfo.headersitename)
+        img.d-inline-block.align-top(src=templatepageinfo.siteinfo.headersitelogo, height="30", alt=templatepageinfo.siteinfo.headersitename)
         |  
-        span.custom-text-shadow-1px #{copyrightsiteInfo.sitename}
+        span.custom-text-shadow-1px #{templatepageinfo.siteinfo.headersitename}
     button.navbar-toggler(type="button", data-toggle="collapse", data-target="#bs-navbarNav", aria-controls="bs-navbarNav", aria-expanded="false", aria-label="Toggle navigation")
       span.navbar-toggler-icon
     div.flex-row-reverse.collapse.navbar-collapse(id="bs-navbarNav")
       ul.navbar-nav
         +setNavItems
         form.form-inline.mt-2.mt-md-0(action="/search", post="GET")
-          input.form-control.rounded-0.col-8(type="search", name="term", placeholder=searchInfo.holder, aria-label=searchInfo.caption)
-          button.btn.btn-success.rounded-0(type="submit") #{searchInfo.caption}
+          input.form-control.rounded-0.col-8(type="search", name="term", placeholder=templatepageinfo.searchinfo.holder, aria-label=templatepageinfo.searchinfo.caption)
+          button.btn.btn-success.rounded-0(type="submit") #{templatepageinfo.searchinfo.caption}
 <!-- Sticky Nav Bar End -->

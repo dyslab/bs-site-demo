@@ -95,7 +95,7 @@
 }
 
 /*-----------------------------------------------------------------------------------------
-  For index page.
+  For index/header/footer page.
 -----------------------------------------------------------------------------------------*/
 .costom-text-darkgray {
   color: darkgray
@@ -133,6 +133,16 @@
 .custom-footer-brand:hover {
   text-decoration: none;
   color: white;
+}
+
+.custom-footer-lang {
+  font-size: 1.2em;
+  color: white
+}
+a.custom-footer-lang:hover {
+  text-decoration: none;
+  font-size: 1.2em;
+  color: #ffee00
 }
 
 /*-----------------------------------------------------------------------------------------

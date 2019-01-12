@@ -3,24 +3,19 @@ var router = express.Router()
 
 var TemplateDataReader = require('./template-data-reader')
 var SearchDataReader = require('./search-data-reader')
+var CookieHandler = require('./cookie-handler.js')
 
 /* GET search page. */
 router.get('/', function (req, res, next) {
-  // search-data-reader
-  var copyrightsiteInfo = TemplateDataReader.getCopyrightSiteInfo()
-  var navMenu = TemplateDataReader.getNavMenu('/search')
-  var searchInfo = TemplateDataReader.getSearchInfo()
-  var subscribeInfo = TemplateDataReader.getSubscribeInfo()
-  var getintouchInfo = TemplateDataReader.getGetInTouchInfo()
-  var pageInfo = SearchDataReader.getPageInfo(req.query.term)
+  // read page info
+  var cookieObj = CookieHandler.getCookies(req)
+  var templatePageInfo = TemplateDataReader.getTemplatePageInfo('/search', cookieObj)
+  var pageInfo = SearchDataReader.getPageInfo(req.query.term,
+    templatePageInfo.language.currentid, templatePageInfo.datamode)
 
   // search page render
-  res.render('template' + TemplateDataReader.getTemplateID() + '-search', {
-    copyrightsiteInfo: copyrightsiteInfo,
-    navMenu: navMenu,
-    searchInfo: searchInfo,
-    subscribeInfo: subscribeInfo,
-    getintouchInfo: getintouchInfo,
+  res.render('template' + templatePageInfo.templateID + '-search', {
+    templatepageinfo: templatePageInfo,
     pageinfo: pageInfo
   })
 })
