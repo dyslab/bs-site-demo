@@ -25,10 +25,62 @@
 //
 // -------------------------------------------------------------------------------------------------------------------------------------
 var fs = require('fs')
+var fsPromises = require('fs').promises
 var path = require('path')
 
 const BaseFilePath = path.join(__dirname, '../websitedata')
 const FeedbackFilePath = path.join(BaseFilePath, 'feedback')
+
+// read JSON file path and return JSON object
+exports.getObjectFromJSONFile = function (entrypoint, type, id) {
+  var fpath = getJSONFullFilePath(entrypoint, type, id)
+
+  if (id && id !== undefined) console.log(fpath)
+  if (fs.existsSync(fpath)) {
+    return JSON.parse(fs.readFileSync(fpath, { encoding: 'utf8' }))
+  } else {
+    return undefined
+  }
+}
+
+// async read JSON file path and return JSON object
+exports.asyncGetObjectFromJSONFile = async function (entrypoint, type, id) {
+  var fpath = getJSONFullFilePath(entrypoint, type, id)
+
+  console.log('Experimental Test: You\'re asynchronously reading data from: ' + fpath)
+  if (fs.existsSync(fpath)) {
+    var retObjString = await fsPromises.readFile(fpath, { encoding: 'utf8' }).catch((err) => {
+      console.log(err)
+    })
+    return JSON.parse(retObjString)
+  } else {
+    return undefined
+  }
+}
+
+// get full JSON file path.
+function getJSONFullFilePath (entrypoint, type, id) {
+  const jsonFileList = {
+    template: '/template.json',
+    index: '/index.json',
+    about: '/about.json',
+    contact: '/contact.json',
+    search: '/search.json',
+    product_all: '/product/product-all.json',
+    product_cat: '/product/product-cat-[id].json',
+    product_item: '/product/product-item-[id].json',
+    service_id: '/service/service-[id].json',
+    news_list: '/news/news-list.json',
+    news_details: '/news/news-details-[id].json'
+  }
+
+  var retpath = BaseFilePath
+  if (entrypoint && entrypoint !== undefined) retpath = path.join(retpath, '/' + entrypoint)
+  if (type && type !== undefined) retpath = path.join(retpath, jsonFileList[type])
+  if (id && id !== undefined) retpath = retpath.replace(/\[id\]/i, id)
+
+  return retpath
+}
 
 // Format date string like '20180203','2018-12-19', '2018/12/19'...
 function formatDate2yyyyMMdd (dateobj, speratechar) {
@@ -86,6 +138,7 @@ exports.outputSampleJSONFiles = function () {
   // output template.json
   jsonObj = TemplateDataReader.getTemplatePageInfo('/')
   // remove auto generated nodes.
+  delete jsonObj.datamode
   delete jsonObj.siteinfo.copyright
   for (var i = 0; i <= jsonObj.navmenu.length - 1; i++) {
     delete jsonObj.navmenu[i].active

@@ -1,0 +1,143 @@
+{
+  "pagetitle": "联系我们",
+  "part1visible": "true",
+  "part1title": "联系我们",
+  "part1subtitle": "我们很高兴为你服务",
+  "part1content": "如果你想了解更多我们的产品信息，请不要犹豫，随时与我们联系。你可以通过社交联系方式、在工作时间内联系我们的总部及分公司与我们取得联系, 或者通过填写下面的表格发表你对我们产品的看法和意见。",
+  "part1background": "/imgs/template1-contact-title-bg.jpg",
+  "part2visible": "true",
+  "part2title": "总部 / 分公司",
+  "part2data": [
+    {
+      "title": "中国想象力公司",
+      "lines": [
+        {
+          "caption": "地址:",
+          "text": "北京海淀区王府井大街9999号想象力大厦8层"
+        },
+        {
+          "caption": "电话:",
+          "text": "010-12345688<br>400-100-8888 (中国客户服务热线)"
+        },
+        {
+          "caption": "传真:",
+          "text": "010-12345699"
+        },
+        {
+          "caption": "电邮:",
+          "text": "image@unknow.company",
+          "link": "mailto:image@unknow.company"
+        },
+        {
+          "caption": "工作时间:",
+          "text": "周一至周六 北京时间9点至19点"
+        }
+      ],
+      "image": "/imgs/address-p1.jpg",
+      "imagelink": "http://map.baidu.com/?newmap=1&shareurl=1&l=19&tn=B_NORMAL_MAP&hb=B_SATELLITE_STREET&c=12959653,4826605&mapShareId=c3c410057b19e457eaf853b4"
+    },
+    {
+      "title": "上海分公司",
+      "lines": [
+        {
+          "caption": "地址:",
+          "text": "上海黄浦区南京路99号固特维尔大厦18层"
+        },
+        {
+          "caption": "电话:",
+          "text": "021-12345688<br>400-100-8888 (中国客户服务热线)"
+        },
+        {
+          "caption": "传真:",
+          "text": "021-12345699"
+        },
+        {
+          "caption": "电邮:",
+          "text": "image.sh@unknow.company",
+          "link": "mailto:image.sh@unknow.company"
+        },
+        {
+          "caption": "工作时间:",
+          "text": "周一至周六 北京时间9点至19点"
+        }
+      ],
+      "image": "/imgs/address-p2.jpg",
+      "imagelink": "http://map.baidu.com/?newmap=1&shareurl=1&l=16&tn=B_NORMAL_MAP&hb=B_SATELLITE_STREET&c=13525059,3641487&mapShareId=be91cb02ba85655ecae33cb5"
+    },
+    {
+      "title": "洛杉矶分公司",
+      "lines": [
+        {
+          "caption": "地址:",
+          "text": "No 2345, Vitoria St, Los Angeles, California 92999, US"
+        },
+        {
+          "caption": "电话:",
+          "text": "01-123-456-88"
+        },
+        {
+          "caption": "传真:",
+          "text": "01-123-456-00"
+        },
+        {
+          "caption": "电邮:",
+          "text": "image.la@unknow.company",
+          "link": "mailto:image.la@unknow.company"
+        },
+        {
+          "caption": "工作时间:",
+          "text": "Mon. - Sat. PST 10AM - 8PM"
+        },
+        {
+          "caption": "网址:",
+          "text": "<b>美国想象力.</b>",
+          "link": "http://www.xxxxxxxx.us"
+        }
+      ],
+      "image": "/imgs/address-p3.jpg",
+      "imagelink": "https://goo.gl/maps/1w32VkVhigD2"
+    },
+    {
+      "title": "东京分公司",
+      "lines": [
+        {
+          "caption": "ADDRESS:",
+          "text": "日本东京樱花大街345号"
+        },
+        {
+          "caption": "电话:",
+          "text": "0123-456-188"
+        },
+        {
+          "caption": "传真:",
+          "text": "0123-456-999"
+        },
+        {
+          "caption": "电邮:",
+          "text": "image.jp@unknow.company",
+          "link": "mailto:image.jp@unknow.company"
+        },
+        {
+          "caption": "工作时间:",
+          "text": "周一 - 周六. 东京时间 9AM - 9PM"
+        }
+      ],
+      "image": "/imgs/address-p4.jpg",
+      "imagelink": "https://goo.gl/maps/okGEXLEYbpB2"
+    }
+  ],
+  "part3visible": "true",
+  "part3title": "欢迎给我们留言",
+  "part3data": {
+    "namecaption": "姓名",
+    "nameholder": "怎么称呼你？",
+    "emailcaption": "电邮",
+    "emailholder": "电子邮件地址",
+    "messagecaption": "留言",
+    "messageholder": "请在此留言",
+    "submitcaption": "提交",
+    "responsetitle": "谢谢你的留言",
+    "responsecontent": "你的留言信息已经发送至我们的客户专员，关于你的咨询和疑问，我们会尽快给你回复。",
+    "responsebuttoncaption": "关闭窗口"
+  }
+}

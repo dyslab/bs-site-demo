@@ -1,14 +1,13 @@
 {
   "siteinfo": {
     "headersitelogo": "/imgs/bootstrap-solid.svg",
-    "headersitename": "BS DEMO SITE",
+    "headersitename": "BS DEMO WEBSITE",
     "footersitelogo": "/imgs/bootstrap-solid.svg",
-    "footersitename": "Bootstrap Demostration Website",
+    "footersitename": "Bootstrap Demonstration Website.",
     "copyrightprefix": "Copyright",
-    "copyrightsuffix": "All rights reserved."
+    "copyrightsuffix": " Powered by Node.js/JQuery/Bootstrap, All rights reserved."
   },
   "templateID": "1",
-  "datamode": "file",
   "language": {
     "currentid": "en",
     "list": [
@@ -26,11 +25,6 @@
     {
       "name": "HOME",
       "href": "/",
-      "submenu": []
-    },
-    {
-      "name": "ABOUT",
-      "href": "/about",
       "submenu": []
     },
     {
@@ -81,6 +75,11 @@
     {
       "name": "CONTACT",
       "href": "/contact",
+      "submenu": []
+    },
+    {
+      "name": "ABOUT",
+      "href": "/about",
       "submenu": []
     }
   ],

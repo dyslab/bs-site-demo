@@ -1,8 +1,8 @@
 // about page data reader
+var FileHandler = require('./file-handler.js')
 
-// read page infomation and return
-exports.getPageInfo = function (langid, datamode) {
-  var pageinfoObj = {
+function getDefaultPageInfo () {
+  var defaultPageInfoObj = {
     pagetitle: 'ABOUT US',
     part1visible: 'true',
     part1title: 'ABOUT US',
@@ -158,6 +158,32 @@ exports.getPageInfo = function (langid, datamode) {
       subline: 'France',
       content: 'De très bonnes chaussures m\'ont rendu heureux. Je vous remercie. De très bonnes chaussures m\'ont rendu heureux. Je vous remercie. De très bonnes chaussures m\'ont rendu heureux. De très bonnes chaussures m\'ont rendu heureux. Je vous remercie.'
     }]
+  }
+
+  return defaultPageInfoObj
+}
+
+// read page infomation and return
+exports.getPageInfo = function (langid, datamode) {
+  var pageinfoObj = getDefaultPageInfo()
+
+  if (datamode === 'file') {
+    // read data from JSON file
+    var tmpObj = FileHandler.getObjectFromJSONFile(langid, 'about')
+    if (tmpObj && tmpObj !== undefined) pageinfoObj = tmpObj
+  }
+
+  return pageinfoObj
+}
+
+// async read page infomation and return
+exports.asyncGetPageInfo = async function (langid, datamode) {
+  var pageinfoObj = getDefaultPageInfo()
+
+  if (datamode === 'file') {
+    // read data from JSON file
+    var tmpObj = await FileHandler.asyncGetObjectFromJSONFile(langid, 'about')
+    if (tmpObj && tmpObj !== undefined) pageinfoObj = tmpObj
   }
 
   return pageinfoObj

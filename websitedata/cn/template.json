@@ -1,11 +1,11 @@
 {
   "siteinfo": {
     "headersitelogo": "/imgs/bootstrap-solid.svg",
-    "headersitename": "BS DEMO SITE",
+    "headersitename": "BS示例网站",
     "footersitelogo": "/imgs/bootstrap-solid.svg",
-    "footersitename": "Bootstrap Demostration Website",
-    "copyrightprefix": "Copyright",
-    "copyrightsuffix": "All rights reserved."
+    "footersitename": "Bootstrap示例网站",
+    "copyrightprefix": "Copyright ",
+    "copyrightsuffix": " 版权所有. 本网站基于Node.js/JQuery/Bootstrap设计."
   },
   "templateID": "1",
   "language": {
@@ -23,29 +23,24 @@
   },
   "navmenu": [
     {
-      "name": "HOME",
+      "name": "首页",
       "href": "/",
       "submenu": []
     },
     {
-      "name": "ABOUT",
-      "href": "/about",
-      "submenu": []
-    },
-    {
-      "name": "PRODUCTS",
+      "name": "产品",
       "href": "#",
       "submenu": [
         {
-          "name": "HOTSALE PRODUCTS",
+          "name": "热销产品",
           "href": "/product/category/hotsale"
         },
         {
-          "name": "PRODUCT CATEGORY 1",
+          "name": "产品目录1",
           "href": "/product/category/cat1"
         },
         {
-          "name": "PRODUCT CATEGORY 2",
+          "name": "产品目录2",
           "href": "/product/category/cat2"
         },
         {
@@ -53,53 +48,58 @@
           "href": "#"
         },
         {
-          "name": "ALL PRODUCTS",
+          "name": "全部产品",
           "href": "/product/all/"
         }
       ]
     },
     {
-      "name": "SERVICES",
+      "name": "服务",
       "href": "#",
       "submenu": [
         {
-          "name": "CUSTOMER SERVICE",
+          "name": "顾客服务",
           "href": "/service/customer"
         },
         {
-          "name": "DISTRIBUTOR SERVICE",
+          "name": "经销商服务",
           "href": "/service/distributor"
         }
       ]
     },
     {
-      "name": "NEWS",
+      "name": "新闻",
       "href": "/news",
       "submenu": []
     },
     {
-      "name": "CONTACT",
+      "name": "联系",
       "href": "/contact",
+      "submenu": []
+    },
+    {
+      "name": "关于我们",
+      "href": "/about",
       "submenu": []
     }
   ],
   "searchinfo": {
-    "caption": "SEARCH",
-    "holder": "Search term",
-    "hint": "Input yout search term here"
+    "caption": "搜索",
+    "holder": "搜索词",
+    "hint": "请输入你的搜索关键词"
   },
   "subscribeinfo": {
-    "headline": "SUBSCRIBE TO US",
-    "caption": "SUBSCRIBE",
-    "holder": "Email address",
-    "hint": "Input your email here",
-    "smalltips": "Your privacy information will be legally protected.",
-    "responsetitle": "THANKS FOR YOUR SUBSCRIPTION",
-    "responsecontent": "Your email address has been enrolled to our database successfully. We will keep your privacy and will never share your email address with others.",
-    "responsebuttoncaption": "CLOSE"
+    "headline": "订阅期刊",
+    "caption": "订阅",
+    "holder": "邮件地址",
+    "hint": "请输入你的邮件地址",
+    "smalltips": "你的隐私将受到法律保护.",
+    "responsetitle": "感谢你的订阅",
+    "responsecontent": "你的电子邮件地址已登记入我们的客户数据库中，我们将确保你的隐私信息不会向外透露.",
+    "responsebuttoncaption": "关闭窗口"
   },
   "getintouchinfo": {
-    "headline": "GET IN TOUCH WITH US",
+    "headline": "和我们保持联系",
     "data": [
       {
         "faicon": "fab fa-facebook-f",

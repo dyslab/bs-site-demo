@@ -1,0 +1,28 @@
+{
+  "pagetitle": "企业新闻",
+  "newsperpage": 12,
+  "part1visible": "true",
+  "part1title": "企业新闻",
+  "part1subtitle": "追踪时事",
+  "part1content": "欢迎查阅我们的企业新闻信息，你的关心是我们成长的动力.欢迎查阅我们的企业新闻信息，你的关心是我们成长的动力.欢迎查阅我们的企业新闻信息，你的关心是我们成长的动力.",
+  "part1background": "/imgs/template1-news-title-bg.jpg",
+  "part2visible": "true",
+  "part2title": "最新消息",
+  "part2subtitle": "下方订阅",
+  "part2data": [
+    {
+      "headline": "中国海军两艘主力舰一同入役",
+      "faicon": "fas fa-newspaper",
+      "date": "2019-1-14",
+      "shorttext": "1月12日，海军161呼和浩特舰，987五指山舰命名入列仪式在粤西某军港举行。这也是第十条入列的052D型驱逐舰，第六条入列的071型船坞登陆舰。",
+      "href": "/news/details/2019011402"
+    },
+    {
+      "headline": "告别2018，人类群星远行时Condolence to the stars...",
+      "faicon": "fas fa-newspaper",
+      "date": "2018-12-27",
+      "shorttext": "<b>星星沉落在海洋中央，一支支歌曲在我心中消亡。</b>——卡尔杜齐《离别》节选...创伤的世界与幻想的江湖...微小至纤维，无垠至宇宙...世界大爆炸...生活在别处...",
+      "href": "/news/details/2018122700"
+    }
+  ]
+}

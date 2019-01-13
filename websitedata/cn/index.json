@@ -3,24 +3,24 @@
   "carouselpartvisible": "true",
   "carouseldata": [
     {
-      "image": "/imgs/promotion-carousel-01.jpg",
-      "caption": "Imagination, Inspiration, Innovation",
-      "captionpos": "45%"
-    },
-    {
       "image": "/imgs/promotion-carousel-02.jpg",
-      "caption": "Step up",
+      "caption": "想象, 灵感, 创新",
       "captionpos": "60%"
     },
     {
-      "image": "/imgs/promotion-carousel-03.jpg",
-      "caption": "Passion, Energy, Future",
-      "captionpos": "75%"
+      "image": "/imgs/promotion-carousel-01.jpg",
+      "caption": "重新开始",
+      "captionpos": "45%"
     },
     {
       "image": "/imgs/promotion-carousel-04.jpg",
-      "caption": "Step up to TOP",
+      "caption": "激情, 活力, 未来",
       "captionpos": "90%"
+    },
+    {
+      "image": "/imgs/promotion-carousel-03.jpg",
+      "caption": "走向高潮",
+      "captionpos": "75%"
     }
   ],
   "aboutpartvisible": "true",
@@ -28,37 +28,37 @@
   "teampartvisible": "true",
   "newspartvisible": "true",
   "sliderpartvisible": "true",
-  "slidertitle": "PROMOTION",
-  "slidersubtitle": "VISIT",
+  "slidertitle": "产品及服务推介",
+  "slidersubtitle": "欢迎点击访问",
   "sliderdata": [
     {
       "image": "/imgs/slider-01.jpg",
-      "caption": "HM0752",
+      "caption": "0752系列",
       "href": "/product/item/hm0752"
     },
     {
       "image": "/imgs/slider-02.jpg",
-      "caption": "HM0903",
+      "caption": "0903联系",
       "href": "/contact"
     },
     {
       "image": "/imgs/slider-03.jpg",
-      "caption": "HM0739",
+      "caption": "0739服务",
       "href": "/service/customer"
     },
     {
       "image": "/imgs/slider-04.jpg",
-      "caption": "HM0725",
+      "caption": "0725新闻",
       "href": "/news"
     },
     {
       "image": "/imgs/slider-05.jpg",
-      "caption": "HM0810",
+      "caption": "0810产品",
       "href": "/product/all/"
     },
     {
       "image": "/imgs/slider-06.jpg",
-      "caption": "HM0738",
+      "caption": "0738关于我们",
       "href": "/about"
     }
   ],

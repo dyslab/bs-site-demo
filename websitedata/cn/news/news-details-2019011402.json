@@ -1,0 +1,16 @@
+{
+  "pagetitle": "企业新闻",
+  "part1visible": "true",
+  "part1title": "企业新闻 ",
+  "part1subtitle": "追踪最新企业资讯",
+  "part1content": "查阅与我们产品、企业相关的新闻资讯，你可以通过下方的邮件订阅获得更多详细资料.查阅与我们产品、企业相关的新闻资讯，你可以通过下方的邮件订阅获得更多详细资料.",
+  "part1background": "/imgs/template1-news-details-title-bg.jpg",
+  "part2visible": "true",
+  "part2data": {
+    "headline": "中国海军两艘主力舰一同入役",
+    "faicon": "fas fa-newspaper",
+    "date": "2019-1-14",
+    "text": "<p>1月12日，海军161呼和浩特舰，987五指山舰命名入列仪式在粤西某军港举行。这也是第十条入列的052D型驱逐舰，第六条入列的071型船坞登陆舰。</p><p><figure class=\"figure\"><img class=\"figure-img img-fluid rounded\" src=\"/imgs/news/news-20190114-01.jpg\"><figcaption class=\"figure-caption\">1月12日，海军161呼和浩特舰，987五指山舰命名入列仪式在粤西某军港举行。这也是第十条入列的052D型驱逐舰，第六条入列的071型船坞登陆舰。</figcaption></figure></p>"
+  },
+  "part2backtext": " GO BACK "
+}

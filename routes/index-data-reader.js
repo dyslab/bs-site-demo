@@ -1,8 +1,8 @@
 // index page data reader
+var FileHandler = require('./file-handler.js')
 
-// read page infomation and return
-exports.getPageInfo = function (langid, datamode) {
-  var pageinfoObj = {
+function getDefaultPageInfo () {
+  var defaultPageInfoObj = {
     pagetitle: 'HOME',
     carouselpartvisible: 'true',
     carouseldata: [{
@@ -55,6 +55,19 @@ exports.getPageInfo = function (langid, datamode) {
       href: '/about'
     }],
     testimonialpartvisible: 'true'
+  }
+
+  return defaultPageInfoObj
+}
+
+// read page infomation and return
+exports.getPageInfo = function (langid, datamode) {
+  var pageinfoObj = getDefaultPageInfo()
+
+  if (datamode === 'file') {
+    // read data from JSON file
+    var tmpObj = FileHandler.getObjectFromJSONFile(langid, 'index')
+    if (tmpObj && tmpObj !== undefined) pageinfoObj = tmpObj
   }
 
   return pageinfoObj

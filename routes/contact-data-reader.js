@@ -1,8 +1,8 @@
 // contact page data reader
+var FileHandler = require('./file-handler.js')
 
-// read page infomation and return
-exports.getPageInfo = function (langid, datamode) {
-  var pageinfoObj = {
+function getDefaultPageInfo () {
+  var defaultPageInfoObj = {
     pagetitle: 'CONTACT US',
     part1visible: 'true',
     part1title: 'CONTACT US',
@@ -114,6 +114,19 @@ exports.getPageInfo = function (langid, datamode) {
       responsecontent: 'Your message has been submitted to our marketer. We will send you response very soon.',
       responsebuttoncaption: 'CLOSE'
     }
+  }
+
+  return defaultPageInfoObj
+}
+
+// read page infomation and return
+exports.getPageInfo = function (langid, datamode) {
+  var pageinfoObj = getDefaultPageInfo()
+
+  if (datamode === 'file') {
+    // read data from JSON file
+    var tmpObj = FileHandler.getObjectFromJSONFile(langid, 'contact')
+    if (tmpObj && tmpObj !== undefined) pageinfoObj = tmpObj
   }
 
   return pageinfoObj

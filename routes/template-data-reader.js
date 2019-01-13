@@ -1,18 +1,21 @@
 // template data reader
+var FileHandler = require('./file-handler.js')
 
-// read get in touch info data and return
-exports.getTemplatePageInfo = function (currentpage, cookie) {
-  var templatePageInfoObj = {
+// Data Access Mode, indicates to the data storage. eg. 'file','sqlite','mysql'...
+// *** currently only JSON 'file' mode available. ***
+const DataMode = 'file'
+
+function getDefaultPageInfo () {
+  var defaultPageInfoObj = {
     siteinfo: {
       headersitelogo: '/imgs/bootstrap-solid.svg',
       headersitename: 'BS DEMO SITE',
       footersitelogo: '/imgs/bootstrap-solid.svg',
-      footersitename: 'Bootstrap Demostration Website',
+      footersitename: 'Bootstrap Demonstration Website',
       copyrightprefix: 'Copyright',
       copyrightsuffix: 'All rights reserved.'
     },
     templateID: '1',
-    datamode: 'file', // RESERVED. for future development. as a flag indicated to the data storage mode. eg. 'file','sqlite','mysql'...
     language: {
       currentid: 'en',
       list: [{
@@ -83,11 +86,30 @@ exports.getTemplatePageInfo = function (currentpage, cookie) {
     }
   }
 
-  // read data by datamode, currently only JSON file mode available.
-  if (templatePageInfoObj.datamode === 'file') {
-    // read data from JSON file
-    // Do something ...
+  return defaultPageInfoObj
+}
+
+// read get in touch info data and return
+exports.getTemplatePageInfo = function (currentpage, cookie) {
+  var templatePageInfoObj = getDefaultPageInfo()
+
+  // set current language by cookie
+  var curid = templatePageInfoObj.language.currentid
+  if (cookie && cookie !== undefined) {
+    if (cookie.preferred_language && cookie.preferred_language !== undefined) {
+      curid = cookie.preferred_language
+    }
   }
+
+  if (DataMode === 'file') {
+    // read data from JSON file
+    var tmpObj = FileHandler.getObjectFromJSONFile(curid, 'template')
+    if (tmpObj && tmpObj !== undefined) templatePageInfoObj = tmpObj
+  }
+
+  // set datamode key/value as a pass parameter.
+  templatePageInfoObj.datamode = DataMode
+  templatePageInfoObj.language.currentid = curid
 
   // set copyright duration year.
   var dateObj = new Date()
@@ -112,13 +134,6 @@ exports.getTemplatePageInfo = function (currentpage, cookie) {
       } else {
         templatePageInfoObj.navmenu[i].active = false
       }
-    }
-  }
-
-  // set current language by cookie
-  if (cookie && cookie !== undefined) {
-    if (cookie.preferred_language && cookie.preferred_language !== undefined) {
-      templatePageInfoObj.language.currentid = cookie.preferred_language
     }
   }
 
