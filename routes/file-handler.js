@@ -136,7 +136,7 @@ exports.outputSampleJSONFiles = function () {
 
   // ------------------------------------------------------------------------------------
   // output template.json
-  jsonObj = TemplateDataReader.getTemplatePageInfo('/')
+  jsonObj = TemplateDataReader.outputFile()
   // remove auto generated nodes.
   delete jsonObj.datamode
   delete jsonObj.siteinfo.copyright

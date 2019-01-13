@@ -139,3 +139,8 @@ exports.getTemplatePageInfo = function (currentpage, cookie) {
 
   return templatePageInfoObj
 }
+
+// for output JSON sample file
+exports.outputFile = function () {
+  return getDefaultPageInfo()
+}
