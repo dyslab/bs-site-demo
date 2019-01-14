@@ -14,12 +14,12 @@ mixin setCarouselBannerItems
   each cbitem, index in pageinfo.carouseldata
     if index == 0
       div.carousel-item.active
-        img.d-block.w-100(src=cbitem.image, alt=cbitem.caption)
+        img.d-block.w-100.custom-carousel-img-height(src=cbitem.image, alt=cbitem.caption)
         div.carousel-caption.d-none.d-md-block(style="height:" + cbitem.captionpos)
           h1.font-weight-bolder.text-white.custom-text-shadow-2px!= cbitem.caption
     else
       div.carousel-item
-        img.d-block.w-100(src=cbitem.image, alt=cbitem.caption)
+        img.d-block.w-100.custom-carousel-img-height(src=cbitem.image, alt=cbitem.caption)
         div.carousel-caption.d-none.d-md-block(style="height:" + cbitem.captionpos)
           h1.font-weight-bolder.text-white.custom-text-shadow-2px!= cbitem.caption
 //- setCarouselBannerItems Declaration End

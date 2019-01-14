@@ -84,14 +84,26 @@
   For all pages except index.
 -----------------------------------------------------------------------------------------*/
 .custom-title-height {
-  min-height: 400px
+  min-height: 49vh;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.custom-title-space-height {
+  height: 98px
 }
 
 /*-----------------------------------------------------------------------------------------
   For Nav Bar.
 -----------------------------------------------------------------------------------------*/
 .custom-white-transparency-95 {
-  background-color: rgba(255,255,255,0.95)
+  background-color: rgba(255,255,255,0.94);
+}
+
+.custom-height-0 {
+  padding: 0;
+  height: 0px;
 }
 
 /*-----------------------------------------------------------------------------------------
@@ -119,8 +131,13 @@
   color: rgb(92, 116, 146)
 }
 
+.custom-carousel-img-height {
+  min-height: 50vh;
+  max-height: 100vh;
+}
+
 .custom-testimonial-height {
-  min-height: 360px
+  min-height: 50vh;
 }
 
 .custom-footer-bgcolor {

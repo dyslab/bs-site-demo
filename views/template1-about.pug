@@ -66,9 +66,10 @@ block content
   <!-- Part 1 Begin -->
   if pageinfo.part1visible.toUpperCase() == 'TRUE'
     section(id="part1")
-      div.container-fluid.custom-title-height.pt-5.pt-5(style="background: url('" + pageinfo.part1background + "')")
+      div.container-fluid.custom-title-height(style="background: url('" + pageinfo.part1background + "')")
+        div.custom-title-space-height
         div.container
-          div.row.justify-content-center.pt-md-5.pt-3
+          div.row.justify-content-center
             div.col.text-center.text-light
               h1.font-weight-bolder.custom-text-shadow-2px #{pageinfo.part1title}
               h5.font-weight-bold.custom-text-shadow-1px #{pageinfo.part1subtitle}
