@@ -1,0 +1,61 @@
+{
+  "pagetitle": "PRODUCT",
+  "part1visible": "true",
+  "part1title": "PRODUCT",
+  "part1subtitle": "",
+  "part1content": "Welcome to check this out! We are just selling the blow-up-minding, innovative and creative products. Pick up your favorite items and take them back home...",
+  "part1background": "/imgs/template1-product-item-title-bg.jpg",
+  "part2visible": "true",
+  "part2title": "G1001",
+  "part2images": [
+    "/imgs/products/product-g1001-p1.jpg",
+    "/imgs/products/product-g1001-p2.jpg",
+    "/imgs/products/product-g1001-p3.jpg"
+  ],
+  "part2lines": [
+    {
+      "caption": "Features:",
+      "text": "Next Generation Laser Gun | Probably the best automatic rifle"
+    },
+    {
+      "caption": "Services:",
+      "text": "Free Shipping|Free Return"
+    },
+    {
+      "caption": "SKU:",
+      "text": "G1001"
+    },
+    {
+      "caption": "UPC/EAN:",
+      "text": "MIL099629872545"
+    },
+    {
+      "caption": "GUID:",
+      "text": "GUID-1996-2987-1111"
+    },
+    {
+      "caption": "Color:",
+      "text": "Multicolor"
+    },
+    {
+      "caption": "Size:",
+      "text": "Customized"
+    },
+    {
+      "caption": "Purchase:",
+      "text": "<b>Click here</b>",
+      "link": "/product/all/"
+    }
+  ],
+  "part3visible": "true",
+  "part3title": "PRODUCT DETAILS",
+  "part3images": [
+    "/imgs/products/product-g1001-d1.jpg",
+    "/imgs/products/product-g1001-d2.jpg",
+    "/imgs/products/product-g1001-d3.jpg",
+    "/imgs/products/product-g1001-d4.jpg",
+    "/imgs/products/product-g1001-d5.gif",
+    "/imgs/products/product-g1001-d6.jpg",
+    "/imgs/products/product-g1001-d7.jpg"
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "pagetitle": "产品",
+  "part1visible": "true",
+  "part1title": "产品",
+  "part1subtitle": "",
+  "part1content": "欢迎观赏我们让人心动的新潮产品，尽情挑选并把他们带回家",
+  "part1background": "/imgs/template1-product-item-title-bg.jpg",
+  "part2visible": "true",
+  "part2title": "HM0752 人字拖充电器",
+  "part2images": [
+    "/imgs/products/product-hm0752-p1.jpg",
+    "/imgs/products/product-hm0752-p2.jpg",
+    "/imgs/products/product-hm0752-p3.jpg",
+    "/imgs/products/product-hm0752-p4.jpg",
+    "/imgs/products/product-hm0752-p5.jpg",
+    "/imgs/products/product-hm0752-p6.jpg"
+  ],
+  "part2lines": [
+    {
+      "caption": "特色功能:",
+      "text": "随时随地让你的双脚充满能量"
+    },
+    {
+      "caption": "服务:",
+      "text": "免费送货 | 只换不修"
+    },
+    {
+      "caption": "SKU:",
+      "text": "HM0752-02/HM0752-31"
+    },
+    {
+      "caption": "UPC/EAN:",
+      "text": "07629872545727<br>07629872545755<br>07629872545756<br>07629873545757"
+    },
+    {
+      "caption": "颜色:",
+      "text": "白色 | 酒红"
+    },
+    {
+      "caption": "尺码:",
+      "text": "34/35/36/37/38/39/40/41 EU<br>35/36/37/38/39/40/41/42 CN"
+    },
+    {
+      "caption": "图案:",
+      "text": "石榴"
+    },
+    {
+      "caption": "购买链接:",
+      "text": "<b>从此双脚无忧</b>",
+      "link": "/product/all/"
+    }
+  ],
+  "part3visible": "true",
+  "part3title": "产 品 细 节",
+  "part3images": [
+    "/imgs/products/product-hm0752-p1.jpg",
+    "/imgs/products/product-hm0752-p2.jpg",
+    "/imgs/products/product-hm0752-p3.jpg",
+    "/imgs/products/product-hm0752-p4.jpg",
+    "/imgs/products/product-hm0752-p5.jpg",
+    "/imgs/products/product-hm0752-p6.jpg"
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "pagetitle": "产品",
+  "part1visible": "true",
+  "part1title": "产品",
+  "part1subtitle": "",
+  "part1content": "欢迎观赏我们让人心动的新潮产品，尽情挑选并把他们带回家",
+  "part1background": "/imgs/template1-product-item-title-bg.jpg",
+  "part2visible": "true",
+  "part2title": "CAKE001 中国能量派",
+  "part2images": [
+    "/imgs/products/product-cake001-p1.jpg",
+    "/imgs/products/product-cake001-p2.jpg",
+    "/imgs/products/product-cake001-p3.jpg"
+  ],
+  "part2lines": [
+    {
+      "caption": "特色:",
+      "text": "美味充能食品, 补充你一天所需能量"
+    },
+    {
+      "caption": "服务:",
+      "text": "免费送货"
+    },
+    {
+      "caption": "SKU:",
+      "text": "CAKE001-10<br>CAKE001-20<br>CAKE001-30<br>CAKE001-40<br>CAKE001-50"
+    },
+    {
+      "caption": "UPC/EAN:",
+      "text": "077629872899"
+    },
+    {
+      "caption": "颜色:",
+      "text": "黑色/金色/银色"
+    },
+    {
+      "caption": "尺寸:",
+      "text": "可定制"
+    },
+    {
+      "caption": "购买链接:",
+      "text": "<b>点击这里</b>",
+      "link": "/product/all/"
+    }
+  ],
+  "part3visible": "true",
+  "part3title": "产品细节",
+  "part3images": [
+    "/imgs/products/product-cake001-d1.jpg",
+    "/imgs/products/product-cake001-d2.jpg",
+    "/imgs/products/product-cake001-d3.jpg"
+  ]
+}

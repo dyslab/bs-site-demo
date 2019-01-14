@@ -10,7 +10,7 @@
     {
       "id": "cat1",
       "title": "CAT1 - category 1",
-      "count": 0
+      "count": -1
     },
     {
       "id": "cat2",

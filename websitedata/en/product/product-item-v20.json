@@ -6,7 +6,7 @@
   "part1content": "Welcome to check this out! We are just selling the blow-up-minding, innovative and creative products. Pick up your favorite items and take them back home...",
   "part1background": "/imgs/template1-product-item-title-bg.jpg",
   "part2visible": "true",
-  "part2title": "",
+  "part2title": "V20",
   "part2images": [
     "/imgs/products/product-v20-p1.png",
     "/imgs/products/product-v20-p2.png",
@@ -17,10 +17,6 @@
     {
       "caption": "Features:",
       "text": "Kirin 980 Processor|4800 MPixels Camera|4000 mAh Battery|Super Charge"
-    },
-    {
-      "caption": "Services:",
-      "text": "Free Shipping|Free Return"
     },
     {
       "caption": "Services:",

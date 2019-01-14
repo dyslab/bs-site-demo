@@ -1,0 +1,65 @@
+{
+  "pagetitle": "产品",
+  "part1visible": "true",
+  "part1title": "产品",
+  "part1subtitle": "",
+  "part1content": "欢迎观赏我们让人心动的新潮产品，尽情挑选并把他们带回家",
+  "part1background": "/imgs/template1-product-item-title-bg.jpg",
+  "part2visible": "true",
+  "part2title": "PROD002",
+  "part2images": [
+    "/imgs/products/product-prod002-p1.jpg",
+    "/imgs/products/product-prod002-p2.jpg",
+    "/imgs/products/product-prod002-p3.jpg",
+    "/imgs/products/product-prod002-p4.jpg",
+    "/imgs/products/product-prod002-p5.jpg"
+  ],
+  "part2lines": [
+    {
+      "caption": "Model:",
+      "text": "VIVO X23 Grenade"
+    },
+    {
+      "caption": "Features:",
+      "text": "A Powerful bomb and looks like a famous cellphone"
+    },
+    {
+      "caption": "Services:",
+      "text": "Free Shipping|Free Return"
+    },
+    {
+      "caption": "SKU:",
+      "text": "PROD002"
+    },
+    {
+      "caption": "UPC/EAN:",
+      "text": "0112227254572795"
+    },
+    {
+      "caption": "Color:",
+      "text": "White|Black|Multicolour"
+    },
+    {
+      "caption": "Size:",
+      "text": "38/39/40 inch."
+    },
+    {
+      "caption": "Pattern:",
+      "text": "Cellphone"
+    },
+    {
+      "caption": "Purchase:",
+      "text": "<b>Click here</b>",
+      "link": "/product/all/"
+    }
+  ],
+  "part3visible": "true",
+  "part3title": "PRODUCT DETAILS",
+  "part3images": [
+    "/imgs/products/product-prod002-p1.jpg",
+    "/imgs/products/product-prod002-p2.jpg",
+    "/imgs/products/product-prod002-p3.jpg",
+    "/imgs/products/product-prod002-p4.jpg",
+    "/imgs/products/product-prod002-p5.jpg"
+  ]
+}

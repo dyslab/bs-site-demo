@@ -32,10 +32,6 @@
       "href": "#",
       "submenu": [
         {
-          "name": "HOTSALE PRODUCTS",
-          "href": "/product/category/hotsale"
-        },
-        {
           "name": "PRODUCT CATEGORY 1",
           "href": "/product/category/cat1"
         },

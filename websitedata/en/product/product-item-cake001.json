@@ -1,0 +1,53 @@
+{
+  "pagetitle": "PRODUCT",
+  "part1visible": "true",
+  "part1title": "PRODUCT",
+  "part1subtitle": "",
+  "part1content": "Welcome to check this out! We are just selling the blow-up-minding, innovative and creative products. Pick up your favorite items and take them back home...",
+  "part1background": "/imgs/template1-product-item-title-bg.jpg",
+  "part2visible": "true",
+  "part2title": "CAKE001",
+  "part2images": [
+    "/imgs/products/product-cake001-p1.jpg",
+    "/imgs/products/product-cake001-p2.jpg",
+    "/imgs/products/product-cake001-p3.jpg"
+  ],
+  "part2lines": [
+    {
+      "caption": "Features:",
+      "text": "Chinese Energy Pie, Tasty and fill up your whole day energy"
+    },
+    {
+      "caption": "Services:",
+      "text": "Free Shipping"
+    },
+    {
+      "caption": "SKU:",
+      "text": "CAKE001-10<br>CAKE001-20<br>CAKE001-30<br>CAKE001-40<br>CAKE001-50"
+    },
+    {
+      "caption": "UPC/EAN:",
+      "text": "077629872899"
+    },
+    {
+      "caption": "Color:",
+      "text": "Black/Gold/Silver"
+    },
+    {
+      "caption": "Size:",
+      "text": "Customized"
+    },
+    {
+      "caption": "Purchase:",
+      "text": "<b>Click here</b>",
+      "link": "/product/all/"
+    }
+  ],
+  "part3visible": "true",
+  "part3title": "PRODUCT DETAILS",
+  "part3images": [
+    "/imgs/products/product-cake001-d1.jpg",
+    "/imgs/products/product-cake001-d2.jpg",
+    "/imgs/products/product-cake001-d3.jpg"
+  ]
+}

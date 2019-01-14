@@ -1,0 +1,56 @@
+{
+  "pagetitle": "产品目录",
+  "part1visible": "true",
+  "part1title": "我们的产品",
+  "part1subtitle": "让人心动的新潮产品世界",
+  "part1content": "",
+  "part1background": "/imgs/template1-product-title-bg.jpg",
+  "part2visible": "true",
+  "part2title": "产品目录 [产品目录2]",
+  "part2count": 20,
+  "part2data": [
+    {
+      "image": "/imgs/products/product-prod001-t1.jpg",
+      "title": "PROD001",
+      "content": "空间金字塔，一键瞬移至你想去的空间位置",
+      "href": "/product/item/prod001"
+    },
+    {
+      "image": "/imgs/products/product-v20-t1.jpg",
+      "title": "V20",
+      "content": "超级GPS储存器, 将你身边的一切物品收入囊中",
+      "href": "/product/item/v20"
+    },
+    {
+      "image": "/imgs/products/product-prod010-t1.jpg",
+      "title": "PROD010",
+      "content": "X光透视太阳镜, 想看哪里看哪里",
+      "href": "/product/item/prod010"
+    },
+    {
+      "image": "/imgs/products/product-cake001-t1.jpg",
+      "title": "CAKE001",
+      "content": "中国能量派, 美味充能食品",
+      "href": "/product/item/cake001"
+    }
+  ],
+  "part3visible": "true",
+  "part3data": [
+    {
+      "image": "/imgs/products/product-cat-link-formore.png",
+      "href": ""
+    },
+    {
+      "image": "/imgs/products/product-cat-link-hot.png",
+      "href": "/product/category/hotsale"
+    },
+    {
+      "image": "/imgs/products/product-cat-link-cat1.png",
+      "href": "/product/category/cat1"
+    },
+    {
+      "image": "/imgs/products/product-cat-link-all.png",
+      "href": "/product/all/"
+    }
+  ]
+}

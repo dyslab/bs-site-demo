@@ -1,12 +1,12 @@
 {
-  "pagetitle": "PRODUCT",
+  "pagetitle": "产品",
   "part1visible": "true",
-  "part1title": "PRODUCT",
+  "part1title": "产品",
   "part1subtitle": "",
-  "part1content": "Welcome to check this out! We are just selling the blow-up-minding, innovative and creative products. Pick up your favorite items and take them back home...",
+  "part1content": "欢迎观赏我们让人心动的新潮产品",
   "part1background": "/imgs/template1-product-item-title-bg.jpg",
   "part2visible": "true",
-  "part2title": "",
+  "part2title": "V20 超级GPS储存器",
   "part2images": [
     "/imgs/products/product-v20-p1.png",
     "/imgs/products/product-v20-p2.png",
@@ -15,45 +15,41 @@
   ],
   "part2lines": [
     {
-      "caption": "Features:",
-      "text": "Kirin 980 Processor|4800 MPixels Camera|4000 mAh Battery|Super Charge"
+      "caption": "特色功能:",
+      "text": "麒麟980处理器 | 4800万相机 | 4000毫安电池 | 超级充"
     },
     {
-      "caption": "Services:",
-      "text": "Free Shipping|Free Return"
+      "caption": "服务:",
+      "text": "免费送货 | 免费退换"
     },
     {
-      "caption": "Services:",
-      "text": "Free Shipping|Free Return"
-    },
-    {
-      "caption": "SKU:",
+      "caption": "SKU码:",
       "text": "HUAWEI-V20"
     },
     {
-      "caption": "UPC/EAN:",
+      "caption": "UPC/EAN码:",
       "text": "07629872545727<br>07629872545755"
     },
     {
-      "caption": "Color:",
-      "text": "Blue|Red|Black"
+      "caption": "颜色:",
+      "text": "蓝色 | 红色 | 极光黑"
     },
     {
-      "caption": "Size:",
-      "text": "34/35/36/37/38/39/40/41 EU"
+      "caption": "尺寸:",
+      "text": "340 x 200 x 100 mm"
     },
     {
-      "caption": "Pattern:",
-      "text": "Double V Shape"
+      "caption": "外观图案:",
+      "text": "双V全面屏"
     },
     {
-      "caption": "Purchase:",
-      "text": "<b>Click here</b>",
+      "caption": "购买链接:",
+      "text": "<b>点此订购</b>",
       "link": "/product/all/"
     }
   ],
   "part3visible": "true",
-  "part3title": "PRODUCT DETAILS",
+  "part3title": "产品细节",
   "part3images": [
     "/imgs/products/product-v20-d1.jpg",
     "/imgs/products/product-v20-d2.jpg",

@@ -1,0 +1,112 @@
+{
+  "pagetitle": "客户服务",
+  "part1visible": "true",
+  "part1title": "顾客服务",
+  "part1subtitle": "随时为你服务",
+  "part1content": "",
+  "part1background": "/imgs/service/template1-cat1-title-bg.jpg",
+  "part2visible": "true",
+  "part2title": "顾客特权",
+  "part2data": [
+    {
+      "image": "/imgs/template1-service-privilege2.png",
+      "title": "1对1VIP服务",
+      "content": "点击以下链接进入服务通道...",
+      "linktext": "1对1服务通道 >",
+      "href": "#"
+    },
+    {
+      "image": "/imgs/template1-service-privilege3.png",
+      "title": "回款服务",
+      "content": "定制VIP回款套餐，18个月试用期后你会获得更多...",
+      "linktext": "开启VIP回款 >",
+      "href": "#"
+    },
+    {
+      "image": "/imgs/template1-service-privilege4.png",
+      "title": "免费配送",
+      "content": "自由配送服务网络，按需提供免费配送服务.<p><I>服务时间: 周一至周日. 12:00 - 20:00</I></p>",
+      "linktext": "",
+      "href": "#"
+    },
+    {
+      "image": "/imgs/template1-service-privilege5.png",
+      "title": "产品回收",
+      "content": "对废旧产品进行回收，仅仅一个电话搞定。",
+      "linktext": "",
+      "href": "#"
+    }
+  ],
+  "part3visible": "true",
+  "part3title": "自助服务",
+  "part3data": [
+    {
+      "image": "/imgs/service/template1-service-function1.jpg",
+      "title": "升级会员",
+      "href": "#"
+    },
+    {
+      "image": "/imgs/service/template1-service-function2.jpg",
+      "title": "手机APP",
+      "href": "#"
+    },
+    {
+      "image": "/imgs/service/template1-service-function3.jpg",
+      "title": "社交网络",
+      "href": "/about"
+    },
+    {
+      "image": "/imgs/service/template1-service-function4.jpg",
+      "title": "自助运营",
+      "href": "#"
+    }
+  ],
+  "part4visible": "true",
+  "part4title": "常见问题",
+  "part4data": [
+    {
+      "faicon": "fas fa-question-circle",
+      "title": "我可以从此网站了解什么?",
+      "content": "你可以了解到我们的历史及资讯，以及众多激动人心的优质产品。"
+    },
+    {
+      "faicon": "far fa-question-circle",
+      "title": "我为什么会问这么愚蠢的问题?",
+      "content": "你懂得，有时候人常常会干些傻事."
+    },
+    {
+      "faicon": "fas fa-question-circle",
+      "title": "其他人能够看到我这个愚蠢的问题吗?",
+      "content": "当然可以，须知纸包不住火。"
+    },
+    {
+      "faicon": "far fa-question-circle",
+      "title": "好吧，我承认我是一傻X， 但为什么你要建个如此傻X的部分呢？",
+      "content": "嗯......我必须承认，有时候我也傻。"
+    }
+  ],
+  "part5visible": "true",
+  "part5title": "需要更多帮助，请联系我们的客服",
+  "part5data": [
+    {
+      "faicon": "fab fa-weixin",
+      "title": "扫码加入微信群",
+      "popuphref": "/imgs/qrcode-wx-test.png"
+    },
+    {
+      "faicon": "fab fa-weibo",
+      "title": "扫码关注微博公众号",
+      "popuphref": ""
+    },
+    {
+      "faicon": "fab fa-qq",
+      "title": "扫码加入QQ用户群",
+      "popuphref": "/imgs/qrcode-qq-test.png"
+    },
+    {
+      "faicon": "fas fa-phone",
+      "title": "直接拨打我们的客服热线",
+      "popuphref": "/imgs/callnow400.jpg"
+    }
+  ]
+}

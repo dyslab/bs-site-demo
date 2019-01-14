@@ -1,0 +1,55 @@
+{
+  "pagetitle": "产品",
+  "part1visible": "true",
+  "part1title": "产品",
+  "part1subtitle": "",
+  "part1content": "欢迎观赏我们让人心动的新潮产品，尽情挑选并把他们带回家",
+  "part1background": "/imgs/template1-product-item-title-bg.jpg",
+  "part2visible": "true",
+  "part2title": "PROD001",
+  "part2images": [
+    "/imgs/products/product-prod001-p1.jpg",
+    "/imgs/products/product-prod001-p2.jpg"
+  ],
+  "part2lines": [
+    {
+      "caption": "Features:",
+      "text": "Space Pymaid, Easy to use, One click change location"
+    },
+    {
+      "caption": "Services:",
+      "text": "Free Shipping|Free Return"
+    },
+    {
+      "caption": "SKU:",
+      "text": "PROD001"
+    },
+    {
+      "caption": "UPC/EAN:",
+      "text": "02229872545727255"
+    },
+    {
+      "caption": "Color:",
+      "text": "White|Black"
+    },
+    {
+      "caption": "Size:",
+      "text": "38/39/40/41 ft."
+    },
+    {
+      "caption": "Pattern:",
+      "text": "Pymaid"
+    },
+    {
+      "caption": "Purchase:",
+      "text": "<b>Click here</b>",
+      "link": "/product/all/"
+    }
+  ],
+  "part3visible": "true",
+  "part3title": "PRODUCT DETAILS",
+  "part3images": [
+    "/imgs/products/product-prod001-p1.jpg",
+    "/imgs/products/product-prod001-p2.jpg"
+  ]
+}

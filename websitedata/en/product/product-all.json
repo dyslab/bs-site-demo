@@ -3,19 +3,19 @@
   "part1visible": "true",
   "part1title": "ALL PRODUCTS",
   "part1subtitle": "WORTHY TO OWN",
-  "part1content": "Welcome to all products page! We are just selling the blow-up-minding, innovative and creative products. Pick up your favorite items and take them back home...<br>欢迎来到全部产品页面，我们只卖别人无法想象的创新产品，挑选您喜欢的产品并把他们带回家...",
+  "part1content": "Welcome to all products page! We are just selling the blow-up-minding, innovative and creative products. Pick up your favorite items and take them back home...<br>Balabalabalaba....LOL...",
   "part1background": "/imgs/template1-product-all-title-bg.jpg",
   "part2visible": "true",
   "part2data": [
     {
       "id": "cat1",
       "title": "CAT1 - category 1",
-      "count": 0
+      "count": -1
     },
     {
       "id": "cat2",
       "title": "CAT2 - category 2",
-      "count": 4
+      "count": 20
     }
   ]
 }

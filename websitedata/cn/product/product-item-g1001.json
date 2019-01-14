@@ -1,0 +1,61 @@
+{
+  "pagetitle": "产品",
+  "part1visible": "true",
+  "part1title": "产品",
+  "part1subtitle": "",
+  "part1content": "欢迎观赏我们让人心动的新潮产品，尽情挑选并把他们带回家",
+  "part1background": "/imgs/template1-product-item-title-bg.jpg",
+  "part2visible": "true",
+  "part2title": "G1001 镭射枪",
+  "part2images": [
+    "/imgs/products/product-g1001-p1.jpg",
+    "/imgs/products/product-g1001-p2.jpg",
+    "/imgs/products/product-g1001-p3.jpg"
+  ],
+  "part2lines": [
+    {
+      "caption": "特色:",
+      "text": "下一代自卫武器|镭射激光枪|可能是最好的激光武器"
+    },
+    {
+      "caption": "服务:",
+      "text": "免费送货 | 免费维护 | 免费退换"
+    },
+    {
+      "caption": "SKU码:",
+      "text": "G1001"
+    },
+    {
+      "caption": "UPC/EAN码:",
+      "text": "MIL099629872545"
+    },
+    {
+      "caption": "GUID码:",
+      "text": "GUID-1996-2987-1111"
+    },
+    {
+      "caption": "颜色:",
+      "text": "彩色"
+    },
+    {
+      "caption": "尺寸:",
+      "text": "定制款"
+    },
+    {
+      "caption": "购买链接:",
+      "text": "<b>从此只有你打劫别人</b>",
+      "link": "/product/all/"
+    }
+  ],
+  "part3visible": "true",
+  "part3title": "产 品 细 节",
+  "part3images": [
+    "/imgs/products/product-g1001-d1.jpg",
+    "/imgs/products/product-g1001-d2.jpg",
+    "/imgs/products/product-g1001-d3.jpg",
+    "/imgs/products/product-g1001-d4.jpg",
+    "/imgs/products/product-g1001-d5.gif",
+    "/imgs/products/product-g1001-d6.jpg",
+    "/imgs/products/product-g1001-d7.jpg"
+  ]
+}

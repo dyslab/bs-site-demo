@@ -1,8 +1,8 @@
 // service page data reader
+var FileHandler = require('./file-handler.js')
 
-// read page infomation and return
-exports.getPageInfo = function (serviceid, langid, datamode) {
-  var pageinfoObj = {
+function getDefaultPageInfo () {
+  var defaultPageInfoObj = {
     pagetitle: 'SERVICES',
     part1visible: 'true',
     part1title: 'SERVICES',
@@ -105,7 +105,18 @@ exports.getPageInfo = function (serviceid, langid, datamode) {
     }]
   }
 
-  pageinfoObj.part1title = serviceid.toUpperCase() + ' ' + pageinfoObj.part1title
+  return defaultPageInfoObj
+}
+
+// read page infomation and return
+exports.getPageInfo = function (serviceid, langid, datamode) {
+  var pageinfoObj = getDefaultPageInfo()
+
+  if (datamode === 'file') {
+    // read data from JSON file
+    var tmpObj = FileHandler.getObjectFromJSONFile(langid, 'service_id', serviceid)
+    if (tmpObj && tmpObj !== undefined) pageinfoObj = tmpObj
+  }
 
   return pageinfoObj
 }

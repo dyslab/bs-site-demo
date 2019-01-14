@@ -1,0 +1,16 @@
+{
+  "pagetitle": "NEWS DETAILS",
+  "part1visible": "true",
+  "part1title": "NEWS ",
+  "part1subtitle": "NEWS SUBTITLE",
+  "part1content": "Check out the latest news and events about us below. Feel free to subscribe our monthly mail news and product information if you would like to know us more.",
+  "part1background": "/imgs/template1-news-details-title-bg.jpg",
+  "part2visible": "true",
+  "part2data": {
+    "headline": "China, U.S. may meet in January for trade negotiation",
+    "faicon": "far fa-newspaper",
+    "date": "2018-9-13",
+    "text": "<p>The delegations of China and the U.S. have stayed in close communication and have made plans to meet face-to-face in January, the spokesman of China's Ministry of Commerce Gao Feng said on Thursday.</p><p>The remarks came after media reports stated that a U.S. trade team will travel to Beijing on January 7 for trade talks with China.</p><p>Gao confirmed the potential meeting without giving a specified date, saying the two sides are keeping close communication via telephone as well.</p><p>The upcoming meeting will be the first face-to-face negotiation since Chinese President Xi Jinping and his U.S. counterpart Donald Trump met in Argentina at G20 summit.</p>"
+  },
+  "part2backtext": " GO BACK "
+}

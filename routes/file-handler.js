@@ -35,9 +35,14 @@ const FeedbackFilePath = path.join(BaseFilePath, 'feedback')
 exports.getObjectFromJSONFile = function (entrypoint, type, id) {
   var fpath = getJSONFullFilePath(entrypoint, type, id)
 
-  if (id && id !== undefined) console.log(fpath)
+  console.log(fpath)
   if (fs.existsSync(fpath)) {
-    return JSON.parse(fs.readFileSync(fpath, { encoding: 'utf8' }))
+    try {
+      return JSON.parse(fs.readFileSync(fpath, { encoding: 'utf8' }))
+    } catch (error) {
+      console.log(error)
+      return undefined
+    }
   } else {
     return undefined
   }
@@ -49,10 +54,15 @@ exports.asyncGetObjectFromJSONFile = async function (entrypoint, type, id) {
 
   console.log('Experimental Test: You\'re asynchronously reading data from: ' + fpath)
   if (fs.existsSync(fpath)) {
-    var retObjString = await fsPromises.readFile(fpath, { encoding: 'utf8' }).catch((err) => {
-      console.log(err)
-    })
-    return JSON.parse(retObjString)
+    try {
+      var retObjString = await fsPromises.readFile(fpath, { encoding: 'utf8' }).catch((err) => {
+        console.log(err)
+      })
+      return JSON.parse(retObjString)
+    } catch (error) {
+      console.log(error)
+      return undefined
+    }
   } else {
     return undefined
   }
@@ -196,8 +206,6 @@ exports.outputSampleJSONFiles = function () {
   // ------------------------------------------------------------------------------------
   // output product-all.json / product-cat-[catgoryid].json / product-item-[productid].json
   jsonObj = ProductDataReader.getCategoryPageInfo('category')
-  // remove auto generated nodes.
-  delete jsonObj.part2data
   jsonstring = JSON.stringify(jsonObj, null, 2)
   fpath = OutputDemoFilePath + '/product/product-cat-[catgoryid].json'
   fs.writeFile(fpath, jsonstring, (err) => {

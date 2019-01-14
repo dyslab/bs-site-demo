@@ -1,0 +1,63 @@
+{
+  "pagetitle": "产品",
+  "part1visible": "true",
+  "part1title": "产品",
+  "part1subtitle": "",
+  "part1content": "欢迎观赏我们让人心动的新潮产品，尽情挑选并把他们带回家",
+  "part1background": "/imgs/template1-product-item-title-bg.jpg",
+  "part2visible": "true",
+  "part2title": "DOG-003 虚拟现实VR狗娃娃",
+  "part2images": [
+    "/imgs/products/product-dog003-p1.jpg",
+    "/imgs/products/product-dog003-p2.jpg",
+    "/imgs/products/product-dog003-p3.jpg",
+    "/imgs/products/product-dog003-p4.jpg"
+  ],
+  "part2lines": [
+    {
+      "caption": "特色:",
+      "text": "可爱好玩的虚拟现实VR宠物"
+    },
+    {
+      "caption": "服务:",
+      "text": "免费送货 | 免费退换"
+    },
+    {
+      "caption": "SKU码:",
+      "text": "DOG-003"
+    },
+    {
+      "caption": "UPC/EAN码:",
+      "text": "099629872545711"
+    },
+    {
+      "caption": "GUID码:",
+      "text": "GUID-0996-2987-2545"
+    },
+    {
+      "caption": "颜色:",
+      "text": "土黄色/白色"
+    },
+    {
+      "caption": "尺寸:",
+      "text": "9-20 英尺并可定制"
+    },
+    {
+      "caption": "图案:",
+      "text": "小狗模样"
+    },
+    {
+      "caption": "购买链接:",
+      "text": "<b>点击这里带我回家</b>",
+      "link": "/product/all/"
+    }
+  ],
+  "part3visible": "true",
+  "part3title": "产品细节",
+  "part3images": [
+    "/imgs/products/product-dog003-d1.jpg",
+    "/imgs/products/product-dog003-d2.jpg",
+    "/imgs/products/product-dog003-d3.jpg",
+    "/imgs/products/product-dog003-d4.jpg"
+  ]
+}

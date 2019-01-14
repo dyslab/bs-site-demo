@@ -1,0 +1,109 @@
+{
+  "pagetitle": "经销商服务",
+  "part1visible": "true",
+  "part1title": "经销商服务",
+  "part1subtitle": "按需定制服务",
+  "part1content": "欢迎来到我们的经销商服务页面，这里你可以获得更多有关我们产品、服务、经销商政策的资讯.欢迎来到我们的经销商服务页面，这里你可以获得更多有关我们产品、服务、经销商政策的资讯.",
+  "part1background": "/imgs/service/template1-cat2-title-bg.jpg",
+  "part2visible": "true",
+  "part2title": "经销商特权",
+  "part2data": [
+    {
+      "image": "/imgs/service/template1-service-privilege1.png",
+      "title": "1对1资讯",
+      "content": "点击下面的链接进入我们的1对1服务通道.",
+      "linktext": "1对1服务通道 >",
+      "href": "#"
+    },
+    {
+      "image": "/imgs/service/template1-service-privilege7.png",
+      "title": "最佳价格",
+      "content": "提供行业的最佳价格.",
+      "linktext": "",
+      "href": "#"
+    },
+    {
+      "image": "/imgs/service/template1-service-privilege8.png",
+      "title": "便利配送",
+      "content": "自有配送渠道，门对门配送服务<p><I>服务时间: 周一至周六. 10:00 - 20:00 GST</I></p>",
+      "linktext": "",
+      "href": "#"
+    },
+    {
+      "image": "/imgs/service/template1-service-privilege9.png",
+      "title": "获得更多回报",
+      "content": "精心定制的回款套餐服务，为你提供最优收益.",
+      "linktext": "开启回款计划 >",
+      "href": "#"
+    },
+    {
+      "image": "/imgs/service/template1-service-privilege10.png",
+      "title": "免费资讯",
+      "content": "我们的优秀客服同事乐意向你提供免费资讯服务.",
+      "linktext": "联系我们 >",
+      "href": "/contact"
+    }
+  ],
+  "part3visible": "true",
+  "part3title": "自助服务",
+  "part3data": [
+    {
+      "image": "/imgs/service/template1-service-function4.jpg",
+      "title": "自助运营",
+      "href": "#"
+    },
+    {
+      "image": "/imgs/service/template1-service-function5.jpg",
+      "title": "邮件咨询",
+      "href": "#"
+    }
+  ],
+  "part4visible": "true",
+  "part4title": "常见问题",
+  "part4data": [
+    {
+      "faicon": "fas fa-question-circle",
+      "title": "经销商服务有多少种类型?",
+      "content": "无可记数，至少999种以上."
+    },
+    {
+      "faicon": "far fa-question-circle",
+      "title": "你在忽悠我吗?",
+      "content": "我们不是大忽悠，从1元计划到9999元计划，确实有很多套餐可供你放心选择."
+    },
+    {
+      "faicon": "fas fa-question-circle",
+      "title": "请问100元计划是怎样的?",
+      "content": "你先预存100元如我们的账户，18个月后我们开始每月返还你1%，直至返还至100%你的全部付款为止，计划终结."
+    },
+    {
+      "faicon": "far fa-question-circle",
+      "title": "那我存1000元又怎样?",
+      "content": "预存1000元，18个月后每月返回10元，直至全额回款为止."
+    },
+    {
+      "faicon": "far fa-question-circle",
+      "title": "我要怎样参与计划？",
+      "content": "按MOQ数量购买我们的产品后，即可申请加入我们的计划，详情可咨询我们的客户，或向我们的客服邮箱:<a href=\"mailto:csd@unknow.company\">csd@unknow.company</a>发送咨询邮件."
+    }
+  ],
+  "part5visible": "true",
+  "part5title": "需要更多服务?",
+  "part5data": [
+    {
+      "faicon": "fab fa-weixin",
+      "title": "微信群扫码",
+      "popuphref": "/imgs/qrcode-wx-test.png"
+    },
+    {
+      "faicon": "fab fa-qq",
+      "title": "QQ群扫码",
+      "popuphref": "/imgs/qrcode-qq-test.png"
+    },
+    {
+      "faicon": "fas fa-phone",
+      "title": "拨打客服热线",
+      "popuphref": "/imgs/callnow400.jpg"
+    }
+  ]
+}

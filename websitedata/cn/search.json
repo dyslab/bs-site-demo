@@ -1,0 +1,20 @@
+{
+  "pagetitle": "搜索",
+  "part1visible": "true",
+  "part1title": "搜索结果",
+  "part1subtitle": "请查阅",
+  "part1content": "感谢你试用我们的搜索页面，我们努力为你提供最接近你需求的搜索结果",
+  "part1background": "/imgs/template1-search-title-bg.jpg",
+  "part2visible": "true",
+  "part2title": "搜索词: ",
+  "part2data": [],
+  "searchfields": [
+    "/product/category/cat1",
+    "/product/category/cat2",
+    "/news"
+  ],
+  "resultcount": 50,
+  "resulttipsprefix": "共找到 ",
+  "resulttipssuffix": " 条记录。",
+  "noresulttips": "抱歉，查无结果。"
+}

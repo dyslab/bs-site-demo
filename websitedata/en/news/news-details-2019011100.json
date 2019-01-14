@@ -1,0 +1,16 @@
+{
+  "pagetitle": "NEWS DETAILS",
+  "part1visible": "true",
+  "part1title": "NEWS ",
+  "part1subtitle": "NEWS SUBTITLE",
+  "part1content": "Check out the latest news and events about us below. Feel free to subscribe our monthly mail news and product information if you would like to know us more.",
+  "part1background": "/imgs/template1-news-details-title-bg.jpg",
+  "part2visible": "true",
+  "part2data": {
+    "headline": "Xi, Kim hold talks, reaching important consensus",
+    "faicon": "far fa-newspaper",
+    "date": "2019-1-11",
+    "text": "<p>The two leaders of China and DPRK had an in-depth exchange of views on bilateral relations and issues of common concern, and reached important consensus....The two leaders of China and DPRK had an in-depth exchange of views on bilateral relations and issues of common concern, and reached important consensus....</p><p><center><figure class=\"figure\"><img class=\"figure-img img-fluid rounded\" src=\"/imgs/news/news-20190111-01.jpg\"><figcaption class=\"figure-caption\">The two leaders of China and DPRK had an in-depth exchange of views on bilateral relations and issues of common concern, and reached important consensus.</figcaption></figure></center></p>"
+  },
+  "part2backtext": " GO BACK "
+}

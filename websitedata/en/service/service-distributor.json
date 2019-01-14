@@ -1,44 +1,44 @@
 {
   "pagetitle": "SERVICES",
   "part1visible": "true",
-  "part1title": "CUSTOMER SERVICES",
-  "part1subtitle": "WE ARE READY FOR SERVING YOU",
+  "part1title": "DISTRIBUTOR SERVICES",
+  "part1subtitle": "SERVING FOR YOUR REQUEST",
   "part1content": "Welcome to the services page, feel free to contact us or our branch office during work time, or you're able to write a message to us in the form below as you wish.",
-  "part1background": "/imgs/template1-service-title-bg.jpg",
+  "part1background": "/imgs/service/template1-cat2-title-bg.jpg",
   "part2visible": "true",
-  "part2title": "CUSTOMER PRIVILEGE",
+  "part2title": "DISTRIBUTOR PRIVILEGE",
   "part2data": [
     {
       "image": "/imgs/template1-service-privilege2.png",
-      "title": "VIP 1 on 1",
+      "title": "1 on 1 VIP SERVICE",
       "content": "Click the link below to enjoy the customer 1 on 1 privilege service online.",
       "linktext": "1 on 1 Service Channel >",
       "href": "#"
     },
     {
       "image": "/imgs/template1-service-privilege3.png",
-      "title": "Money Back Service",
-      "content": "Customize Money Back Package for VIP customers, you can earn more than you paid after 18 months trial.",
-      "linktext": "Start Your Money Back Project >",
+      "title": "BEST PRICE",
+      "content": "Free collect the recycled items as you wish. Go to the specific channel to take action on it.",
+      "linktext": "",
       "href": "#"
     },
     {
       "image": "/imgs/template1-service-privilege4.png",
-      "title": "Free Shipping",
+      "title": "CONVENIENT SHIPPING",
       "content": "We offer free shipping service for customers. Consult the front counter for further details please.<p><I>Work time: Mon-Sun. 12:00 - 20:00 GST</I></p>",
       "linktext": "",
       "href": "#"
     },
     {
       "image": "/imgs/template1-service-privilege5.png",
-      "title": "Item Recycling Service",
-      "content": "Free collect the recycled items as you wish. Go to the specific channel to take action on it.",
-      "linktext": "",
+      "title": "GET MORE THAN YOU PAID",
+      "content": "Customize Money Back Package for VIP customers, you can earn more than you paid after 18 months trial.",
+      "linktext": "Start Your Money Back Project >",
       "href": "#"
     },
     {
       "image": "/imgs/template1-service-privilege6.png",
-      "title": "Free Callback",
+      "title": "FREE CALL",
       "content": "Send request and get a call back with no charge. We offer your any information that you need.",
       "linktext": "Send Callback Request NOW >",
       "href": "/contact"
@@ -48,29 +48,19 @@
   "part3title": "SELF-SERVICE",
   "part3data": [
     {
-      "image": "/imgs/template1-service-function1.jpg",
-      "title": "Upgarde Membership",
-      "href": "#"
-    },
-    {
       "image": "/imgs/template1-service-function2.jpg",
-      "title": "Mobile App",
+      "title": "VIP Membership",
       "href": "#"
     },
     {
       "image": "/imgs/template1-service-function3.jpg",
-      "title": "Sociality Link",
+      "title": "Community",
       "href": "/about"
     },
     {
-      "image": "/imgs/template1-service-function4.jpg",
-      "title": "Daily Maintenance",
-      "href": "#"
-    },
-    {
       "image": "/imgs/template1-service-function5.jpg",
-      "title": "Price Inquiry",
-      "href": "/contact"
+      "title": "ATM Pos",
+      "href": "#"
     }
   ],
   "part4visible": "true",
@@ -95,6 +85,11 @@
       "faicon": "far fa-question-circle",
       "title": "Okay, I admit I am a idiot. But why did you create a such stupid section though?",
       "content": "Ummm...I have to say that, sometimes I am a idiot too."
+    },
+    {
+      "faicon": "far fa-question-circle",
+      "title": "One more question...",
+      "content": "Sorry, never seen the people as stupid as you."
     }
   ],
   "part5visible": "true",
@@ -104,11 +99,6 @@
       "faicon": "fab fa-weixin",
       "title": "SCAN and JOIN our wechat discussion group",
       "popuphref": "/imgs/qrcode-wx-test.png"
-    },
-    {
-      "faicon": "fab fa-weibo",
-      "title": "SCAN and JOIN our weibo user group",
-      "popuphref": ""
     },
     {
       "faicon": "fab fa-qq",

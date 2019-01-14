@@ -1,61 +1,8 @@
 // product page data reader
+var FileHandler = require('./file-handler.js')
 
-// get product category list by categoryid and limitcount
-//  categoryid: category id/name.
-//  limitcount: the quantity of return items. eg. 0,1,2,3,4... Note: 0 means unlimited.
-exports.getCatergoryList = function (categoryid, limitcount) {
-  var catgoryListObj = [{
-    image: '/imgs/products/product-prod001-t1.jpg',
-    title: 'PROD001',
-    content: 'Space Pymaid, Easy to use, One click change location',
-    href: '/product/item/prod001'
-  }, {
-    image: '/imgs/products/product-prod002-t1.jpg',
-    title: 'PROD002',
-    content: 'VIVO X23 Grenade, A Powerful bomb and looks like a famous cellphone',
-    href: '/product/item/prod002'
-  }, {
-    image: '/imgs/products/product-hm0752-t1.jpg',
-    title: 'HM0752',
-    content: 'Shaped-like Flip Flops Energy Recharger, Recharge feet energy anywhere anytime',
-    href: '/product/item/hm0752'
-  }, {
-    image: '/imgs/products/product-dog003-t1.jpg',
-    title: 'DOG-003',
-    content: 'Coolest VR puppy doll, Feed him just like feed your other pets',
-    href: '/product/item/dog-003'
-  }, {
-    image: '/imgs/products/product-g1001-t1.jpg',
-    title: 'G1001',
-    content: 'Next Generation Laser Gun, Probably the best automatic rifle that you met',
-    href: '/product/item/g1001'
-  }, {
-    image: '/imgs/products/product-v20-t1.jpg',
-    title: 'V20',
-    content: 'Superior GPS Storage, Collect everything around you and store them',
-    href: '/product/item/v20'
-  }, {
-    image: '/imgs/products/product-prod010-t1.jpg',
-    title: 'PROD010',
-    content: 'X-ray Sunglasses, Penetrate any barrier between you and the target',
-    href: '/product/item/prod010'
-  }, {
-    image: '/imgs/products/product-cake001-t1.jpg',
-    title: 'CAKE001',
-    content: 'Chinese Energy Pie, Tasty and fill up your whole day energy',
-    href: '/product/item/cake001'
-  }]
-
-  if (limitcount && limitcount > 0 && limitcount < catgoryListObj.length) {
-    catgoryListObj = catgoryListObj.slice(0, limitcount)
-  }
-
-  return catgoryListObj
-}
-
-// read category list page infomation and return
-exports.getCategoryPageInfo = function (categoryid, langid, datamode) {
-  var pageinfoObj = {
+function getDefaultPageInfo (id) {
+  var defaultCategoryPageInfoObj = {
     pagetitle: 'PRODUCT CATALOG',
     part1visible: 'true',
     part1title: 'OUR AMAZING PRODUCTS',
@@ -64,8 +11,48 @@ exports.getCategoryPageInfo = function (categoryid, langid, datamode) {
     part1background: '/imgs/template1-product-title-bg.jpg',
     part2visible: 'true',
     part2title: 'PRODUCT CATEGORY',
-    part2count: 20, // the quantity of visible items. eg. 0:unlimited, the number greater than 0 is the count of visible items.
-    part2data: [],
+    part2count: 20, // the quantity of visible items. eg. -1:unlimited, the number greater than 0 is the count of visible items.
+    part2data: [{
+      image: '/imgs/products/product-prod001-t1.jpg',
+      title: 'PROD001',
+      content: 'Space Pymaid, Easy to use, One click change location',
+      href: '/product/item/prod001'
+    }, {
+      image: '/imgs/products/product-prod002-t1.jpg',
+      title: 'PROD002',
+      content: 'VIVO X23 Grenade, A Powerful bomb and looks like a famous cellphone',
+      href: '/product/item/prod002'
+    }, {
+      image: '/imgs/products/product-hm0752-t1.jpg',
+      title: 'HM0752',
+      content: 'Shaped-like Flip Flops Energy Recharger, Recharge feet energy anywhere anytime',
+      href: '/product/item/hm0752'
+    }, {
+      image: '/imgs/products/product-dog003-t1.jpg',
+      title: 'DOG-003',
+      content: 'Coolest VR puppy doll, Feed him just like feed your other pets',
+      href: '/product/item/dog-003'
+    }, {
+      image: '/imgs/products/product-g1001-t1.jpg',
+      title: 'G1001',
+      content: 'Next Generation Laser Gun, Probably the best automatic rifle that you met',
+      href: '/product/item/g1001'
+    }, {
+      image: '/imgs/products/product-v20-t1.jpg',
+      title: 'V20',
+      content: 'Superior GPS Storage, Collect everything around you and store them',
+      href: '/product/item/v20'
+    }, {
+      image: '/imgs/products/product-prod010-t1.jpg',
+      title: 'PROD010',
+      content: 'X-ray Sunglasses, Penetrate any barrier between you and the target',
+      href: '/product/item/prod010'
+    }, {
+      image: '/imgs/products/product-cake001-t1.jpg',
+      title: 'CAKE001',
+      content: 'Chinese Energy Pie, Tasty and fill up your whole day energy',
+      href: '/product/item/cake001'
+    }],
     part3visible: 'true',
     part3data: [{
       image: '/imgs/products/product-cat-link-formore.png',
@@ -85,15 +72,7 @@ exports.getCategoryPageInfo = function (categoryid, langid, datamode) {
     }]
   }
 
-  pageinfoObj.part2title = categoryid.toUpperCase()
-  pageinfoObj.part2data = this.getCatergoryList(categoryid, pageinfoObj.part2count)
-
-  return pageinfoObj
-}
-
-// read all category list infomation and return
-exports.getAllPageInfo = function (langid, datamode) {
-  var pageinfoObj = {
+  var defaultAllInfoObj = {
     pagetitle: 'ALL PRODUCTS',
     part1visible: 'true',
     part1title: 'ALL PRODUCTS',
@@ -104,29 +83,17 @@ exports.getAllPageInfo = function (langid, datamode) {
     part2data: [{
       id: 'cat1',
       title: 'CAT1 - category 1',
-      count: 0, // the quantity of visible items. eg. 0: unlimited, the number greater than 0 is the count of visible items.
+      count: -1, // the quantity of visible items. eg. -1: unlimited, the number greater than 0 is the count of visible items.
       data: []
     }, {
       id: 'cat2',
       title: 'CAT2 - category 2',
-      count: 4, // the quantity of visible items. eg. 0: unlimited, the number greater than 0 is the count of visible items.
+      count: 4, // the quantity of visible items. eg. -1: unlimited, the number greater than 0 is the count of visible items.
       data: []
     }]
   }
 
-  for (var i = 0; i < pageinfoObj.part2data.length; i++) {
-    pageinfoObj.part2data[i].data = this.getCatergoryList(
-      pageinfoObj.part2data[i].id.toLocaleLowerCase(),
-      pageinfoObj.part2data[i].count
-    )
-  }
-
-  return pageinfoObj
-}
-
-// read item infomation and return
-exports.getItemPageInfo = function (productid, langid, datamode) {
-  var pageinfoObj = {
+  var defaultItemInfoObj = {
     pagetitle: 'PRODUCT',
     part1visible: 'true',
     part1title: 'PRODUCT',
@@ -144,9 +111,6 @@ exports.getItemPageInfo = function (productid, langid, datamode) {
     part2lines: [{
       caption: 'Features:',
       text: 'Kirin 980 Processor|4800 MPixels Camera|4000 mAh Battery|Super Charge'
-    }, {
-      caption: 'Services:',
-      text: 'Free Shipping|Free Return'
     }, {
       caption: 'Services:',
       text: 'Free Shipping|Free Return'
@@ -184,7 +148,65 @@ exports.getItemPageInfo = function (productid, langid, datamode) {
     ]
   }
 
-  pageinfoObj.part2title = productid.toUpperCase()
+  switch (id) {
+    case 'category':
+      return defaultCategoryPageInfoObj
+    case 'all':
+      return defaultAllInfoObj
+    default:
+      return defaultItemInfoObj
+  }
+}
+
+// read category list page infomation and return
+exports.getCategoryPageInfo = function (categoryid, langid, datamode) {
+  var pageinfoObj = getDefaultPageInfo('category')
+
+  if (datamode === 'file') {
+    // read data from JSON file
+    var tmpObj = FileHandler.getObjectFromJSONFile(langid, 'product_cat', categoryid)
+    if (tmpObj && tmpObj !== undefined) pageinfoObj = tmpObj
+  }
+
+  if (pageinfoObj && pageinfoObj.part2count >= 0 && pageinfoObj.part2count < pageinfoObj.part2data.length) {
+    pageinfoObj.part2data = pageinfoObj.part2data.slice(0, pageinfoObj.part2count)
+  }
+
+  return pageinfoObj
+}
+
+// read all category list infomation and return
+exports.getAllPageInfo = function (langid, datamode) {
+  var pageinfoObj = getDefaultPageInfo('all')
+
+  if (datamode === 'file') {
+    // read data from JSON file
+    var tmpObj = FileHandler.getObjectFromJSONFile(langid, 'product_all')
+    if (tmpObj && tmpObj !== undefined) pageinfoObj = tmpObj
+  }
+
+  var tmpCatObj
+  for (var i = 0; i < pageinfoObj.part2data.length; i++) {
+    tmpCatObj = this.getCategoryPageInfo(pageinfoObj.part2data[i].id.toLocaleLowerCase(), langid, datamode)
+    if (tmpCatObj && pageinfoObj.part2data[i].count >= 0 && pageinfoObj.part2data[i].count < tmpCatObj.part2data.length) {
+      pageinfoObj.part2data[i].data = tmpCatObj.part2data.slice(0, pageinfoObj.part2data[i].count)
+    } else {
+      pageinfoObj.part2data[i].data = tmpCatObj.part2data
+    }
+  }
+
+  return pageinfoObj
+}
+
+// read item infomation and return
+exports.getItemPageInfo = function (productid, langid, datamode) {
+  var pageinfoObj = getDefaultPageInfo('item')
+
+  if (datamode === 'file') {
+    // read data from JSON file
+    var tmpObj = FileHandler.getObjectFromJSONFile(langid, 'product_item', productid)
+    if (tmpObj && tmpObj !== undefined) pageinfoObj = tmpObj
+  }
 
   return pageinfoObj
 }

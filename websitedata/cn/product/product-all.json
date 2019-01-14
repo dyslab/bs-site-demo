@@ -1,0 +1,21 @@
+{
+  "pagetitle": "所有产品",
+  "part1visible": "true",
+  "part1title": "所有产品",
+  "part1subtitle": "值得购买",
+  "part1content": "欢迎来到全部产品页面，我们只卖别人无法想象的创新产品，挑选您喜欢的产品并把他们带回家...",
+  "part1background": "/imgs/template1-product-all-title-bg.jpg",
+  "part2visible": "true",
+  "part2data": [
+    {
+      "id": "cat1",
+      "title": "产品目录1",
+      "count": -1
+    },
+    {
+      "id": "cat2",
+      "title": "产品目录2",
+      "count": 20
+    }
+  ]
+}

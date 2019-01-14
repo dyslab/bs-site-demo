@@ -1,0 +1,55 @@
+{
+  "pagetitle": "PRODUCT",
+  "part1visible": "true",
+  "part1title": "PRODUCT",
+  "part1subtitle": "",
+  "part1content": "Welcome to check this out! We are just selling the blow-up-minding, innovative and creative products. Pick up your favorite items and take them back home...",
+  "part1background": "/imgs/template1-product-item-title-bg.jpg",
+  "part2visible": "true",
+  "part2title": "PROD010",
+  "part2images": [
+    "/imgs/products/product-prod010-p1.jpg",
+    "/imgs/products/product-prod010-p2.jpg",
+    "/imgs/products/product-prod010-p3.jpg"
+  ],
+  "part2lines": [
+    {
+      "caption": "Features:",
+      "text": "X-ray Sunglasses, Penetrate any barrier between you and the target"
+    },
+    {
+      "caption": "Services:",
+      "text": "Free Shipping|Free Return"
+    },
+    {
+      "caption": "SKU:",
+      "text": "PROD010-10<br>PROD010-20<br>PROD010-30"
+    },
+    {
+      "caption": "UPC/EAN:",
+      "text": "077629872899"
+    },
+    {
+      "caption": "Color:",
+      "text": "Black/Gold/Silver"
+    },
+    {
+      "caption": "Size:",
+      "text": "Customized"
+    },
+    {
+      "caption": "Purchase:",
+      "text": "<b>Click here</b>",
+      "link": "/product/all/"
+    }
+  ],
+  "part3visible": "true",
+  "part3title": "PRODUCT DETAILS",
+  "part3images": [
+    "/imgs/products/product-prod010-d1.jpg",
+    "/imgs/products/product-prod010-d2.jpg",
+    "/imgs/products/product-prod010-d3.jpg",
+    "/imgs/products/product-prod010-d4.jpg",
+    "/imgs/products/product-prod010-d5.jpg"
+  ]
+}
