@@ -1,0 +1,355 @@
+/*-----------------------------------------------------------------------------------------
+  Common part.
+-----------------------------------------------------------------------------------------*/
+.custom-text-shadow-1px {
+  text-shadow: 1px 1px 1px darkgray;
+  -webkit-text-shadow: 1px 1px 1px darkgray;
+  -moz-text-shadow: 1px 1px 1px darkgray;
+  -ms-text-shadow: 1px 1px 1px darkgray
+}
+.custom-text-shadow-2px {
+  text-shadow: 2px 2px 2px darkgray;
+  -webkit-text-shadow: 2px 2px 2px darkgray;
+  -moz-text-shadow: 2px 2px 2px darkgray;
+  -ms-text-shadow: 2px 2px 2px darkgray
+}
+.custom-text-shadow-3px {
+  text-shadow: 3px 3px 3px darkgray;
+  -webkit-text-shadow: 3px 3px 3px darkgray;
+  -moz-text-shadow: 3px 3px 3px darkgray;
+  -ms-text-shadow: 3px 3px 3px darkgray
+}
+.custom-text-shadow-white-1px {
+  text-shadow: 1px 1px 1px white;
+  -webkit-text-shadow: 1px 1px 1px white;
+  -moz-text-shadow: 1px 1px 1px white;
+  -ms-text-shadow: 1px 1px 1px white;
+}
+.custom-text-shadow-white-2px {
+  text-shadow: 2px 2px 2px white;
+  -webkit-text-shadow: 2px 2px 2px white;
+  -moz-text-shadow: 2px 2px 2px white;
+  -ms-text-shadow: 2px 2px 2px white;
+}
+
+/*---------------------------------------
+  Go To Top, code comes from Bootdtrap
+---------------------------------------*/
+.u-go-to {
+  display: none;
+  position: relative;
+  z-index: 100;
+  width: 3rem;
+  height: 3rem;
+  background-color: rgb(17, 112, 253);
+  color: #fff;
+  font-size: 0.75rem;
+  border-radius: 2rem;
+  opacity: 0.5;
+  transition: 0.3s ease-out;
+}
+.u-go-to__inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.u-go-to:hover, .u-go-to:focus:hover {
+  color: #fff;
+  opacity: 1;
+}
+
+/*---------------------------------------
+  social_media_icons_style
+---------------------------------------*/
+.social_media ul li a {
+  text-align: center;
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  line-height: 34px;
+  background: transparent;
+  border: 2px solid #fff;
+}
+.social_media ul li a:hover path {
+  fill: #15e99d;
+}
+
+/*-----------------------------------------------------------------------------------------
+  For all pages except index.
+-----------------------------------------------------------------------------------------*/
+.custom-title-height {
+  min-height: 39vh;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.custom-title-space-height {
+  height: 58px
+}
+
+/*-----------------------------------------------------------------------------------------
+  For Nav Bar.
+-----------------------------------------------------------------------------------------*/
+.custom-input-height-30 {
+  height: 30px
+}
+
+.custom-dropdownitem-link {
+  color: white
+}
+.custom-dropdownitem-link:hover {
+  background-color: rgba(147, 190, 255, 0.95);
+  color: black;
+}
+
+/*-----------------------------------------------------------------------------------------
+  For index/header/footer page.
+-----------------------------------------------------------------------------------------*/
+.custom-header-bgcolor,
+.custom-footer-bgcolor,
+.custom-transparency-95 {
+  background-color: rgba(10, 45, 97, 0.95);
+}
+
+.costom-text-darkgray {
+  color: darkgray
+}
+
+.costom-default-color-about-0 {
+  color: #a55
+}
+.costom-default-color-about-1 {
+  color: #5a5
+}
+.costom-default-color-about-2 {
+  color: #55a
+}
+
+.custom-div-about:hover {
+  color: white;
+  background: rgba(10, 45, 97, .6);
+}
+.custom-div-about:hover h3 {
+  color: white;
+}
+.custom-div-about:hover path {
+  fill: white;
+}
+
+.custom-timeline-bgcolor {
+  background: #ecf0f1
+}
+
+.costom-team-color {
+  color: rgb(92, 116, 146)
+}
+
+.custom-carousel-img-height {
+  min-height: 50vh;
+  max-height: 100vh;
+}
+
+.custom-testimonial-height {
+  min-height: 50vh;
+}
+
+.custom-footer-color, .custom-footer-brand {
+  color: #ccc;
+  text-decoration: none;
+}
+.custom-footer-brand:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.custom-footer-lang {
+  font-size: 1.2em;
+  color: white
+}
+a.custom-footer-lang:hover {
+  text-decoration: none;
+  font-size: 1.2em;
+  color: #ffee00
+}
+
+/*-----------------------------------------------------------------------------------------
+  For about page.
+-----------------------------------------------------------------------------------------*/
+.custom-transparency-0 {
+  background-color: rgba(255, 255, 255, 0);
+}
+
+
+/*-----------------------------------------------------------------------------------------
+  For index/news page.
+-----------------------------------------------------------------------------------------*/
+.custom-news-bgcolor {
+  background: #e7ecd1
+}
+.custom-news-title-color {
+  color: #000000
+}
+.custom-news-title-color:hover {
+  color: #186918;
+  text-decoration: none 
+}
+.custom-news-content-color {
+  color: #666
+}
+
+/*-----------------------------------------------------------------------------------------
+  For contact page.
+-----------------------------------------------------------------------------------------*/
+.custom-contact-map-height {
+  max-height: 360px
+}
+
+.custom-contact-form-bgcolor {
+  background: rgb(253, 249, 228)
+}
+
+.custom-contact-link {
+  color: #261cb4;
+  text-decoration: none
+}
+.custom-contact-link:hover {
+  color: #0f8360;
+  text-decoration: none
+}
+
+/*-----------------------------------------------------------------------------------------
+  For service page.
+-----------------------------------------------------------------------------------------*/
+.custom-service-link {
+  color: #1296db;
+  text-decoration: none
+}
+.custom-service-link:hover {
+  text-decoration: none;
+  color: #145070;
+  text-shadow: 0px 0px 1px #666
+}
+.custom-service-link:focus {
+  text-decoration: none;
+  color: #145070;
+  text-shadow: 0px 0px 1px #666
+}
+
+.custom-service-function { 
+  display: inline-block;
+  vertical-align: top;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  -moz-transition: .3s;
+  transition: .3s;
+  margin-bottom: .21rem;
+  width: 98%;
+  cursor:pointer
+}
+.custom-service-function img { 
+  width: 100%;
+  border: 0
+}
+.custom-service-function:hover { 
+  -webkit-transform: translateY(-4px);
+  -moz-transform: translateY(-4px);
+  -ms-transform: translateY(-4px);
+  -o-transform: translateY(-4px);
+  transform: translateY(-4px); 
+  -webkit-box-shadow: 0 10px 40px 1px rgba(0,0,0,.1); 
+  -moz-box-shadow: 0 10px 40px 1px rgba(0,0,0,.1); 
+  box-shadow: 0 10px 40px 1px rgba(0,0,0,.1)
+}
+
+/*-----------------------------------------------------------------------------------------
+  For product pages.
+-----------------------------------------------------------------------------------------*/
+.custom-product-cat-link { 
+  display: inline-block;
+  vertical-align: top;
+  -webkit-transition: .1s;
+  -o-transition: .1s;
+  -moz-transition: .1s;
+  transition: .1s;
+  margin-bottom: .21rem;
+  width: 98%;
+  color: #016b4b;
+  text-shadow: 1px 1px 1px white;
+  -webkit-text-shadow: 1px 1px 1px white;
+  -moz-text-shadow: 1px 1px 1px white;
+  -ms-text-shadow: 1px 1px 1px white;
+  cursor:pointer
+}
+.custom-product-cat-link:hover { 
+  -webkit-transform: translateY(-5px);
+  -moz-transform: translateY(-5px);
+  -ms-transform: translateY(-5px);
+  -o-transform: translateY(-5px);
+  transform: translateY(-5px); 
+  -webkit-box-shadow: 0 20px 20px 3px rgba(0,0,0,.1); 
+  -moz-box-shadow: 0 20px 20px 3px rgba(0,0,0,.1); 
+  box-shadow: 0 20px 20px 3px rgba(0,0,0,.1);
+  color: #991616;
+  text-shadow: 1px 1px 1px white;
+  -webkit-text-shadow: 1px 1px 1px white;
+  -moz-text-shadow: 1px 1px 1px white;
+  -ms-text-shadow: 1px 1px 1px white
+}
+
+.custom-product-cat-link2-height {
+  max-height: 80px
+}
+.custom-product-cat-link2 {
+  width: 7.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/></filter></svg>#grayscale");
+  filter: gray;
+  -webkit-filter: grayscale(50%);
+  opacity: .65;
+  transition: all 0.3s ease;
+}
+.custom-product-cat-link2:hover {
+  filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0'/></filter></svg>#grayscale");
+  -webkit-filter: grayscale(0%);
+  opacity: 1;
+}
+
+/*-----------------------------------------------------------------------------------------
+  For search pages.
+-----------------------------------------------------------------------------------------*/
+.custom-search-term { 
+  background: yellow
+}
+
+.custom-search-result-title { 
+  font-size: 110%
+}
+.custom-search-result-text { 
+  font-size: 100%
+}
+
+.custom-search-link {
+  text-decoration: none;
+  color: #686868;
+}
+.custom-search-link:hover {
+  text-decoration: none;
+  color: #118324;
+}
+.custom-search-link:hover div {
+  background: white;
+}
+.custom-search-link:hover .custom-search-result-title {
+  text-shadow: 0px 0px 1px darkgray;
+  -webkit-text-shadow: 0px 0px 1px rgb(7, 5, 5);
+  -moz-text-shadow: 0px 0px 1px darkgray;
+  -ms-text-shadow: 0px 0px 1px darkgray;
+}

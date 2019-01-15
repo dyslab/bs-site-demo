@@ -1,0 +1,57 @@
+<!-- Page Footer Begin -->
+footer.p-0
+  div.container-fluid.custom-footer-bgcolor.p-0.p-md-3
+    div.container.pt-5.pb-5
+      div.d-flex.justify-content-between.row
+        div.col-lg-6.col-md-12
+          div
+            ul.list-inline
+              each langitem in templatepageinfo.language.list
+                if langitem.id == templatepageinfo.language.currentid
+                  li.list-inline-item.badge.badge-secondary 
+                    span.custom-footer-lang #{langitem.caption}
+                else
+                  li.list-inline-item.badge.badge-success
+                    a.custom-footer-lang(href="/switch?lang=" + langitem.id) #{langitem.caption}
+        div.col-lg-6.col-md-12.text-lg-right.text-md-left.text-light.custom-text-shadow-1px.pb-3
+          div
+            h5.font-weight-bolder #{templatepageinfo.getintouchinfo.headline}
+          div.social_media
+            ul.list-inline
+              each gitem in templatepageinfo.getintouchinfo.data
+                li.list-inline-item
+                  a(href=gitem.href, target="_blank", rel=gitem.ref)
+                    i(class= gitem.faicon + " fa-lg text-white")
+      hr.bg-dark
+      div.d-flex.justify-content-center.row
+        div.col.text-center.custom-footer-color
+          span #{templatepageinfo.siteinfo.copyright}
+            |  
+            a.custom-footer-brand(href="/", alt=templatepageinfo.siteinfo.footersitename)
+              img.d-inline-block.align-top(src=templatepageinfo.siteinfo.footersitelogo, height="20", alt=templatepageinfo.siteinfo.footersitename)
+              |  
+              span #{templatepageinfo.siteinfo.footersitename}
+            |  
+          span #{templatepageinfo.siteinfo.copyrightsuffix}
+
+  <!-- Go to Top -->
+  a.js-go-to.u-go-to(href="javascript:;", data-position='{"bottom": 15, "right": 15 }', data-type="fixed", data-offset-top="400",
+    data-compensation="#header", data-show-effect="slideInUp", data-hide-effect="slideOutDown")
+    span.fa.fa-arrow-up.fa-2x.u-go-to__inner
+  <!-- Note: Need to add script part below the body -->
+  <!-- End Go to Top -->
+
+  <!-- Ajax Form Response - modalSubscribeResponseDialog Begin -->
+  div.modal.fade(id="modalSubscribeResponseDialog", tabindex="-1", role="dialog")
+    div.modal-dialog(role="document")
+      div.modal-content
+        div.modal-header
+          h5 #{templatepageinfo.subscribeinfo.responsetitle}
+          button.close(type="button", data-dismiss="modal", aria-label=templatepageinfo.subscribeinfo.responsebuttoncaption)
+            span(aria-hidden="true") &times;
+        div.modal-body
+          p!= templatepageinfo.subscribeinfo.responsecontent
+        div.modal-footer.justify-content-center
+          button.btn.btn-success(type="button",data-dismiss="modal") #{templatepageinfo.subscribeinfo.responsebuttoncaption}
+  <!-- Ajax Form Response - modalSubscribeResponseDialog End -->
+<!-- Page Footer End -->

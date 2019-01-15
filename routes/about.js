@@ -13,6 +13,9 @@ function syncRenderPage (req, res) {
   var templatePageInfo = TemplateDataReader.getTemplatePageInfo('/about', cookieObj)
   var pageInfo = AboutDataReader.getPageInfo(templatePageInfo.language.currentid, templatePageInfo.datamode)
 
+  // *** Test template 2 ***
+  templatePageInfo.templateID = 2
+
   // about page render
   res.render('template' + templatePageInfo.templateID + '-about', {
     templatepageinfo: templatePageInfo,

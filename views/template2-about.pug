@@ -1,0 +1,146 @@
+extends template2-layout
+
+//- setPart2Items Declaration Begin
+mixin setPart2Items
+  each p2item, index in pageinfo.part2data
+    div.col-lg-4.col-12.pb-3
+      div.card
+        div.card-body.pb-4.custom-div-about
+          h3.font-weight-bold.custom-text-shadow-1px(class="costom-default-color-about-" + (index % 3))
+            i(class=p2item.faicon)
+            | 
+            | #{p2item.faicontitle}
+          p.card-text!= p2item.faiconcontent
+//- setPart2Items Declaration End
+
+//- setPart3Items Declaration Begin
+mixin setPart3Items
+  each p3item in pageinfo.part3data
+    div.timeline__item
+      div.timeline__content
+        h5.custom-text-shadow-1px #{p3item.headline}
+        p!= p3item.content
+//- setPart3Items Declaration End
+
+//- setPart4Items Declaration Begin
+mixin setPart4Items
+  each p4item in pageinfo.part4data
+    div.col-lg-4.col-md-6.p-3
+      div.card.text-center.rounded.shadow.pl-3.pr-3.pt-3
+        img.img-fluid.rounded-circle(src=p4item.image, alt=p4item.headline)
+        div.card-body
+          h5.card-title.custom-text-shadow-1px #{p4item.headline}
+          p.card-text!= p4item.content
+          ul.list-inline
+            each linkitem in p4item.links
+              li.list-inline-item.pl-1.pr-1
+                a.costom-team-color(href=linkitem.href, target="_blank")
+                  i(class=linkitem.faicon + " fa-lg")
+//- setPart4Items Declaration End
+
+//- setPart5Items Declaration Begin
+mixin setPart5Items
+  each p5item, index in pageinfo.part5data
+    if index == 0
+      div.carousel-item.active
+        div.text-center
+          h3.font-weight-bold.text-success.custom-text-shadow-white-1px #{p5item.headline}
+          h5.text-white #{p5item.prefixsubline}
+            |  
+            span.text-warning.custom-text-shadow-white-1px #{p5item.subline}
+          div.container-fluid.w-75
+            p.text-light!= p5item.content
+    else
+      div.carousel-item
+        div.text-center
+          h3.font-weight-bold.text-success.custom-text-shadow-white-1px #{p5item.headline}
+          h5.text-white #{p5item.prefixsubline}
+            |  
+            span.text-warning.custom-text-shadow-white-1px #{p5item.subline}
+          div.container-fluid.w-75
+            p.text-light!= p5item.content
+//- setPart5Items Declaration End
+
+block header-scripts
+  link(href="/static/css/timeline.min.css", rel="stylesheet")
+
+block content
+  <!-- Part 1 Begin -->
+  if pageinfo.part1visible.toUpperCase() == 'TRUE'
+    section(id="part1")
+      div.container-fluid.custom-title-height(style="background: url('" + pageinfo.part1background + "')")
+        div.custom-title-space-height
+        div.container
+          h1.text-white.font-weight-bolder.custom-text-shadow-2px #{pageinfo.part1title}
+          h3.text-white.custom-text-shadow-1px #{pageinfo.part1subtitle}
+          div.text-light.col-12.col-lg-6.p-0 #{pageinfo.part1content}
+        div.custom-title-space-height
+  <!-- Part 1 End -->
+  <!-- Part 2 Begin -->
+  if pageinfo.part2visible.toUpperCase() == 'TRUE'
+    section.custom-timeline-bgcolor.pt-5(id="part2")
+      div.container-fluid.custom-transparency-0
+        div.container
+          div.row
+            +setPart2Items
+  <!-- Part 2 End -->
+
+  <!-- Part 3 Begin -->
+  if pageinfo.part3visible.toUpperCase() == 'TRUE'
+    section.custom-timeline-bgcolor.pt-5.pb-5(id="part3")
+      div.container
+        div.text-center.custom-text-shadow-3px
+          span #{pageinfo.part3subtitle}
+          h3.font-weight-bolder #{pageinfo.part3title}
+        div.timeline
+          div.timeline__wrap
+            div.timeline__items
+              +setPart3Items
+          button.timeline-nav-button.timeline-nav-button--prev
+          button.timeline-nav-button.timeline-nav-button--next
+          span.timeline-divider
+  <!-- Note: Need to add timeline script part below the body -->
+  <!-- Part 3 End -->
+  
+  <!-- Part 4 Begin -->
+  if pageinfo.part4visible.toUpperCase() == 'TRUE'
+    section(id="part4")
+      div.container-fluid.bg-light.pt-5.pb-5
+        div.container
+          div.text-center.custom-text-shadow-2px.pb-3
+            h2.font-weight-bolder #{pageinfo.part4title}
+            p #{pageinfo.part4subtitle}
+          div.card-deck
+            +setPart4Items
+  <!-- Part 4 End -->
+
+  <!-- Part 5 Begin -->
+  if pageinfo.part5visible.toUpperCase() == 'TRUE'
+    section(id="part5")
+      div.container-fluid.custom-testimonial-height.pt-5.pb-5(style="background: url('" + pageinfo.part5background + "')")
+        div.container.p-0
+          div.text-center.pb-3.text-dark.custom-text-shadow-white-1px
+            h2.font-weight-bolder #{pageinfo.part5title}
+            p #{pageinfo.part5subtitle}
+          div.carousel.slide(id="bs-testimonial-slide", data-ride="carousel")
+            div.carousel-inner
+              +setPart5Items
+            a.carousel-control-prev(href="#bs-testimonial-slide", role="button", data-slide="prev")
+              span.carousel-control-prev-icon(aria-hidden="true")
+              span.sr-only Previous
+            a.carousel-control-next(href="#bs-testimonial-slide", role="button", data-slide="next")
+              span.carousel-control-next-icon(aria-hidden="true")
+              span.sr-only Next
+  <!-- Part 5 End -->
+
+block footer-scripts
+  <!-- Timeline Script Begin -->
+  script(src="/static/js/timeline.min.js")
+  script.
+    timeline(document.querySelectorAll('.timeline'), {
+      forceVerticalMode: 700,
+      mode: 'horizontal',
+      verticalStartPosition: 'left',
+      visibleItems: 5
+    });
+  <!-- Timeline Script End -->

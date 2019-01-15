@@ -4,7 +4,7 @@
   "part1title": "关于我们",
   "part1subtitle": "我们的理念",
   "part1content": "这是一个基于Node.js/JQuety/Bootstrap设计的可定制实践网站.这是一个基于Node.js/JQuety/Bootstrap设计的可定制实践网站.这是一个基于Node.js/JQuety/Bootstrap设计的可定制实践网站.这是一个基于Node.js/JQuety/Bootstrap设计的可定制实践网站.",
-  "part1background": "/imgs/template1-about-title-bg.jpg",
+  "part1background": "/imgs/template1-about-title-bg2.jpg",
   "part2visible": "true",
   "part2title": "图标故事",
   "part2data": [
@@ -15,8 +15,8 @@
     },
     {
       "faicon": "fab fa-font-awesome",
-      "faicontitle": "Font Awesome图标",
-      "faiconcontent": "FA图标助我们高飞。"
+      "faicontitle": "图标",
+      "faiconcontent": "FontAwesome图标助我们高飞。"
     },
     {
       "faicon": "fab fa-weixin",

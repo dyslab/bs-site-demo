@@ -1,0 +1,73 @@
+//- setNavItems Declaration Begin
+mixin setNavItems
+  each menuitem, index in templatepageinfo.navmenu
+    if menuitem.submenu.length > 0
+      if menuitem.active
+        li.nav-item.active
+          div.dropdown
+            a.nav-link.dropdown-toggle(href=menuitem.href, id="bs-submenu-" + index, data-toggle="dropdown", aria-haspopup="true", aria-expanded="false") #{menuitem.name}
+              span.sr-only (current)
+            div.dropdown-menu.custom-transparency-95(aria-labelledby="bs-submenu-" + index)
+              each submenuitem in menuitem.submenu
+                if submenuitem.name == "---"
+                  div.dropdown-divider
+                else
+                  a.dropdown-item(href=submenuitem.href) #{submenuitem.name}
+      else
+        li.nav-item
+          div.dropdown
+            a.nav-link.dropdown-toggle(href=menuitem.href, id="bs-submenu-" + index, data-toggle="dropdown", aria-haspopup="true", aria-expanded="false") #{menuitem.name}
+            div.dropdown-menu.custom-transparency-95.border-0(aria-labelledby="bs-submenu-" + index)
+              each submenuitem in menuitem.submenu
+                if submenuitem.name == "---"
+                  div.dropdown-divider
+                else
+                  a.dropdown-item.custom-dropdownitem-link(href=submenuitem.href) #{submenuitem.name}
+    else
+      if menuitem.active
+        li.nav-item.active
+          a.nav-link(href=menuitem.href) #{menuitem.name}
+            span.sr-only (current)
+      else
+        li.nav-item
+          a.nav-link(href=menuitem.href) #{menuitem.name}
+//- setNavItems Declaration End
+
+<!-- Sticky Nav Bar Begin -->
+header
+nav.navbar.navbar-expand-lg.navbar-light.custom-header-bgcolor.p-0
+  div.d-flex.container
+    div.collapse.navbar-collapse.p-2(id="bs-navbarNav")
+      div.navbar-nav.flex-row.justify-content-between.col-12
+        div.d-inline-flex
+          a.navbar-brand(href="/", alt=templatepageinfo.siteinfo.headersitename)
+            img.d-inline-block.align-top(src=templatepageinfo.siteinfo.headersitelogo, height="30", alt=templatepageinfo.siteinfo.headersitename)
+            |  
+            span.text-white.custom-text-shadow-1px #{templatepageinfo.siteinfo.headersitename}
+        div.d-inline-flex
+          button.btn.btn-sm.custom-header-bgcolor.text-white.mr-2(data-toggle="collapse" data-target="#bs-subscribeDIV")
+            i.fas.fa-at
+          button.btn.btn-sm.custom-header-bgcolor.text-white(data-toggle="collapse" data-target="#bs-searchDIV")
+            i.fas.fa-search
+div#bs-subscribeDIV.collapse.custom-header-bgcolor
+  form#subscribeForm.nav-item.form-inline(action="#", post="GET")
+    div.container.d-flex.justify-content-center.pt-3
+      div.input-group.w-100
+        input.form-control(type="email", name="subscribemail", id="subscribemail", aria-describedby="emailHelp", placeholder=templatepageinfo.subscribeinfo.holder, data-toggle="tooltip", data-placement="bottom", title=templatepageinfo.subscribeinfo.hint, required)
+        button.input-group-append.btn.btn-primary(type="submit") #{templatepageinfo.subscribeinfo.caption}
+  div.container.d-flex.justify-content-start.pb-3
+    small.form-text.text-light(id="emailHelp")!= templatepageinfo.subscribeinfo.smalltips
+div#bs-searchDIV.collapse.custom-header-bgcolor
+  form.nav-item.form-inline(action="/search", post="GET")
+    div.container.d-flex.justify-content-center.p-3
+      div.input-group.w-100
+        input.form-control(type="search", name="term", placeholder=templatepageinfo.searchinfo.holder, aria-label=templatepageinfo.searchinfo.caption)
+        button.input-group-append.btn.btn-success(type="submit") #{templatepageinfo.searchinfo.caption}
+nav.navbar.navbar-expand-lg.navbar-dark.custom-transparency-95.sticky-top.p-2
+  div.container-fluid.d-flex.justify-content-end
+    button.navbar-toggler(type="button", data-toggle="collapse", data-target="#bs-navbarNav", aria-controls="bs-navbarNav", aria-expanded="false", aria-label="Toggle navigation")
+      span.navbar-toggler-icon
+    div.flex-row.collapse.justify-content-center.navbar-collapse(id="bs-navbarNav")
+      ul.navbar-nav
+        +setNavItems
+<!-- Sticky Nav Bar End -->
