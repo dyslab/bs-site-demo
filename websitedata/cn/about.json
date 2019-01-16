@@ -10,32 +10,32 @@
   "part2data": [
     {
       "faicon": "fas fa-lightbulb",
-      "faicontitle": "电灯泡",
+      "faicontitle": "88个灵感电灯泡",
       "faiconcontent": "灵感就像电灯泡。故事源于2018年..."
     },
     {
       "faicon": "fab fa-font-awesome",
-      "faicontitle": "图标",
+      "faicontitle": "1000+图标",
       "faiconcontent": "FontAwesome图标助我们高飞。"
     },
     {
       "faicon": "fab fa-weixin",
-      "faicontitle": "微信",
+      "faicontitle": "15个微信群",
       "faiconcontent": "微信提升我们团队的沟通效率。"
     },
     {
       "faicon": "fas fa-cube",
-      "faicontitle": "积累",
+      "faicontitle": "10年积累",
       "faiconcontent": "成功是由失败积累而成。"
     },
     {
       "faicon": "fab fa-alipay",
-      "faicontitle": "支付宝",
+      "faicontitle": "50000+支付宝交易",
       "faiconcontent": "支付宝，剁手党，你懂的。"
     },
     {
       "faicon": "fab  fa-apple",
-      "faicontitle": "苹果",
+      "faicontitle": "69次苹果发布",
       "faiconcontent": "没有了乔布斯的苹果不再是苹果。"
     }
   ],

@@ -4,8 +4,8 @@ extends template2-layout
 mixin setPart2Items
   each p2item, index in pageinfo.part2data
     div.col-lg-4.col-12.pb-3
-      div.card
-        div.card-body.pb-4.custom-div-about
+      div.card.custom-div-about.custom-about-card-offset-y20
+        div.card-body.p-3.pl-lg-4.pr-lg-4.pt-lg-5.pb-lg-5
           h3.font-weight-bold.custom-text-shadow-1px(class="costom-default-color-about-" + (index % 3))
             i(class=p2item.faicon)
             | 
@@ -25,15 +25,15 @@ mixin setPart3Items
 //- setPart4Items Declaration Begin
 mixin setPart4Items
   each p4item in pageinfo.part4data
-    div.col-lg-4.col-md-6.p-3
-      div.card.text-center.rounded.shadow.pl-3.pr-3.pt-3
-        img.img-fluid.rounded-circle(src=p4item.image, alt=p4item.headline)
+    div.col-lg-3.col-md-4.p-2
+      div.card.rounded.border-0
+        img.card-img-top(src=p4item.image, alt=p4item.headline)
         div.card-body
           h5.card-title.custom-text-shadow-1px #{p4item.headline}
           p.card-text!= p4item.content
-          ul.list-inline
+          ul.card-text.list-inline
             each linkitem in p4item.links
-              li.list-inline-item.pl-1.pr-1
+              li.list-inline-item.pl-1.pr-1.pb-0
                 a.costom-team-color(href=linkitem.href, target="_blank")
                   i(class=linkitem.faicon + " fa-lg")
 //- setPart4Items Declaration End
@@ -41,24 +41,13 @@ mixin setPart4Items
 //- setPart5Items Declaration Begin
 mixin setPart5Items
   each p5item, index in pageinfo.part5data
-    if index == 0
-      div.carousel-item.active
-        div.text-center
-          h3.font-weight-bold.text-success.custom-text-shadow-white-1px #{p5item.headline}
-          h5.text-white #{p5item.prefixsubline}
-            |  
-            span.text-warning.custom-text-shadow-white-1px #{p5item.subline}
-          div.container-fluid.w-75
-            p.text-light!= p5item.content
-    else
-      div.carousel-item
-        div.text-center
-          h3.font-weight-bold.text-success.custom-text-shadow-white-1px #{p5item.headline}
-          h5.text-white #{p5item.prefixsubline}
-            |  
-            span.text-warning.custom-text-shadow-white-1px #{p5item.subline}
-          div.container-fluid.w-75
-            p.text-light!= p5item.content
+    div.col-md-6.col-lg-4.p-0
+      div.card.rounded(class=' costom-default-color-about-bg' + (index % 3))
+        div.card-header.text-capitalize.custom-text-shadow-1px= p5item.prefixsubline + ' ' + p5item.subline
+        div.card-body
+          blockquote.blockquote.mb-0
+            p!= p5item.content
+            footer.blockquote-footer #{p5item.headline}
 //- setPart5Items Declaration End
 
 block header-scripts
@@ -70,16 +59,17 @@ block content
     section(id="part1")
       div.container-fluid.custom-title-height(style="background: url('" + pageinfo.part1background + "')")
         div.custom-title-space-height
-        div.container
+        div.container.pt-4.pb-4
           h1.text-white.font-weight-bolder.custom-text-shadow-2px #{pageinfo.part1title}
           h3.text-white.custom-text-shadow-1px #{pageinfo.part1subtitle}
           div.text-light.col-12.col-lg-6.p-0 #{pageinfo.part1content}
         div.custom-title-space-height
   <!-- Part 1 End -->
+
   <!-- Part 2 Begin -->
   if pageinfo.part2visible.toUpperCase() == 'TRUE'
-    section.custom-timeline-bgcolor.pt-5(id="part2")
-      div.container-fluid.custom-transparency-0
+    section.custom-about-bgcolor.pt-0.pb-5(id="part2")
+      div.container-fluid
         div.container
           div.row
             +setPart2Items
@@ -87,27 +77,28 @@ block content
 
   <!-- Part 3 Begin -->
   if pageinfo.part3visible.toUpperCase() == 'TRUE'
-    section.custom-timeline-bgcolor.pt-5.pb-5(id="part3")
-      div.container
-        div.text-center.custom-text-shadow-3px
+    section.custom-about-bgcolor.pt-1.pb-5(id="part3")
+      div.container.pb-0
+        div.text-light.custom-text-shadow-1px
+          h2.font-weight-bolder #{pageinfo.part3title}
           span #{pageinfo.part3subtitle}
-          h3.font-weight-bolder #{pageinfo.part3title}
-        div.timeline
-          div.timeline__wrap
-            div.timeline__items
-              +setPart3Items
-          button.timeline-nav-button.timeline-nav-button--prev
-          button.timeline-nav-button.timeline-nav-button--next
-          span.timeline-divider
+        div.p-1.pt-3
+          div.timeline
+            div.timeline__wrap
+              div.timeline__items
+                +setPart3Items
+            button.timeline-nav-button.timeline-nav-button--prev
+            button.timeline-nav-button.timeline-nav-button--next
+            span.timeline-divider
   <!-- Note: Need to add timeline script part below the body -->
   <!-- Part 3 End -->
   
   <!-- Part 4 Begin -->
   if pageinfo.part4visible.toUpperCase() == 'TRUE'
-    section(id="part4")
-      div.container-fluid.bg-light.pt-5.pb-5
+    section.custom-about-bgcolor.pt-1.pb-5(id="part4")
+      div.container-fluid
         div.container
-          div.text-center.custom-text-shadow-2px.pb-3
+          div.text-light.custom-text-shadow-1px
             h2.font-weight-bolder #{pageinfo.part4title}
             p #{pageinfo.part4subtitle}
           div.card-deck
@@ -116,21 +107,14 @@ block content
 
   <!-- Part 5 Begin -->
   if pageinfo.part5visible.toUpperCase() == 'TRUE'
-    section(id="part5")
+    section.custom-about-bgcolor(id="part5")
       div.container-fluid.custom-testimonial-height.pt-5.pb-5(style="background: url('" + pageinfo.part5background + "')")
-        div.container.p-0
-          div.text-center.pb-3.text-dark.custom-text-shadow-white-1px
+        div.container
+          div.text-light.custom-text-shadow-1px
             h2.font-weight-bolder #{pageinfo.part5title}
             p #{pageinfo.part5subtitle}
-          div.carousel.slide(id="bs-testimonial-slide", data-ride="carousel")
-            div.carousel-inner
-              +setPart5Items
-            a.carousel-control-prev(href="#bs-testimonial-slide", role="button", data-slide="prev")
-              span.carousel-control-prev-icon(aria-hidden="true")
-              span.sr-only Previous
-            a.carousel-control-next(href="#bs-testimonial-slide", role="button", data-slide="next")
-              span.carousel-control-next-icon(aria-hidden="true")
-              span.sr-only Next
+          div.card-deck
+            +setPart5Items
   <!-- Part 5 End -->
 
 block footer-scripts
@@ -141,6 +125,6 @@ block footer-scripts
       forceVerticalMode: 700,
       mode: 'horizontal',
       verticalStartPosition: 'left',
-      visibleItems: 5
+      visibleItems: 4
     });
   <!-- Timeline Script End -->

@@ -13,6 +13,9 @@ router.get('/', function (req, res, next) {
   var templatePageInfo = TemplateDataReader.getTemplatePageInfo('/contact', cookieObj)
   var pageInfo = ContactDataReader.getPageInfo(templatePageInfo.language.currentid, templatePageInfo.datamode)
 
+  // *** Test template 2 ***
+  templatePageInfo.templateID = 2
+
   // contact page render
   res.render('template' + templatePageInfo.templateID + '-contact', {
     templatepageinfo: templatePageInfo,

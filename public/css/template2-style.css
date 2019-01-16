@@ -61,7 +61,7 @@
 }
 
 /*---------------------------------------
-  social_media_icons_style
+  social_media_icons_style, 2 sets
 ---------------------------------------*/
 .social_media ul li a {
   text-align: center;
@@ -77,7 +77,40 @@
   border: 2px solid #fff;
 }
 .social_media ul li a:hover path {
-  fill: #15e99d;
+  fill: rgb(96, 178, 255);
+}
+
+.list-social-links {
+  padding: 0;
+  list-style: none;
+  display: flex; 
+}
+.list-social-links a {
+  display: block;
+  padding: 0.125rem .5rem;
+  background: #dee2e6;
+  color: #6c757d;
+  border-radius: 0.375rem;
+  transition: background-color 0.1s linear, color 0.1s linear; 
+}
+.list-social-links a:hover {
+  background: #ced4da;
+  color: rgba(21, 42, 73, 1); 
+}
+.list-social-links i {
+  font-size: .75rem;
+}
+.list-social-links > li {
+  margin-right: 0.375rem; 
+  width: 30px;
+  text-align: center;
+}
+.list-social-links > li.text-white a {
+  color: #fff;
+  background: rgba(21, 42, 73, 0.5); 
+}
+.list-social-links > li.text-white a:hover {
+  background: rgba(21, 42, 73, 0.75); 
 }
 
 /*-----------------------------------------------------------------------------------------
@@ -110,37 +143,19 @@
 }
 
 /*-----------------------------------------------------------------------------------------
-  For index/header/footer page.
+  For index/about/header/footer page.
 -----------------------------------------------------------------------------------------*/
 .custom-header-bgcolor,
-.custom-footer-bgcolor,
+.custom-footer-bgcolor {
+  background-color: rgb(26, 69, 109)
+}
+
 .custom-transparency-95 {
   background-color: rgba(10, 45, 97, 0.95);
 }
 
 .costom-text-darkgray {
   color: darkgray
-}
-
-.costom-default-color-about-0 {
-  color: #a55
-}
-.costom-default-color-about-1 {
-  color: #5a5
-}
-.costom-default-color-about-2 {
-  color: #55a
-}
-
-.custom-div-about:hover {
-  color: white;
-  background: rgba(10, 45, 97, .6);
-}
-.custom-div-about:hover h3 {
-  color: white;
-}
-.custom-div-about:hover path {
-  fill: white;
 }
 
 .custom-timeline-bgcolor {
@@ -176,16 +191,62 @@
 a.custom-footer-lang:hover {
   text-decoration: none;
   font-size: 1.2em;
-  color: #ffee00
+  color: #fff
+}
+
+.costom-footer-badge-enable-color {
+  background: rgba(21, 42, 73, 0.5); 
+}
+.costom-footer-badge-enable-color:hover {
+  background: rgba(21, 42, 73, 0.75); 
+}
+.costom-footer-badge-disable-color {
+  background: rgb(47, 56, 66)
 }
 
 /*-----------------------------------------------------------------------------------------
   For about page.
 -----------------------------------------------------------------------------------------*/
-.custom-transparency-0 {
-  background-color: rgba(255, 255, 255, 0);
+
+.custom-about-bgcolor {
+  background-color: rgba(21, 42, 73, 0.8)
 }
 
+.costom-default-color-about-0 {
+  color: #a55
+}
+.costom-default-color-about-1 {
+  color: #5a5
+}
+.costom-default-color-about-2 {
+  color: #55a
+}
+
+.costom-default-color-about-bg0 {
+  background: rgb(255, 237, 237)
+}
+.costom-default-color-about-bg1 {
+  background: rgb(238, 253, 238)
+}
+.costom-default-color-about-bg2 {
+  background: rgb(237, 237, 255)
+}
+
+.custom-div-about:hover {
+  color: white;
+  background: rgb(74, 110, 163);
+}
+.custom-div-about:hover h3 {
+  color: white;
+}
+.custom-div-about:hover path {
+  fill: white;
+}
+
+.custom-about-card-offset-y20 {
+  margin-top: -20px; 
+  margin-bottom: 20px;
+}
 
 /*-----------------------------------------------------------------------------------------
   For index/news page.
@@ -207,12 +268,17 @@ a.custom-footer-lang:hover {
 /*-----------------------------------------------------------------------------------------
   For contact page.
 -----------------------------------------------------------------------------------------*/
+
+.custom-contact-bgcolor {
+  background-color: rgb(9, 19, 49)
+}
+
 .custom-contact-map-height {
   max-height: 360px
 }
 
 .custom-contact-form-bgcolor {
-  background: rgb(253, 249, 228)
+  background: rgb(189, 214, 230)
 }
 
 .custom-contact-link {

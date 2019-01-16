@@ -27,7 +27,7 @@ function getDefaultPageInfo () {
         text: 'image@unknow.company',
         link: 'mailto:image@unknow.company'
       }, {
-        caption: 'WORK TIME:',
+        caption: 'WORKTIME:',
         text: 'Mon. - Sat. Local Time 9AM - 7PM'
       }],
       image: '/imgs/address-p1.jpg',
@@ -48,7 +48,7 @@ function getDefaultPageInfo () {
         text: 'image.sh@unknow.company',
         link: 'mailto:image.sh@unknow.company'
       }, {
-        caption: 'WORK TIME:',
+        caption: 'WORKTIME:',
         text: 'Mon. - Sat. Local Time 9AM - 7PM'
       }],
       image: '/imgs/address-p2.jpg',
@@ -69,7 +69,7 @@ function getDefaultPageInfo () {
         text: 'image.la@unknow.company',
         link: 'mailto:image.la@unknow.company'
       }, {
-        caption: 'WORK TIME:',
+        caption: 'WORKTIME:',
         text: 'Mon. - Sat. Local Time 10AM - 8PM'
       }, {
         caption: 'WEBSITE:',
@@ -94,7 +94,7 @@ function getDefaultPageInfo () {
         text: 'image.jp@unknow.company',
         link: 'mailto:image.jp@unknow.company'
       }, {
-        caption: 'WORK TIME:',
+        caption: 'WORKTIME:',
         text: 'Mon. - Sat. Local Time 9AM - 9PM'
       }],
       image: '/imgs/address-p4.jpg',
@@ -102,6 +102,8 @@ function getDefaultPageInfo () {
     }],
     part3visible: 'true',
     part3title: 'DROP A LINE TO US',
+    part3subtitle: '',
+    part3content: 'We\'re looking forward to getting your response and ready for answering all your questions.',
     part3data: {
       namecaption: 'Your Name',
       nameholder: 'What can we address you',

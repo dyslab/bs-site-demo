@@ -29,7 +29,7 @@
           "link": "mailto:image@unknow.company"
         },
         {
-          "caption": "WORK TIME:",
+          "caption": "WORKTIME:",
           "text": "Mon. - Sat. Local Time 9AM - 7PM"
         }
       ],
@@ -57,7 +57,7 @@
           "link": "mailto:image.sh@unknow.company"
         },
         {
-          "caption": "WORK TIME:",
+          "caption": "WORKTIME:",
           "text": "Mon. - Sat. Local Time 9AM - 7PM"
         }
       ],
@@ -85,7 +85,7 @@
           "link": "mailto:image.la@unknow.company"
         },
         {
-          "caption": "WORK TIME:",
+          "caption": "WORKTIME:",
           "text": "Mon. - Sat. Local Time 10AM - 8PM"
         },
         {
@@ -118,7 +118,7 @@
           "link": "mailto:image.jp@unknow.company"
         },
         {
-          "caption": "WORK TIME:",
+          "caption": "WORKTIME:",
           "text": "Mon. - Sat. Local Time 9AM - 9PM"
         }
       ],
@@ -128,6 +128,8 @@
   ],
   "part3visible": "true",
   "part3title": "DROP A LINE TO US",
+  "part3subtitle": "",
+  "part3content": "We're looking forward to getting your response and ready for answering all your questions.",
   "part3data": {
     "namecaption": "Your Name",
     "nameholder": "What can we address you",

@@ -1,0 +1,115 @@
+extends template2-layout
+
+block header-scripts
+  link(href="/static/css/magnific-popup.css", rel="stylesheet")
+
+block content
+  <!-- Part 1 Begin -->
+  if pageinfo.part1visible.toUpperCase() == 'TRUE'
+    section(id="part1")
+      div.container-fluid.custom-title-height(style="background: url('" + pageinfo.part1background + "')")
+        div.custom-title-space-height
+        div.container.pt-4.pb-4
+          h1.text-white.font-weight-bolder.custom-text-shadow-2px #{pageinfo.part1title}
+          h3.text-white.custom-text-shadow-1px #{pageinfo.part1subtitle}
+          div.text-light.col-12.col-lg-6.p-0 #{pageinfo.part1content}
+        div.custom-title-space-height
+  <!-- Part 1 End -->
+
+  <!-- Part 2 Begin -->
+  if pageinfo.part2visible.toUpperCase() == 'TRUE'
+    section.custom-contact-bgcolor.pt-0.pb-3(id="part2")
+      div.container
+        each p2item in pageinfo.part2data
+          div.row
+            div.col.pb-3
+              div.card.custom-about-card-offset-y20
+                div.card-body.pt-5.pb-5.p-lg-5
+                  div.row.d-flex.justify-content-between
+                    div.col-12.col-lg-8
+                      h3.font-weight-bold.custom-text-shadow-1px #{p2item.title}
+                      div.row
+                        each lineitem in p2item.lines
+                          div.col-12.col-md-3.pt-2 #{lineitem.caption}
+                          if lineitem.link && lineitem.link != undefined
+                            div.col-12.col-md-9.pt-2
+                              a.custom-contact-link(href=lineitem.link)!= ' ' + lineitem.text
+                          else
+                            div.col-12.col-md-9.pt-2!= lineitem.text
+                    div.col-12.col-lg-4.pt-3
+                      a.mfp-image-link.custom-service-link(href=p2item.image, title=p2item.title)
+                        img.img-fluid.custom-contact-map-height(src=p2item.image)
+  <!-- Note: Need to add script part below the body -->
+  <!-- Part 2 End -->
+
+  <!-- Part 3 Begin -->
+  if pageinfo.part3visible.toUpperCase() == 'TRUE'
+    section.custom-contact-bgcolor.pt-0.pb-5(id="part3")
+      div.container
+        div.card.custom-contact-form-bgcolor
+          div.row.card-body
+            div.col-12.col-lg-5
+              div.pt-3.pb-3.pl-3.pt-md-5.pb-md-5
+                h3.font-weight-bold.custom-text-shadow-1px #{pageinfo.part3title}
+                h4.font-weight-bold.custom-text-shadow-1px #{pageinfo.part3subtitle}
+                p!= pageinfo.part3content
+            div.col-12.col-lg-7
+              div.pt-3.pb-3.pl-3.pt-md-5.pb-md-5
+                form(action="#", id="sendmessageForm", method="POST")
+                  div.form-group
+                    div.form-row.pb-3
+                      label.col-md-3.text-md-right.text-sm-left.form-control-sm(for="name") #{pageinfo.part3data.namecaption}
+                      div.col-md-8
+                        input.form-control.form-control-sm(type="name", name="name", id="name", placeholder=pageinfo.part3data.nameholder)
+                    div.form-row.pb-3
+                      label.col-md-3.text-md-right.text-sm-left.form-control-sm(for="email") #{pageinfo.part3data.emailcaption}
+                      div.col-md-8
+                        input.form-control.form-control-sm(type="email", name="email", id="email", placeholder=pageinfo.part3data.emailholder, required)
+                    div.form-row.pb-3
+                      label.col-md-3.text-md-right.text-sm-left.form-control-sm(for="message") #{pageinfo.part3data.messagecaption}
+                      div.col-md-8
+                        textarea.form-control.form-control-sm(name="message", id="message", placeholder=pageinfo.part3data.messageholder, rows="4")
+                    div.form-row
+                      div.col-md-3
+                      div.col-md-8
+                        button.btn.btn-primary(id="submitBtn", type="submit") #{pageinfo.part3data.submitcaption}
+  <!-- Note: Need to add script part below the body -->
+  <!-- Part 3 End -->
+
+  <!-- Ajax Form Response - modalContactResponseDialog Begin -->
+  div.modal.fade(id="modalContactResponseDialog", tabindex="-1", role="dialog")
+    div.modal-dialog(role="document")
+      div.modal-content
+        div.modal-header
+          h5 #{pageinfo.part3data.responsetitle}
+          button.close(type="button", data-dismiss="modal", aria-label=pageinfo.part3data.responsebuttoncaption)
+            span(aria-hidden="true") &times;
+        div.modal-body
+          p!= pageinfo.part3data.responsecontent
+        div.modal-footer.justify-content-center
+          button.btn.btn-success(type="button",data-dismiss="modal") #{pageinfo.part3data.responsebuttoncaption}
+  <!-- Ajax Form Response - modalContactResponseDialog End -->
+
+block footer-scripts
+  <!-- Part2/Magnific Popup Script Begin -->
+  script(src="/static/js/jquery.magnific-popup.min.js")
+  script.
+    $(document).ready(function() {
+      $(".mfp-image-link").magnificPopup({
+        type: "image",
+        closeOnContentClick: true
+      })
+    })
+  <!-- Part2/Magnific Popup Script End -->
+
+  <!-- Part3/Send Message Script Begin -->
+  script.
+    $(document).ready(function() {
+      $('#sendmessageForm').submit(function(event) {
+        event.preventDefault()
+        $.post('/contact/sendmessage', {name: $('#name').val(), email: $('#email').val(), message: $('#message').val() }, function(data) {
+          $('#modalContactResponseDialog').modal('show')
+        })
+      })
+    })
+  <!-- Part3/Send Message Script End -->

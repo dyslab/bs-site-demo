@@ -8,23 +8,20 @@ footer.p-0
             ul.list-inline
               each langitem in templatepageinfo.language.list
                 if langitem.id == templatepageinfo.language.currentid
-                  li.list-inline-item.badge.badge-secondary 
+                  li.list-inline-item.badge.costom-footer-badge-disable-color
                     span.custom-footer-lang #{langitem.caption}
                 else
-                  li.list-inline-item.badge.badge-success
+                  li.list-inline-item.badge.costom-footer-badge-enable-color
                     a.custom-footer-lang(href="/switch?lang=" + langitem.id) #{langitem.caption}
-        div.col-lg-6.col-md-12.text-lg-right.text-md-left.text-light.custom-text-shadow-1px.pb-3
+      div.d-flex.justify-content-between.row
+        div.col-lg-4.col-12.order-md-12
           div
-            h5.font-weight-bolder #{templatepageinfo.getintouchinfo.headline}
-          div.social_media
-            ul.list-inline
+            ul.list-social-links.justify-content-start.justify-content-md-end
               each gitem in templatepageinfo.getintouchinfo.data
-                li.list-inline-item
+                li.text-white
                   a(href=gitem.href, target="_blank", rel=gitem.ref)
-                    i(class= gitem.faicon + " fa-lg text-white")
-      hr.bg-dark
-      div.d-flex.justify-content-center.row
-        div.col.text-center.custom-footer-color
+                    i(class=gitem.faicon)
+        div.col-md-8.col-12.custom-footer-color.order-md-1
           span #{templatepageinfo.siteinfo.copyright}
             |  
             a.custom-footer-brand(href="/", alt=templatepageinfo.siteinfo.footersitename)

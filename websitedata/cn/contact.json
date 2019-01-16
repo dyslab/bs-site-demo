@@ -101,7 +101,7 @@
       "title": "东京分公司",
       "lines": [
         {
-          "caption": "ADDRESS:",
+          "caption": "地址:",
           "text": "日本东京樱花大街345号"
         },
         {
@@ -127,7 +127,9 @@
     }
   ],
   "part3visible": "true",
-  "part3title": "欢迎给我们留言",
+  "part3title": "咨询及留言",
+  "part3subtitle": "欢迎给我们留言",
+  "part3content": "我们已准备好回答所有你关心的问题，不要犹豫，现在就给我们发送消息吧。",
   "part3data": {
     "namecaption": "姓名",
     "nameholder": "怎么称呼你？",
