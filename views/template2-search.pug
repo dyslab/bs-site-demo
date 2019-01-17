@@ -1,0 +1,40 @@
+extends template2-layout
+
+block header-scripts
+
+block content
+  <!-- Part 1 Begin -->
+  if pageinfo.part1visible.toUpperCase() == 'TRUE'
+    section(id="part1")
+      div.container-fluid.custom-title-height(style="background: url('" + pageinfo.part1background + "')")
+        div.custom-title-space-height
+        div.container.pt-4.pb-4
+          h1.text-white.font-weight-bolder.custom-text-shadow-2px #{pageinfo.part1title}
+          h3.text-white.custom-text-shadow-1px #{pageinfo.part1subtitle}
+          div.text-light.col-12.col-lg-6.p-0 #{pageinfo.part1content}
+        div.custom-title-space-height
+  <!-- Part 1 End -->
+
+  <!-- Part 2 Begin -->
+  if pageinfo.part2visible.toUpperCase() == 'TRUE'
+    section.custom-search-bgcolor.pt-0.pb-5(id="part2")
+      div.container
+        div.row
+          div.col
+            div.card.bg-light.p-lg-3.custom-card-offset-y20
+              div.card-body
+                h5.card-title.font-weight-bold.custom-text-shadow-1px #{pageinfo.part2title}
+                p.text-dark.font-italic!= pageinfo.resulttips
+                div.card-columns
+                  each p2item in pageinfo.part2data
+                    a.custom-search-link(href=p2item.href)
+                      div.card
+                        div.card-body
+                          div.p-lg-3
+                            span.custom-search-result-title!= p2item.title
+                            br
+                            span.custom-search-result-text!= p2item.text
+
+  <!-- Part 2 End -->
+
+block footer-scripts

@@ -1,0 +1,94 @@
+extends template2-layout
+
+//- setPart2Items Declaration Begin
+mixin setPart2Items
+  each p2item, index in pageinfo.part2data
+    if index % 3 == 0
+      if index == 0
+        | <div class="card-deck">
+      else
+        if index >= 3
+          | </div><div class="card-deck pt-0 pt-sm-3">
+        else
+          | </div><div class="card-deck">
+      div.card.bg-light
+        div.card-body
+          a.custom-news-title-color(href=p2item.href, rel=p2item.headline)
+            h5.card-title.custom-text-shadow-1px #{p2item.headline}
+          p.card-text.custom-news-content-color!= p2item.shorttext
+        div.card-footer.bg-light
+          ui.list-inline
+            li.list-inline-item
+              i.fa-lg.custom-news-content-color(class=p2item.faicon)
+            li.list-inline-item
+              h6.card-text.custom-news-content-color #{p2item.date}
+    else
+      div.card.bg-light
+        div.card-body
+          a.custom-news-title-color(href=p2item.href, rel=p2item.headline)
+            h5.card-title.custom-text-shadow-1px #{p2item.headline}
+          p.card-text.custom-news-content-color!= p2item.shorttext
+        div.card-footer.bg-light
+          ui.list-inline
+            li.list-inline-item
+              i.fa-lg.custom-news-content-color(class=p2item.faicon)
+            li.list-inline-item
+              h6.card-text.custom-news-content-color #{p2item.date}
+  if pageinfo.part2data.length > 0
+    - for (var i = 2; i > (pageinfo.part2data.length - 1) % 3; i--)
+      | <div class="card border-0 p-0" style="height: 0px;"></div>
+    | </div>
+//- setPart2Items Declaration End
+
+block header-scripts
+
+block content
+  <!-- Part 1 Begin -->
+  if pageinfo.part1visible.toUpperCase() == 'TRUE'
+    section(id="part1")
+      div.container-fluid.custom-title-height(style="background: url('" + pageinfo.part1background + "')")
+        div.custom-title-space-height
+        div.container.pt-4.pb-4
+          h1.text-white.font-weight-bolder.custom-text-shadow-2px #{pageinfo.part1title}
+          h3.text-white.custom-text-shadow-1px #{pageinfo.part1subtitle}
+          div.text-light.col-12.col-lg-6.p-0 #{pageinfo.part1content}
+        div.custom-title-space-height
+  <!-- Part 1 End -->
+
+  <!-- Part 2 Begin -->
+  if pageinfo.part2visible.toUpperCase() == 'TRUE'
+    section.custom-news-bgcolor.pt-5.pb-5(id="part2")
+      div.container
+        +setPart2Items
+      div.container
+        if pageinfo.maxpage > 1             
+          div.row
+            div.col.pt-5
+              nav(aria-label="Page navigation")
+                ul.pagination.d-flex.justify-content-center.mb-0
+                  if pageinfo.pageid > 2
+                    li.page-item
+                      a.page-link(href="/news?page=1", aria-label="First") 
+                        span(aria-hidden="true")
+                          i.fas.fa-step-backward
+                  if pageinfo.pageid > 1
+                    li.page-item
+                      a.page-link(href="/news?page=" + (pageinfo.pageid-1), aria-label="Previous") 
+                        span(aria-hidden="true")
+                          i.fas.fa-backward
+                  li.page-item.disabled
+                    a.page-link(href="/news?page=" + pageinfo.pageid)= pageinfo.pageid
+                      span.sr-only (current)
+                  if pageinfo.pageid < pageinfo.maxpage
+                    li.page-item
+                      a.page-link(href="/news?page=" + (pageinfo.pageid+1), aria-label="Next") 
+                        span(aria-hidden="true")
+                          i.fas.fa-forward
+                  if pageinfo.pageid < pageinfo.maxpage - 1
+                    li.page-item
+                      a.page-link(href="/news?page=" + pageinfo.maxpage, aria-label="Last") 
+                        span(aria-hidden="true")
+                          i.fas.fa-step-forward
+  <!-- Part 2 End -->
+
+block footer-scripts

@@ -1,0 +1,16 @@
+{
+  "pagetitle": "NEWS DETAILS",
+  "part1visible": "true",
+  "part1title": "NEWS ",
+  "part1subtitle": "NEWS SUBTITLE",
+  "part1content": "Check out the latest news and events about us below. Feel free to subscribe our monthly mail news and product information if you would like to know us more.",
+  "part1background": "/imgs/template1-news-details-title-bg.jpg",
+  "part2visible": "true",
+  "part2data": {
+    "headline": "Chinese scientists make new medical discovery",
+    "faicon": "fas fa-newspaper",
+    "date": "2019-1-18",
+    "text": "<p><center><figure class=\"figure\"><img class=\"figure-img img-fluid rounded\" src=\"/imgs/news/news-2019011803-01.png\"><figcaption class=\"figure-caption\">Photo by Wang Xiaoying/chinadaily.com.cn</figcaption></figure></center></p><p>Shanghai scientists have discovered that the volume of putamen, a subcortical brain area, in adolescents as an indicator of a higher possibility in the development of schizophrenia after adulthood.</p> <p>The discovery may help scientists understand more about the generative mechanism of the disease, bringing new insights into the study of preemptive intervention before the onset of clinical symptoms, according to the research group from the Institute of Science and Technology for Brain-Inspired Intelligence affiliated to Fudan University.</p><p>The research was based on a computational analysis of more than 10,000 data samples of imaging genetics from over 20 institutions in six countries – the United States, Canada, France, Germany, the United Kingdom and Northern Ireland. The discovery sample was a longitudinally neuroimaging cohort of about 2,000 healthy adolescents , said the research team.</p><p>\"This might be the first time that a Chinese research team has conducted its study based on such a big data both neuroimaging and genetic data from foreign countries. It makes us proud,\" said Feng Jianfeng, leader on the research team.</p><p>A paper about the study, which is based on five years of research, was published in the US science journal JAMA Psychiatry on Thursday.</p><p>Luo Qiang, a researcher on the team, said that they will proceed with animal testing to determine the pathogenesis of the disease.</p>"
+  },
+  "part2backtext": " GO BACK "
+}

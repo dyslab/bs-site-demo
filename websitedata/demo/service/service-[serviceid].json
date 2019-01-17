@@ -103,22 +103,26 @@
     {
       "faicon": "fab fa-weixin",
       "title": "SCAN and JOIN our wechat discussion group",
-      "popuphref": "/imgs/qrcode-wx-test.png"
+      "popuplink": "",
+      "popupimage": "/imgs/qrcode-wx-test.png"
     },
     {
       "faicon": "fab fa-weibo",
       "title": "SCAN and JOIN our weibo user group",
-      "popuphref": ""
+      "popuplink": "http://news.sina.com.cn",
+      "popupimage": ""
     },
     {
       "faicon": "fab fa-qq",
       "title": "SCAN and JOIN our QQ user group",
-      "popuphref": "/imgs/qrcode-qq-test.png"
+      "popuplink": "",
+      "popupimage": "/imgs/qrcode-qq-test.png"
     },
     {
       "faicon": "fas fa-phone",
       "title": "Call our C.S.D. hotline directly",
-      "popuphref": "/imgs/callnow400.jpg"
+      "popuplink": "",
+      "popupimage": "/imgs/callnow400.jpg"
     }
   ]
 }

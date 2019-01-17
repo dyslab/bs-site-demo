@@ -13,6 +13,9 @@ router.get('/:serviceid', function (req, res, next) {
   var pageInfo = ServiceDataReader.getPageInfo(req.params.serviceid,
     templatePageInfo.language.currentid, templatePageInfo.datamode)
 
+  // *** Test template 2 ***
+  templatePageInfo.templateID = 2
+
   // service page render
   res.render('template' + templatePageInfo.templateID + '-service', {
     templatepageinfo: templatePageInfo,

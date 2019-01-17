@@ -54,9 +54,9 @@ block content
               div.col-6.col-md-4.col-lg-3
                 if p3item.href != ''
                   a.custom-service-function(href=p3item.href, title=p3item.title)
-                    img.img-fluid.rounded.function-list(src=p3item.image, alt=p3item.title)
+                    img.img-fluid.rounded(src=p3item.image, alt=p3item.title)
                 else
-                  img.img-fluid.rounded.function-list(src=p3item.image, alt=p3item.title)
+                  img.img-fluid.rounded(src=p3item.image, alt=p3item.title)
   <!-- Part 3 End -->
 
   <!-- Part 4 Begin -->
@@ -93,11 +93,15 @@ block content
             ul.list-unstyled.justify-content-center.row.mb-2
               each p5item in pageinfo.part5data
                 li.p-5
-                  if p5item.popuphref != ''
-                    a.mfp-image-link.custom-service-link(href=p5item.popuphref, title=p5item.title)
-                      i(class=p5item.faicon+" fa-4x")
+                  if p5item.popuplink != ''
+                    a.custom-service-link(href=p5item.popuplink, title=p5item.title, target="_blank")
+                      i.fa-4x(class=p5item.faicon)
                   else
-                    i(class=p5item.faicon+" fa-4x")
+                    if p5item.popupimage != ''
+                      a.mfp-image-link.custom-service-link(href=p5item.popupimage, title=p5item.title)
+                        i.fa-4x(class=p5item.faicon)
+                    else 
+                      i.text-secondary.fa-4x(class=p5item.faicon)
   <!-- Note: Need to add script part below the body -->
   <!-- Part 5 End -->
 

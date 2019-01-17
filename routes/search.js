@@ -13,6 +13,9 @@ router.get('/', function (req, res, next) {
   var pageInfo = SearchDataReader.getPageInfo(req.query.term,
     templatePageInfo.language.currentid, templatePageInfo.datamode)
 
+  // *** Test template 2 ***
+  templatePageInfo.templateID = 2
+
   // search page render
   res.render('template' + templatePageInfo.templateID + '-search', {
     templatepageinfo: templatePageInfo,

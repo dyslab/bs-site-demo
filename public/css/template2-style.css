@@ -127,6 +127,11 @@
   height: 58px
 }
 
+.custom-card-offset-y20 {
+  margin-top: -24px; 
+  margin-bottom: 24px;
+}
+
 /*-----------------------------------------------------------------------------------------
   For Nav Bar.
 -----------------------------------------------------------------------------------------*/
@@ -209,7 +214,7 @@ a.custom-footer-lang:hover {
 -----------------------------------------------------------------------------------------*/
 
 .custom-about-bgcolor {
-  background-color: rgba(21, 42, 73, 0.8)
+  background-color: rgb(21, 42, 73)
 }
 
 .costom-default-color-about-0 {
@@ -243,16 +248,11 @@ a.custom-footer-lang:hover {
   fill: white;
 }
 
-.custom-about-card-offset-y20 {
-  margin-top: -20px; 
-  margin-bottom: 20px;
-}
-
 /*-----------------------------------------------------------------------------------------
   For index/news page.
 -----------------------------------------------------------------------------------------*/
 .custom-news-bgcolor {
-  background: #e7ecd1
+  background: #05352b
 }
 .custom-news-title-color {
   color: #000000
@@ -270,7 +270,7 @@ a.custom-footer-lang:hover {
 -----------------------------------------------------------------------------------------*/
 
 .custom-contact-bgcolor {
-  background-color: rgb(9, 19, 49)
+  background-color: rgb(33, 26, 63)
 }
 
 .custom-contact-map-height {
@@ -293,6 +293,11 @@ a.custom-footer-lang:hover {
 /*-----------------------------------------------------------------------------------------
   For service page.
 -----------------------------------------------------------------------------------------*/
+
+.custom-service-bgcolor {
+  background-color: rgb(29, 39, 53)
+}
+
 .custom-service-link {
   color: #1296db;
   text-decoration: none
@@ -300,38 +305,22 @@ a.custom-footer-lang:hover {
 .custom-service-link:hover {
   text-decoration: none;
   color: #145070;
-  text-shadow: 0px 0px 1px #666
 }
 .custom-service-link:focus {
   text-decoration: none;
   color: #145070;
-  text-shadow: 0px 0px 1px #666
 }
 
 .custom-service-function { 
-  display: inline-block;
-  vertical-align: top;
-  -webkit-transition: .3s;
-  -o-transition: .3s;
-  -moz-transition: .3s;
-  transition: .3s;
-  margin-bottom: .21rem;
-  width: 98%;
-  cursor:pointer
-}
-.custom-service-function img { 
-  width: 100%;
-  border: 0
+  cursor:pointer;
 }
 .custom-service-function:hover { 
-  -webkit-transform: translateY(-4px);
-  -moz-transform: translateY(-4px);
-  -ms-transform: translateY(-4px);
-  -o-transform: translateY(-4px);
-  transform: translateY(-4px); 
-  -webkit-box-shadow: 0 10px 40px 1px rgba(0,0,0,.1); 
-  -moz-box-shadow: 0 10px 40px 1px rgba(0,0,0,.1); 
-  box-shadow: 0 10px 40px 1px rgba(0,0,0,.1)
+  -webkit-box-shadow: 0 0 0 2px rgb(93, 90, 255);
+  -moz-box-shadow: 0 0 0 2px rgb(93, 90, 255);
+  box-shadow: 0 0 0 2px rgb(114, 147, 253);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /*-----------------------------------------------------------------------------------------
@@ -391,6 +380,11 @@ a.custom-footer-lang:hover {
 /*-----------------------------------------------------------------------------------------
   For search pages.
 -----------------------------------------------------------------------------------------*/
+
+.custom-search-bgcolor {
+  background-color: rgb(32, 48, 71)
+}
+
 .custom-search-term { 
   background: yellow
 }
@@ -408,14 +402,11 @@ a.custom-footer-lang:hover {
 }
 .custom-search-link:hover {
   text-decoration: none;
-  color: #118324;
+  color: white;
 }
 .custom-search-link:hover div {
-  background: white;
+  background: #1978ac;
 }
-.custom-search-link:hover .custom-search-result-title {
-  text-shadow: 0px 0px 1px darkgray;
-  -webkit-text-shadow: 0px 0px 1px rgb(7, 5, 5);
-  -moz-text-shadow: 0px 0px 1px darkgray;
-  -ms-text-shadow: 0px 0px 1px darkgray;
+.custom-search-link:hover .custom-search-term {
+  color: black;
 }

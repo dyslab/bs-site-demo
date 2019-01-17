@@ -84,7 +84,7 @@
     {
       "faicon": "far fa-question-circle",
       "title": "我要怎样参与计划？",
-      "content": "按MOQ数量购买我们的产品后，即可申请加入我们的计划，详情可咨询我们的客户，或向我们的客服邮箱:<a href=\"mailto:csd@unknow.company\">csd@unknow.company</a>发送咨询邮件."
+      "content": "按MOQ数量购买我们的产品后，即可申请加入我们的计划，详情可咨询我们的客服人员，或向我们的客服邮箱:<a href=\"mailto:csd@unknow.company\">csd@unknow.company</a>发送咨询邮件."
     }
   ],
   "part5visible": "true",
@@ -93,17 +93,20 @@
     {
       "faicon": "fab fa-weixin",
       "title": "微信群扫码",
-      "popuphref": "/imgs/qrcode-wx-test.png"
+      "popuplink": "",
+      "popupimage": "/imgs/qrcode-wx-test.png"
     },
     {
       "faicon": "fab fa-qq",
       "title": "QQ群扫码",
-      "popuphref": "/imgs/qrcode-qq-test.png"
+      "popuplink": "",
+      "popupimage": "/imgs/qrcode-qq-test.png"
     },
     {
       "faicon": "fas fa-phone",
       "title": "拨打客服热线",
-      "popuphref": "/imgs/callnow400.jpg"
+      "popuplink": "",
+      "popupimage": "/imgs/callnow400.jpg"
     }
   ]
 }

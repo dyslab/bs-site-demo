@@ -11,6 +11,13 @@
   "part2subtitle": "FOLLOW US",
   "part2data": [
     {
+      "headline": "Chinese scientists make new medical discovery",
+      "faicon": "fas fa-newspaper",
+      "date": "2019-1-18",
+      "shorttext": "Shanghai scientists have discovered that the volume of putamen, a subcortical brain area, in adolescents as an indicator of a higher possibility in the development of schizophrenia after adulthood...",
+      "href": "/news/details/2019011803"
+    },
+    {
       "headline": "Xi, Kim hold talks, reaching important consensus",
       "faicon": "far fa-newspaper",
       "date": "2019-1-11",

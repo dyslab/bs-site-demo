@@ -4,7 +4,7 @@ extends template2-layout
 mixin setPart2Items
   each p2item, index in pageinfo.part2data
     div.col-lg-4.col-12.pb-3
-      div.card.custom-div-about.custom-about-card-offset-y20
+      div.card.custom-div-about.custom-card-offset-y20
         div.card-body.p-3.pl-lg-4.pr-lg-4.pt-lg-5.pb-lg-5
           h3.font-weight-bold.custom-text-shadow-1px(class="costom-default-color-about-" + (index % 3))
             i(class=p2item.faicon)

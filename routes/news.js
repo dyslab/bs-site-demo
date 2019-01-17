@@ -16,6 +16,9 @@ router.get('/', function (req, res, next) {
   var pageInfo = NewsDataReader.getNewsListPageInfo(pageID, false,
     templatePageInfo.language.currentid, templatePageInfo.datamode)
 
+  // *** Test template 2 ***
+  templatePageInfo.templateID = 2
+
   // news page render
   res.render('template' + templatePageInfo.templateID + '-news-list', {
     templatepageinfo: templatePageInfo,
@@ -30,6 +33,9 @@ router.get('/details/:newsid', function (req, res, next) {
   var templatePageInfo = TemplateDataReader.getTemplatePageInfo('/news', cookieObj)
   var pageInfo = NewsDataReader.getNewsDetailsPageInfo(req.params.newsid,
     templatePageInfo.language.currentid, templatePageInfo.datamode)
+
+  // *** Test template 2 ***
+  templatePageInfo.templateID = 2
 
   // news page render
   res.render('template' + templatePageInfo.templateID + '-news-details', {

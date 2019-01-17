@@ -91,22 +91,26 @@
     {
       "faicon": "fab fa-weixin",
       "title": "扫码加入微信群",
-      "popuphref": "/imgs/qrcode-wx-test.png"
+      "popuplink": "",
+      "popupimage": "/imgs/qrcode-wx-test.png"
     },
     {
       "faicon": "fab fa-weibo",
       "title": "扫码关注微博公众号",
-      "popuphref": ""
+      "popuplink": "http://news.sina.com.cn",
+      "popupimage": ""
     },
     {
       "faicon": "fab fa-qq",
       "title": "扫码加入QQ用户群",
-      "popuphref": "/imgs/qrcode-qq-test.png"
+      "popuplink": "",
+      "popupimage": "/imgs/qrcode-qq-test.png"
     },
     {
       "faicon": "fas fa-phone",
       "title": "直接拨打我们的客服热线",
-      "popuphref": "/imgs/callnow400.jpg"
+      "popuplink": "",
+      "popupimage": "/imgs/callnow400.jpg"
     }
   ]
 }
