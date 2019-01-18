@@ -13,6 +13,11 @@ router.get('/item/:productid', function (req, res, next) {
   var pageInfo = ProductDataReader.getItemPageInfo(req.params.productid,
     templatePageInfo.language.currentid, templatePageInfo.datamode)
 
+  // *** Template Test ***
+  if (cookieObj.preferred_templateID && cookieObj.preferred_templateID !== undefined) {
+    templatePageInfo.templateID = cookieObj.preferred_templateID
+  }
+
   // all page render
   res.render('template' + templatePageInfo.templateID + '-product-item', {
     templatepageinfo: templatePageInfo,
@@ -26,6 +31,11 @@ router.get('/all/', function (req, res, next) {
   var cookieObj = CookieHandler.getCookies(req)
   var templatePageInfo = TemplateDataReader.getTemplatePageInfo('/product', cookieObj)
   var pageInfo = ProductDataReader.getAllPageInfo(templatePageInfo.language.currentid, templatePageInfo.datamode)
+
+  // *** Template Test ***
+  if (cookieObj.preferred_templateID && cookieObj.preferred_templateID !== undefined) {
+    templatePageInfo.templateID = cookieObj.preferred_templateID
+  }
 
   // all page render
   res.render('template' + templatePageInfo.templateID + '-product-all', {
@@ -41,6 +51,11 @@ router.get('/category/:categoryid', function (req, res, next) {
   var templatePageInfo = TemplateDataReader.getTemplatePageInfo('/product', cookieObj)
   var pageInfo = ProductDataReader.getCategoryPageInfo(req.params.categoryid,
     templatePageInfo.language.currentid, templatePageInfo.datamode)
+
+  // *** Template Test ***
+  if (cookieObj.preferred_templateID && cookieObj.preferred_templateID !== undefined) {
+    templatePageInfo.templateID = cookieObj.preferred_templateID
+  }
 
   // category page render
   res.render('template' + templatePageInfo.templateID + '-product-category', {

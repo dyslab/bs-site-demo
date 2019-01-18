@@ -1,0 +1,76 @@
+extends template2-layout
+
+block header-scripts
+
+block content
+  <!-- Part 1 Begin -->
+  if pageinfo.part1visible.toUpperCase() == 'TRUE'
+    section(id="part1")
+      div.container-fluid.custom-title-height(style="background: url('" + pageinfo.part1background + "')")
+        div.custom-title-space-height
+        div.container.pt-4.pb-4
+          h1.text-white.font-weight-bolder.custom-text-shadow-2px #{pageinfo.part1title}
+          h3.text-white.custom-text-shadow-1px #{pageinfo.part1subtitle}
+          div.text-light.col-12.col-lg-6.p-0 #{pageinfo.part1content}
+        div.custom-title-space-height
+  <!-- Part 1 End -->
+
+  <!-- Part 2 Begin -->
+  if pageinfo.part2visible.toUpperCase() == 'TRUE'
+    section.custom-product-bgcolor.pt-0.pb-3(id="part2")
+      div.container
+        div.row
+          div.col
+            div.card.bg-light.custom-card-offset-y20
+              div.card-body
+                div.text-center.pt-3
+                  h4.font-weight-bold.custom-text-shadow-1px #{pageinfo.part2title}
+                div.row.justify-content-center
+                  div.col-md-6.pt-3.pb-3
+                    div.w-100
+                      if pageinfo.part2images.length > 0
+                        img.custom-image-box.img-fluid(src=pageinfo.part2images[0])
+                    div.row.pt-5
+                      each p2img in pageinfo.part2images
+                        div.col-4.col-md-3.p-2
+                          button.btn.custom-alter-image.custom-product-cat-link.p-0
+                            img.img-fluid.img-thumbnail.custom-thumbnail-img(src=p2img)
+                  div.col-md-6.p-1.p-md-3
+                    table.table.table-borderless.table-hover
+                      tbody
+                        each lineitem in pageinfo.part2lines
+                          tr
+                            td.col-3.text-right #{lineitem.caption}
+                            if lineitem.link && lineitem.link != undefined
+                              td
+                                a.custom-contact-link(href=lineitem.link, target="_blank")!= lineitem.text
+                            else
+                              td!= lineitem.text
+  <!-- Note: Need to add script part below the body -->
+  <!-- Part 2 End -->
+
+  <!-- Part 3 Begin -->
+  if pageinfo.part3visible.toUpperCase() == 'TRUE'
+    section.custom-product-bgcolor.pt-0.pb-0(id="part3")
+        div.container
+          div.row
+            div.col.text-light.text-center.pt-3.pb-3
+              h4.font-weight-bold.custom-text-shadow-1px #{pageinfo.part3title}
+        div.container-fluid.justify-content-center.p-0
+          center
+            each p3img in pageinfo.part3images
+              img.img-fluid(src=p3img)
+  <!-- Part 3 End -->
+
+block footer-scripts
+  <!-- Part2/Alter Image Script Begin -->
+  script.
+    $(document).ready(function() {
+      $(".custom-alter-image").click(function () {
+        var newimage = $(this).children(".custom-thumbnail-img").attr("src")
+        $(".custom-image-box").fadeOut(function () {
+          $(".custom-image-box").attr("src", newimage).fadeIn()
+        })
+      })
+    })
+  <!-- Part2/Alter Image Script End -->

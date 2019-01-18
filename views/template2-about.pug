@@ -43,11 +43,14 @@ mixin setPart5Items
   each p5item, index in pageinfo.part5data
     div.col-md-6.col-lg-4.p-0
       div.card.rounded(class=' costom-default-color-about-bg' + (index % 3))
-        div.card-header.text-capitalize.custom-text-shadow-1px= p5item.prefixsubline + ' ' + p5item.subline
+        div.card-header.text-capitalize.custom-text-shadow-1px
+          h5.text-dark #{p5item.prefixsubline}
+            |  
+            span.text-primary.custom-text-shadow-1px #{p5item.subline}
         div.card-body
           blockquote.blockquote.mb-0
             p!= p5item.content
-            footer.blockquote-footer #{p5item.headline}
+            footer.blockquote-footer.text-info #{p5item.headline}
 //- setPart5Items Declaration End
 
 block header-scripts

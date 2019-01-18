@@ -13,8 +13,10 @@ router.get('/', function (req, res, next) {
   var pageInfo = SearchDataReader.getPageInfo(req.query.term,
     templatePageInfo.language.currentid, templatePageInfo.datamode)
 
-  // *** Test template 2 ***
-  templatePageInfo.templateID = 2
+  // *** Template Test ***
+  if (cookieObj.preferred_templateID && cookieObj.preferred_templateID !== undefined) {
+    templatePageInfo.templateID = cookieObj.preferred_templateID
+  }
 
   // search page render
   res.render('template' + templatePageInfo.templateID + '-search', {

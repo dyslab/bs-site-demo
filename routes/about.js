@@ -13,8 +13,10 @@ function syncRenderPage (req, res) {
   var templatePageInfo = TemplateDataReader.getTemplatePageInfo('/about', cookieObj)
   var pageInfo = AboutDataReader.getPageInfo(templatePageInfo.language.currentid, templatePageInfo.datamode)
 
-  // *** Test template 2 ***
-  templatePageInfo.templateID = 2
+  // *** Template Test ***
+  if (cookieObj.preferred_templateID && cookieObj.preferred_templateID !== undefined) {
+    templatePageInfo.templateID = cookieObj.preferred_templateID
+  }
 
   // about page render
   res.render('template' + templatePageInfo.templateID + '-about', {
@@ -30,6 +32,11 @@ async function asyncRenderPage (req, res) {
   var cookieObj = CookieHandler.getCookies(req)
   var templatePageInfo = TemplateDataReader.getTemplatePageInfo('/about', cookieObj)
   var pageInfo = await AboutDataReader.asyncGetPageInfo(templatePageInfo.language.currentid, templatePageInfo.datamode)
+
+  // *** Template Test ***
+  if (cookieObj.preferred_templateID && cookieObj.preferred_templateID !== undefined) {
+    templatePageInfo.templateID = cookieObj.preferred_templateID
+  }
 
   // about page render
   res.render('template' + templatePageInfo.templateID + '-about', {

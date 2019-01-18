@@ -32,6 +32,22 @@
   -ms-text-shadow: 2px 2px 2px white;
 }
 
+@media (min-width: 576px) {
+  .card-columns {
+    column-count: 1;
+  }
+}
+@media (min-width: 768px) { 
+  .card-columns {
+    column-count: 3;
+  }
+}
+@media (min-width: 992px) { 
+  .card-columns {
+    column-count: 4;
+  }
+}
+
 /*---------------------------------------
   Go To Top, code comes from Bootdtrap
 ---------------------------------------*/
@@ -152,11 +168,15 @@
 -----------------------------------------------------------------------------------------*/
 .custom-header-bgcolor,
 .custom-footer-bgcolor {
-  background-color: rgb(26, 69, 109)
+  background-color: rgb(26, 79, 109)
 }
 
 .custom-transparency-95 {
   background-color: rgba(10, 45, 97, 0.95);
+}
+
+.custom-index-bgcolor {
+  background-color: rgb(23, 52, 75)
 }
 
 .costom-text-darkgray {
@@ -168,7 +188,11 @@
 }
 
 .costom-team-color {
-  color: rgb(92, 116, 146)
+  color: rgb(117, 158, 207)
+}
+
+.custom-team-bgcolor {
+  background-color: rgb(18, 41, 59)
 }
 
 .custom-carousel-img-height {
@@ -326,6 +350,19 @@ a.custom-footer-lang:hover {
 /*-----------------------------------------------------------------------------------------
   For product pages.
 -----------------------------------------------------------------------------------------*/
+
+.custom-product-bgcolor {
+  background: #002530
+}
+
+.custom-product-card-bgcolor1 {
+  background: #030a46
+}
+
+.custom-product-card-bgcolor2 {
+  background: #bcc3ff
+}
+
 .custom-product-cat-link { 
   display: inline-block;
   vertical-align: top;
@@ -342,20 +379,18 @@ a.custom-footer-lang:hover {
   -ms-text-shadow: 1px 1px 1px white;
   cursor:pointer
 }
+.custom-product-cat-link .card {
+  border: 0px;
+}
 .custom-product-cat-link:hover { 
-  -webkit-transform: translateY(-5px);
-  -moz-transform: translateY(-5px);
-  -ms-transform: translateY(-5px);
-  -o-transform: translateY(-5px);
-  transform: translateY(-5px); 
-  -webkit-box-shadow: 0 20px 20px 3px rgba(0,0,0,.1); 
-  -moz-box-shadow: 0 20px 20px 3px rgba(0,0,0,.1); 
-  box-shadow: 0 20px 20px 3px rgba(0,0,0,.1);
-  color: #991616;
+  color: rgb(180, 42, 0);
   text-shadow: 1px 1px 1px white;
   -webkit-text-shadow: 1px 1px 1px white;
   -moz-text-shadow: 1px 1px 1px white;
   -ms-text-shadow: 1px 1px 1px white
+}
+.custom-product-cat-link:hover .card {
+  border: 2px dotted;
 }
 
 .custom-product-cat-link2-height {

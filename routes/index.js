@@ -16,6 +16,11 @@ router.get('/', function (req, res, next) {
   var aboutPartInfo = AboutDataReader.getPageInfoForIndex(templatePageInfo.language.currentid, templatePageInfo.datamode)
   var newsPartInfo = NewsDataReader.getPageInfoForIndex(templatePageInfo.language.currentid, templatePageInfo.datamode)
 
+  // *** Template Test ***
+  if (cookieObj.preferred_templateID && cookieObj.preferred_templateID !== undefined) {
+    templatePageInfo.templateID = cookieObj.preferred_templateID
+  }
+
   // index page render
   res.render('template' + templatePageInfo.templateID + '-index', {
     templatepageinfo: templatePageInfo,

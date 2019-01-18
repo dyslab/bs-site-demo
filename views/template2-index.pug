@@ -1,0 +1,225 @@
+extends template2-layout
+
+//- setCarouselIndicators Declaration Begin
+mixin setCarouselIndicators
+  each cbitem, index in pageinfo.carouseldata
+    if index == 0
+      li.active(data-target="#bs-carouselSlides", data-slide-to=index)
+    else
+      li(data-target="#bs-carouselSlides", data-slide-to=index)
+//- setCarouselIndicators Declaration End
+
+//- setCarouselBannerItems Declaration Begin
+mixin setCarouselBannerItems
+  each cbitem, index in pageinfo.carouseldata
+    if index == 0
+      div.carousel-item.active
+        img.d-block.w-100.custom-carousel-img-height(src=cbitem.image, alt=cbitem.caption)
+        div.carousel-caption.d-none.d-md-block(style="height:" + cbitem.captionpos)
+          h1.font-weight-bolder.text-white.custom-text-shadow-2px!= cbitem.caption
+    else
+      div.carousel-item
+        img.d-block.w-100.custom-carousel-img-height(src=cbitem.image, alt=cbitem.caption)
+        div.carousel-caption.d-none.d-md-block(style="height:" + cbitem.captionpos)
+          h1.font-weight-bolder.text-white.custom-text-shadow-2px!= cbitem.caption
+//- setCarouselBannerItems Declaration End
+
+//- setAboutPartItems Declaration Begin
+mixin setAboutPartItems
+  each apitem, index in aboutpartinfo.part2data
+    div.card.col-md-6.bg-light.border-0
+      div.card-body.pl-0.pr-0.pl-md-3.pr-md-3
+        div.pb-3
+          i.fa-lg(class=apitem.faicon + ' costom-default-color-about-' + (index % 3))
+          |  
+          span.h5.card-title.font-weight-bold(class='costom-default-color-about-' + (index % 3)) #{apitem.faicontitle}
+        p.card-text!= apitem.faiconcontent
+//- setAboutPartItems Declaration End
+
+//- setTimelinePartItems Declaration Begin
+mixin setTimelinePartItems
+  each tpitem in aboutpartinfo.part3data
+    - var randno = parseInt(Math.random() * 3)
+    - if (randno > 2) randno = 2
+    div.card(class="costom-default-color-about-bg" + randno)
+      div.card-body
+        h5.card-title.custom-text-shadow-1px #{tpitem.headline}
+        p!= tpitem.content
+//- setTimelinePartItems Declaration End
+
+//- setTeamPartItems Declaration Begin
+mixin setTeamPartItems
+  each tpitem in aboutpartinfo.part4data
+    div.col-md-4.p-2
+      div.card.border-0.custom-team-bgcolor
+        img.card-img-top(src=tpitem.image, alt=tpitem.headline)
+        div.card-body
+          h5.card-title.text-white.custom-text-shadow-1px #{tpitem.headline}
+          p.card-text.text-white!= tpitem.content
+          ul.card-text.list-inline
+            each linkitem in tpitem.links
+              li.list-inline-item.pl-1.pr-1.pb-0
+                a.costom-team-color(href=linkitem.href, target="_blank")
+                  i(class=linkitem.faicon + " fa-lg")
+//- setTeamPartItems Declaration End
+
+//- setTestimonialPartItems Declaration Begin
+mixin setTestimonialPartItems
+  each tpitem, index in aboutpartinfo.part5data
+    div.col-md-6.col-lg-4.p-0
+      div.card.rounded(class=' costom-default-color-about-bg' + (index % 3))
+        div.card-header.text-capitalize.custom-text-shadow-1px
+          h5.text-dark #{tpitem.prefixsubline}
+            |  
+            span.text-primary.custom-text-shadow-1px #{tpitem.subline}
+        div.card-body
+          blockquote.blockquote.mb-0
+            p!= tpitem.content
+            footer.blockquote-footer.text-info #{tpitem.headline}
+//- setTestimonialPartItems Declaration End
+
+//- setNewsPartItems Declaration Begin
+mixin setNewsPartItems
+  each npitem in newsPartInfo.part2data
+    div.col-lg-6.pl-1.pr-1
+      div.card.border-0.bg-light
+        div.card-body.pl-0.pr-0.pl-md-3.pr-md-3
+          a.custom-news-title-color(href=npitem.href, rel=npitem.headline)
+            h4.card-title.custom-text-shadow-1px #{npitem.headline}
+          ui.list-inline
+            li.list-inline-item
+              i(class=npitem.faicon + " fa-lg custom-news-content-color")
+            li.list-inline-item
+              h6.card-text.custom-news-content-color #{npitem.date}
+          p.card-text.custom-news-content-color!= npitem.shorttext
+//- setNewsPartItems Declaration End
+
+block header-scripts
+  link(href="/static/css/slider-pro.css", rel="stylesheet")
+
+block content
+  <!-- Carousel Banner Part Begin -->
+  if pageinfo.carouselpartvisible.toUpperCase() == 'TRUE'
+    section(id="carousel")
+      div.container-fluid.p-0
+        div.carousel.slide(id="bs-carouselSlides", data-ride="carousel")
+          ol.carousel-indicators
+            +setCarouselIndicators
+          div.carousel-inner
+            +setCarouselBannerItems
+          a.carousel-control-prev(href="#bs-carouselSlides", role="button", data-slide="prev")
+            span.carousel-control-prev-icon(aria-hidden="true")
+            span.sr-only Previous
+          a.carousel-control-next(href="#bs-carouselSlides", role="button", data-slide="next")
+            span.carousel-control-next-icon(aria-hidden="true")
+            span.sr-only Next
+  <!-- Carousel Banner Part End -->
+
+  <!-- About Part Begin -->
+  if pageinfo.aboutpartvisible.toUpperCase() == 'TRUE'
+    section.custom-index-bgcolor.pt-5.pb-5(id="about")
+      div.container
+        div.card.bg-light
+          div.card-body
+            div.row.p-0.p-md-3
+              div.col-lg-7.pt-3
+                h2.card-title.font-weight-bolder.custom-text-shadow-2px #{aboutpartinfo.part1title}
+                h6.card-title.text-secondary.custom-text-shadow-1px #{aboutpartinfo.part1subtitle}
+                span #{aboutpartinfo.part1content}
+                div.row.pt-3
+                  +setAboutPartItems
+              div.col-lg-5.pt-3.align-self-center
+                img.img-fluid.rounded(src="/imgs/template1-aboutus.jpg", alt="about us")
+  <!-- About Part End -->
+
+  <!-- Timeline Part Begin -->
+  if pageinfo.timelinepartvisible.toUpperCase() == 'TRUE'
+    section.custom-index-bgcolor.pt-0.pb-5(id="timeline")
+      div.container
+        div.card.bg-light
+          div.card-body
+            div.row.p-0.p-md-3
+              div.col.pt-3
+                h2.font-weight-bolder.custom-text-shadow-2px #{aboutpartinfo.part3title}
+                h6.card-title.text-secondary.custom-text-shadow-1px #{aboutpartinfo.part3subtitle}
+                div.card-columns.pt-3
+                  +setTimelinePartItems
+  <!-- Timeline Part End -->
+  
+  <!-- Team Part Begin -->
+  if pageinfo.teampartvisible.toUpperCase() == 'TRUE'
+    section.custom-index-bgcolor.pt-0.pb-5(id="team")
+      div.container
+        div.card.bg-light
+          div.card-body
+            div.row.p-0.p-md-3
+              div.col.pt-3
+                h2.font-weight-bolder.custom-text-shadow-2px #{aboutpartinfo.part4title}
+                h6.card-title.text-secondary.custom-text-shadow-1px #{aboutpartinfo.part4subtitle}
+            div.card-deck.pb-4
+              +setTeamPartItems
+  <!-- Team Part End -->
+
+  <!-- News Part Begin -->
+  if pageinfo.newspartvisible.toUpperCase() == 'TRUE'
+    section.custom-index-bgcolor.pt-0.pb-5(id="news")
+      div.container
+        div.card.bg-light
+          div.card-body
+            div.row.p-0.p-md-3
+              div.col.pt-3
+                h2.font-weight-bolder.custom-text-shadow-2px= newsPartInfo.part2title
+                p.custom-text-shadow-1px= newsPartInfo.part2subtitle
+            div.card-deck
+              +setNewsPartItems
+  <!-- News Part End -->
+             
+  <!-- Slider Part Begin -->
+  if pageinfo.sliderpartvisible.toUpperCase() == 'TRUE'
+    section.custom-index-bgcolor.pt-0.pb-5(id="slider")
+      div.container
+        div.card.bg-white
+          div.card-body.pb-0
+            div.row.p-0
+              div.col.pt-3.text-center
+                h2.font-weight-bolder.custom-text-shadow-2px= pageinfo.slidertitle
+                p.custom-text-shadow-1px= pageinfo.slidersubtitle
+          div.col-12.p-3
+            div.slider-pro(id="bs-hot-slider")
+              div.sp-slides
+                each sditem in pageinfo.sliderdata
+                  div.sp-slide
+                    a(href=sditem.href)
+                      img.sp-image.img-fluid(src=sditem.image)
+                      p.sp-caption!= sditem.caption
+  <!-- Note: Need to add script part below the body -->
+  <!-- Slider Part End -->
+
+  <!-- Testimonial Part Begin -->
+  if pageinfo.testimonialpartvisible.toUpperCase() == 'TRUE'
+    section.custom-index-bgcolor.pt-0.pb-5(id="testimonial")
+      div.container
+        div.card(style="background: url('" + aboutpartinfo.part5background + "')")
+          div.card-body
+            div.row.p-0.p-md-3
+              div.col.pt-3.text-center
+                h2.card-title.text-white.font-weight-bolder.custom-text-shadow-2px #{aboutpartinfo.part5title}
+                p.text-white.custom-text-shadow-1px #{aboutpartinfo.part5subtitle}
+                div.card-deck.pt-3.text-left
+                  +setTestimonialPartItems
+  <!-- Testimonial Part End -->
+
+block footer-scripts
+  <!-- Slider Script Begin -->
+  script(src="/static/js/jquery.sliderPro.min.js")
+  script.
+    $(document).ready(function($) {
+      $('#bs-hot-slider').sliderPro({
+        width: 280,
+        height: 280,
+        visibleSize: '100%',
+        aspectRatio: 1,
+        autoSlideSize: true
+      });
+    });
+  <!-- Slider Script End -->

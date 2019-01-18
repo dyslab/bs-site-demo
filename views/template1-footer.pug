@@ -1,3 +1,11 @@
+//- For test: setTemplateList Declaration Begin
+mixin setTemplateList
+  li.list-inline-item.badge.costom-footer-badge-enable-color
+    a.custom-footer-lang(href="/switch?ep=" + templatepageinfo.language.currentid + '&tempid=1') T1
+  li.list-inline-item.badge.costom-footer-badge-enable-color
+    a.custom-footer-lang(href="/switch?ep=" + templatepageinfo.language.currentid + '&tempid=2') T2
+//- For test: setTemplateList Declaration End
+
 <!-- Page Footer Begin -->
 footer.p-0
   div.container-fluid.custom-footer-bgcolor.p-0.p-md-3
@@ -19,6 +27,9 @@ footer.p-0
                 else
                   li.list-inline-item.badge.badge-info
                     a.custom-footer-lang(href="/switch?lang=" + langitem.id) #{langitem.caption}
+              <!-- Template Test Begin -->
+              +setTemplateList
+              <!-- Template Test End -->
           div
             h5.font-weight-bolder #{templatepageinfo.getintouchinfo.headline}
           div.social_media

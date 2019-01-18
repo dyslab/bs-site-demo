@@ -16,8 +16,10 @@ router.get('/', function (req, res, next) {
   var pageInfo = NewsDataReader.getNewsListPageInfo(pageID, false,
     templatePageInfo.language.currentid, templatePageInfo.datamode)
 
-  // *** Test template 2 ***
-  templatePageInfo.templateID = 2
+  // *** Template Test ***
+  if (cookieObj.preferred_templateID && cookieObj.preferred_templateID !== undefined) {
+    templatePageInfo.templateID = cookieObj.preferred_templateID
+  }
 
   // news page render
   res.render('template' + templatePageInfo.templateID + '-news-list', {
@@ -34,8 +36,10 @@ router.get('/details/:newsid', function (req, res, next) {
   var pageInfo = NewsDataReader.getNewsDetailsPageInfo(req.params.newsid,
     templatePageInfo.language.currentid, templatePageInfo.datamode)
 
-  // *** Test template 2 ***
-  templatePageInfo.templateID = 2
+  // *** Template Test ***
+  if (cookieObj.preferred_templateID && cookieObj.preferred_templateID !== undefined) {
+    templatePageInfo.templateID = cookieObj.preferred_templateID
+  }
 
   // news page render
   res.render('template' + templatePageInfo.templateID + '-news-details', {

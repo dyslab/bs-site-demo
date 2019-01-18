@@ -1,0 +1,39 @@
+extends template2-layout
+
+block header-scripts
+
+block content
+  <!-- Part 1 Begin -->
+  if pageinfo.part1visible.toUpperCase() == 'TRUE'
+    section(id="part1")
+      div.container-fluid.custom-title-height(style="background: url('" + pageinfo.part1background + "')")
+        div.custom-title-space-height
+        div.container.pt-4.pb-4
+          h1.text-white.font-weight-bolder.custom-text-shadow-2px #{pageinfo.part1title}
+          h3.text-white.custom-text-shadow-1px #{pageinfo.part1subtitle}
+          div.text-light.col-12.col-lg-6.p-0 #{pageinfo.part1content}
+        div.custom-title-space-height
+  <!-- Part 1 End -->
+
+  <!-- Part 2 Begin -->
+  if pageinfo.part2visible.toUpperCase() == 'TRUE'
+    section.custom-product-bgcolor.pt-5.pb-5(id="part2")
+      each p2item in pageinfo.part2data
+        div.container
+          div.row
+            div.col.pb-3
+              div.card.bg-white
+                div.card-body
+                  h4.card-title.font-weight-bold.custom-text-shadow-1px #{p2item.title}
+                  div.row.justify-content-start
+                    each p2ditem in p2item.data
+                      div.col-6.col-md-4.col-lg-3.p-1
+                        a.custom-product-cat-link(href=p2ditem.href)
+                          div.card
+                            img.img-fluid.card-img(src=p2ditem.image, alt=p2ditem.title)
+                            div.card-img-overlay.d-flex.align-items-end.pb-1
+                              div.d-none.d-md-block.w-100
+                                h6.font-weight-bold #{p2ditem.title}
+  <!-- Part 2 End -->
+
+block footer-scripts
