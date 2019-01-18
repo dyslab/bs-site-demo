@@ -1,0 +1,16 @@
+{
+  "pagetitle": "企业新闻",
+  "part1visible": "true",
+  "part1title": "企业新闻 ",
+  "part1subtitle": "追踪最新企业资讯",
+  "part1content": "查阅与我们产品、企业相关的新闻资讯，你可以通过下方的邮件订阅获得更多详细资料.查阅与我们产品、企业相关的新闻资讯，你可以通过下方的邮件订阅获得更多详细资料.",
+  "part1background": "/imgs/template1-news-details-title-bg.jpg",
+  "part2visible": "true",
+  "part2data": {
+    "headline": "俄两架苏-34战斗机相撞 机组人员设法弹出",
+    "faicon": "far fa-newspaper",
+    "date": "2019-1-19",
+    "text": "<p>当地时间18日，俄罗斯两架苏-34战斗机在日本海上空相撞，俄罗斯国防部证实了此次空中相撞的消息。</p><p>综合俄罗斯塔斯通讯社和俄罗斯卫星通讯社报道，俄两架苏-34轰炸机在远东相撞，从雷达上消失。</p><p>机组人员设法安全弹出。</p><!-- Insert Pictrue Code Begin --><p><center><figure class=\"figure\"><img class=\"figure-img img-fluid rounded\" src=\"/imgs/news/news-2019011903-01.jpg\"><figcaption class=\"figure-caption\">苏-34战斗轰炸机</figcaption></figure></center></p><!-- Insert Pictrue Code End --><p>俄罗斯国防部信息和大众传播部证实称，“莫斯科时间1月18日8时07分（北京时间18日13时07分），俄两架苏-34战斗轰炸机在进行例行飞行训练时，于日本海上空距离海岸线35公里处发生相撞事故，两架飞机当时均在没有携带弹药的情况下飞行。”</p><p>俄罗斯国防部在一份声明中称，机组人员已经设法跳伞逃出，目前搜救部队派出一架安-12运输机和两架米-8直升机，在跳伞区域搜寻飞行员。</p><p>据了解，俄罗斯苏-34战斗轰炸机设计携带8吨武器，战术半径为4000公里，飞行高度为1.8万米。</p>"
+  },
+  "part2backtext": " GO BACK "
+}
