@@ -1,0 +1,16 @@
+{
+  "pagetitle": "企业新闻",
+  "part1visible": "true",
+  "part1title": "企业新闻 ",
+  "part1subtitle": "追踪最新企业资讯",
+  "part1content": "查阅与我们产品、企业相关的新闻资讯，你可以通过下方的邮件订阅获得更多详细资料.查阅与我们产品、企业相关的新闻资讯，你可以通过下方的邮件订阅获得更多详细资料.",
+  "part1background": "/imgs/template1-news-details-title-bg.jpg",
+  "part2visible": "true",
+  "part2data": {
+    "headline": "微软认输:放弃移动操作系统 建议用户改用安卓或iOS",
+    "faicon": "fas fa-newspaper",
+    "date": "2019-1-20",
+    "text": "<p>1月19日消息 在两年多前微软推出了他们的最后一款Windows Phone手机Lumia 650。虽然从那时起我们看到第三方开发人员对Windows Phone支持率开始下降，但微软确保最后一批Windows 10 Mobile用户能够获得及时更新和安全补丁。</p><!-- Insert Pictrue Code Begin --><p><center><figure class=\"figure\"><img class=\"figure-img img-fluid rounded\" src=\"/imgs/news/news-2019012002-01.jpg\"><figcaption class=\"figure-caption\"></figcaption></figure></center></p><!-- Insert Pictrue Code End --><p><font>近期微软最终确定了Windows 10 Mobile的支持终止日期，意味着这款操作系统将发生根本变化。根据微软官网网站最新问答，对Windows 10 Mobile的支持将于2019年12月10日彻底结束。</font></p><p><font>从2019年12月10日开始，Windows 10移动版用户将不再有资格免费从Microsoft收到新的安全更新、非安全修补程序、免费的协助支持选项或联机技术内容更新。第三方或付费的支持计划可能会继续提供支持，但请务必知悉Microsoft支持将不会公开提供适用于Windows 10移动版的更新或修补程序。只有符合Windows 10移动版1709支持资格的设备型号才会一直支持到结束日期。对于Lumia 640和640 XL手机型号，Windows 10移动版1703是最后一个支持的操作系统版本，其支持将在2019年6月11日结束。</font></p><p><font>值得注意的是，微软也已经为Windows 10 Mobile想好了后路，那就是建议这些用户尽快转向iOS或安卓平台。</font></p><p><font>我们建议客户在Windows 10移动版操作系统终止支持后迁移到支持的Android或iOS设备。Microsoft的使命是让地球上的每个人和每个组织取得更大成就，所以我们为这些平台和设备上的移动应用提供支持。希望在2019年12月10日后继续使用Windows 10移动版设备的客户可以在该日期前手动创建备份，方法是使用“设置”“更新和安全”“备份”“选项”，然后点击“立即备份”。</font></p><p><font>微软希望用户转向安卓和iOS平台其实并不傻，Windows 10 Mobile在面对Android或iOS系统激烈的竞争中，其应用生态严重滞后，以致于难以为继。近年来，微软已经在Android或iOS平台上开发了大量的应用程序，绝大部分Win10 Mobile第一方应用都发布了Android或iOS版本。</font></p><p><font>根据爆料传闻，微软正在打造Surface仙女座移动设备，支持双屏或可折叠，但这款设备并非常规意义上的智能手机，而更像是一款口袋式电脑。</font></p>"
+  },
+  "part2backtext": " 回到上一页 "
+}
