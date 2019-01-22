@@ -1,0 +1,16 @@
+{
+  "pagetitle": "企业新闻",
+  "part1visible": "true",
+  "part1title": "企业新闻 ",
+  "part1subtitle": "追踪最新企业资讯",
+  "part1content": "查阅与我们产品、企业相关的新闻资讯，你可以通过下方的邮件订阅获得更多详细资料.查阅与我们产品、企业相关的新闻资讯，你可以通过下方的邮件订阅获得更多详细资料.",
+  "part1background": "/imgs/template1-news-details-title-bg.jpg",
+  "part2visible": "true",
+  "part2data": {
+    "headline": "中国“雪龙”船在南极撞到冰山 船艏桅杆及舷墙受损",
+    "faicon": "fas fa-newspaper",
+    "date": "2019-1-23",
+    "text": "<p>　　记者从自然资源部获悉，“雪龙”船在执行中国第35次南极考察任务期间，于北京时间1月19日上午10时47分，在阿蒙森海密集冰区航行中，因受浓雾影响，在南纬69°59.9‘，西经94°04.2’位置与冰山碰撞，碰撞时船速3节（约5.56千米/小时），船艏桅杆及部分舷墙受损，无人员受伤，压载水舱、油舱、主机及其他船舶动力设备、通讯导航设备运行正常。</p><p>　　情况发生后，自然资源部高度重视，立即研究部署并开展应对工作，把人员安全放在首位，及时对船舶安全状态进行监测，精心组织对受损部位进行检修，在确保安全前提下，制定后续科考作业方案。</p><p>　　目前，“雪龙”船运行正常。</p><!-- Insert Pictrue Code Begin --><p><center><figure class=\"figure\"><img class=\"figure-img img-fluid rounded\" src=\"/imgs/news/news-2019012301-01.jpg\"><figcaption class=\"figure-caption\">雪龙号极地考察船</figcaption></figure></center></p><!-- Insert Pictrue Code End --><!-- Insert Pictrue Code Begin --><p><center><figure class=\"figure\"><img class=\"figure-img img-fluid rounded\" src=\"/imgs/news/news-2019012301-02.jpg\"><figcaption class=\"figure-caption\">雪龙号极地考察船</figcaption></figure></center></p><!-- Insert Pictrue Code End -->"
+  },
+  "part2backtext": " 回到上一页 "
+}
