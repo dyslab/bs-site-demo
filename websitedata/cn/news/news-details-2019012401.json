@@ -1,0 +1,16 @@
+{
+  "pagetitle": "企业新闻",
+  "part1visible": "true",
+  "part1title": "企业新闻 ",
+  "part1subtitle": "追踪最新企业资讯",
+  "part1content": "查阅与我们产品、企业相关的新闻资讯，你可以通过下方的邮件订阅获得更多详细资料.查阅与我们产品、企业相关的新闻资讯，你可以通过下方的邮件订阅获得更多详细资料.",
+  "part1background": "/imgs/template1-news-details-title-bg.jpg",
+  "part2visible": "true",
+  "part2data": {
+    "headline": "永暑岛高清全景图 机场港湾一应俱全(图)",
+    "faicon": "far fa-newspaper",
+    "date": "2019-1-24",
+    "text": "<p>　　近日，《解放军报》官方微博“军报记者”发布了一组图片，盘点了祖国各地的部队风光。其中一张图片，系官方首次公开发布中国南沙群岛永暑岛的高清全景图片，为我们展示了这座位于三沙市的岛屿的旖旎风光，以及中国在岛上进行的各种工程建设细节。</p><!-- Insert Pictrue Code Begin --><p><center><figure class=\"figure\"><img class=\"figure-img img-fluid rounded\" src=\"/imgs/news/news-2019012401-01.jpg\"><figcaption class=\"figure-caption\">资料图片：《解放军报》官方微博“军报记者”发布的永暑岛航拍照片。（《解放军报》）</figcaption></figure></center></p><!-- Insert Pictrue Code End --><p>　　在美国智库战略与国际研究中心（CSIS）2016年发布的关于南沙群岛的研究报告中，曾标示出中国在永暑岛上建设的各种基础设施。图片显示，该岛在2016年就筑有长约3000米的跑道及配属滑行道、多个固定机库以及可容纳大型船舶停靠的港湾。美智库估计，当时该岛总面积近2.7平方公里，岛屿最长处约长3.75公里。</p><!-- Insert Pictrue Code Begin --><p><center><figure class=\"figure\"><img class=\"figure-img img-fluid rounded\" src=\"/imgs/news/news-2019012401-02.jpg\"><figcaption class=\"figure-caption\">资料图片：日媒制作的永暑岛设施卫星照片分析图，照片摄于2016年。（图片来源于网络）</figcaption></figure></center></p><!-- Insert Pictrue Code End --><p>　　此次公布的图片显示，永暑岛已经建有可供大型军机起降的机场设施，以及可供大型船舶停泊的港口设施，还有供居住和工作的建筑群。岛上还在机场跑道附近等处设立了绿化带。</p>"
+  },
+  "part2backtext": " 回到上一页 "
+}
