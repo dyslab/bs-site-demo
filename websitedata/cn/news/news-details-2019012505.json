@@ -1,0 +1,16 @@
+{
+  "pagetitle": "企业新闻",
+  "part1visible": "true",
+  "part1title": "企业新闻 ",
+  "part1subtitle": "追踪最新企业资讯",
+  "part1content": "查阅与我们产品、企业相关的新闻资讯，你可以通过下方的邮件订阅获得更多详细资料.查阅与我们产品、企业相关的新闻资讯，你可以通过下方的邮件订阅获得更多详细资料.",
+  "part1background": "/imgs/template1-news-details-title-bg.jpg",
+  "part2visible": "true",
+  "part2data": {
+    "headline": "俄媒：中国正在研发第2款隐身轰炸机 首款今年将试飞",
+    "faicon": "far fa-newspaper",
+    "date": "2019-1-25",
+    "text": "<p>　　据俄罗斯卫星通讯社网站1月22日报道称，美国最新发布的情报报告称，中国空军可能在同时研制2种新型隐身轰炸机。</p><p>　　俄媒援引美情报报告的猜测称，中国空军正在开发新的中程和远程隐身轰炸机，以打击区域和全球目标。隐身技术对2种新型轰炸机的战斗力生成具有关键作用，2种新型战机可能在2025年之前拥有初始作战能力。</p><p>　　俄媒称，在中国官方媒体此前的报道中，首次披露中国正研制“新型远程战略轰炸机”轰-20，<strong>该型战机可能在今年首飞。外界普遍认为轰-20类似美国的B-2隐身轰炸机。</strong></p><p>　　不过，美情报机构还猜测，中国正研制第2种被称为“歼轰-20”（JH-20）的隐身轰炸机，前者可能配有内置弹舱和外挂点，比F-35的弹药携带量大，作战半径可能有1600至3000公里，长约30米。俄媒认为，这2种新型隐身轰炸机的出现将使中国空军的作战能力发生巨大飞跃。（编译/马骐騑）</p><!-- Insert Pictrue Code Begin --><p><center><figure class=\"figure\"><img class=\"figure-img img-fluid rounded\" src=\"/imgs/news/news-2019012505-01.jpg\"><figcaption class=\"figure-caption\">网友制作的中国空军轰-20想象图</figcaption></figure></center></p><!-- Insert Pictrue Code End -->"
+  },
+  "part2backtext": " 回到上一页 "
+}
