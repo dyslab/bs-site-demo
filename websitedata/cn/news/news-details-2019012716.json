@@ -1,0 +1,16 @@
+{
+  "pagetitle": "企业新闻",
+  "part1visible": "true",
+  "part1title": "企业新闻 ",
+  "part1subtitle": "追踪最新企业资讯",
+  "part1content": "查阅与我们产品、企业相关的新闻资讯，你可以通过下方的邮件订阅获得更多详细资料.查阅与我们产品、企业相关的新闻资讯，你可以通过下方的邮件订阅获得更多详细资料.",
+  "part1background": "/imgs/template1-news-details-title-bg.jpg",
+  "part2visible": "true",
+  "part2data": {
+    "headline": "炸弹卡车！中国海军版歼16战斗机",
+    "faicon": "far fa-newspaper",
+    "date": "2019-1-27",
+    "text": "<!-- Insert Pictrue Code Begin --><p><center><figure class=\"figure\"><img class=\"figure-img img-fluid rounded\" src=\"/imgs/news/news-2019012716-01.jpg\"><figcaption class=\"figure-caption\">有消息传出说沈飞制造的歼-16已批量装备中国海航部队，并部署在沿海地区海航某师。歼-16作战半径达1500千米，现在进入海航部队的歼-16还加装了电子干扰设备，这样在为努力来的海上实战中，不仅作战半径会扩大，还会增强中国海军的整体实力，形成对美军舰艇等的压制。（来源：鼎盛yangheng 罪恶大天使）</figcaption></figure></center></p><!-- Insert Pictrue Code End --><!-- Insert Pictrue Code Begin --><p><center><figure class=\"figure\"><img class=\"figure-img img-fluid rounded\" src=\"/imgs/news/news-2019012716-02.jpg\"><figcaption class=\"figure-caption\">图2</figcaption></figure></center></p><!-- Insert Pictrue Code End --><!-- Insert Pictrue Code Begin --><p><center><figure class=\"figure\"><img class=\"figure-img img-fluid rounded\" src=\"/imgs/news/news-2019012716-03.jpg\"><figcaption class=\"figure-caption\">图3</figcaption></figure></center></p><!-- Insert Pictrue Code End --><!-- Insert Pictrue Code Begin --><p><center><figure class=\"figure\"><img class=\"figure-img img-fluid rounded\" src=\"/imgs/news/news-2019012716-04.jpg\"><figcaption class=\"figure-caption\">图4</figcaption></figure></center></p><!-- Insert Pictrue Code End --><!-- Insert Pictrue Code Begin --><p><center><figure class=\"figure\"><img class=\"figure-img img-fluid rounded\" src=\"/imgs/news/news-2019012716-05.jpg\"><figcaption class=\"figure-caption\">图5</figcaption></figure></center></p><!-- Insert Pictrue Code End --><!-- Insert Pictrue Code Begin --><p><center><figure class=\"figure\"><img class=\"figure-img img-fluid rounded\" src=\"/imgs/news/news-2019012716-06.jpg\"><figcaption class=\"figure-caption\">图6</figcaption></figure></center></p><!-- Insert Pictrue Code End --><!-- Insert Pictrue Code Begin --><p><center><figure class=\"figure\"><img class=\"figure-img img-fluid rounded\" src=\"/imgs/news/news-2019012716-07.jpg\"><figcaption class=\"figure-caption\">图7</figcaption></figure></center></p><!-- Insert Pictrue Code End -->"
+  },
+  "part2backtext": " 回到上一页 "
+}

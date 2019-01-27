@@ -106,9 +106,21 @@ exports.getNewsListPageInfo = function (pageid, getall, langid, datamode) {
     if (pageinfoObj.part2data.length > RecordsPerPage) {
       pageinfoObj.maxpage = parseInt(pageinfoObj.part2data.length / RecordsPerPage)
       if (pageinfoObj.maxpage * RecordsPerPage < pageinfoObj.part2data.length) pageinfoObj.maxpage++
-      var startid = pageinfoObj.part2data.length - pageid * RecordsPerPage
+
+      // *** option1: add news data from eldest to newest(ascent order) in news-list.json ***
+      // var startid = pageinfoObj.part2data.length - pageid * RecordsPerPage
+      // if (startid < 0) startid = 0
+      // pageinfoObj.part2data = pageinfoObj.part2data.slice(startid, pageinfoObj.part2data.length - (pageid - 1) * RecordsPerPage)
+      // add news data from oldest to newest(ascent order) in news-list.json
+
+      // *** option2: add news data from newest to eldest(descent order) in news-list.json ***
+      var startid = (pageid - 1) * RecordsPerPage
       if (startid < 0) startid = 0
-      pageinfoObj.part2data = pageinfoObj.part2data.slice(startid, pageinfoObj.part2data.length - (pageid - 1) * RecordsPerPage)
+      if (pageid * RecordsPerPage > pageinfoObj.part2data.length) {
+        pageinfoObj.part2data = pageinfoObj.part2data.slice(startid, pageinfoObj.part2data.length)
+      } else {
+        pageinfoObj.part2data = pageinfoObj.part2data.slice(startid, pageid * RecordsPerPage)
+      }
     } else {
       pageinfoObj.maxpage = 1
     }
