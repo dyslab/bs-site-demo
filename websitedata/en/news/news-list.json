@@ -11,10 +11,17 @@
   "part2subtitle": "FOLLOW US",
   "part2data": [
     {
+      "headline": "Q&A：Can I email my favorite show or host?",
+      "faicon": "far fa-newspaper",
+      "date": "2019-02-07",
+      "shorttext": "Definitely! Most shows have an option to send them a message on their website and are happy to hear from you...",
+      "href": "/news/details/2019020705"
+    },
+    {
       "headline": "Exactly What to Say to Motivate Someone to Exercise – and Stick With It",
       "faicon": "far fa-newspaper",
       "date": "2019-2-6",
-      "shorttext": "FORMER COLLEGE basketball coach John Thompson had it right when he said, \"You can communicate without motivating, but it is impossible to motivate without communicating.\" In other words, if you want to get someone to do something, it's not about simply saying something; it's about saying the right thing in the right way....",
+      "shorttext": "FORMER COLLEGE basketball coach John Thompson had it right when he said, \"You can communicate without motivating, but it is impossible to motivate without communicating.\" In other words, if you want to get someone to do something, it's not about simply saying something; it's about saying the right thing in the right way...",
       "href": "/news/details/2019020605"
     },
     {

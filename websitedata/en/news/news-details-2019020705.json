@@ -1,0 +1,16 @@
+{
+  "pagetitle": "NEWS DETAILS",
+  "part1visible": "true",
+  "part1title": "NEWS ",
+  "part1subtitle": "NEWS SUBTITLE",
+  "part1content": "Check out the latest news and events about us below. Feel free to subscribe our monthly mail news and product information if you would like to know us more.",
+  "part1background": "/imgs/template1-news-details-title-bg.jpg",
+  "part2visible": "true",
+  "part2data": {
+    "headline": "Q&A：Can I email my favorite show or host?",
+    "faicon": "far fa-newspaper",
+    "date": "2019-02-07",
+    "text": "<p>Definitely! Most shows have an option to send them a message on their website and are happy to hear from you.</p><p>Here is a full list of the shows: <a href=\"http://www.foxnews.com/shows/index.html\" target=\"_blank\">http://www.foxnews.com/shows/index.html</a></p><p>If you're on Twitter, feel free to \"tweet\" at our different hosts as well. They've often got Twitter open while they're on the air. Here is a list of all our on-air talent: <a href=\"http://www.foxnews.com/on-air/personalities\" target=\"_blank\">http://www.foxnews.com/on-air/personalities</a></p>You can also reach out to them via Facebook. </p><p><center><a href=\"http://www.foxnews.com/\" target=\"_blank\"><figure class=\"figure\"><img class=\"figure-img img-fluid rounded\" src=\"/imgs/news/news-2019020705-01.png\"><figcaption class=\"figure-caption\">https://www.foxnews.com/</figcaption></figure></a></center></p>"
+  },
+  "part2backtext": " GO BACK "
+}
