@@ -11,6 +11,13 @@
   "part2subtitle": "FOLLOW US",
   "part2data": [
     {
+      "headline": "Trump says soon to declare recapture of all IS group territory",
+      "faicon": "far fa-newspaper",
+      "date": "2019-2-10",
+      "shorttext": "U.S. President Donald Trump said on Wednesday he expected a formal announcement as early as next week that the coalition fighting Islamic State militants has reclaimed all of the territory previously held by the extremist group...",
+      "href": "/news/details/2019021004"
+    },
+    {
       "headline": "Guantanamo prison looms as option as IS fight ends",
       "faicon": "far fa-newspaper",
       "date": "2019-2-9",
