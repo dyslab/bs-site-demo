@@ -11,6 +11,13 @@
   "part2subtitle": "FOLLOW US",
   "part2data": [
     {
+      "headline": "Pilot strike at Taiwan’s China Airlines drags into 3rd day",
+      "faicon": "fas fa-newspaper",
+      "date": "2019-2-11",
+      "shorttext": "A strike among pilots at Taiwan’s flag carrier China Airlines dragged into a third day Sunday, resulting in further flight cancellations...",
+      "href": "/news/details/2019021104"
+    },
+    {
       "headline": "Trump says soon to declare recapture of all IS group territory",
       "faicon": "far fa-newspaper",
       "date": "2019-2-10",
