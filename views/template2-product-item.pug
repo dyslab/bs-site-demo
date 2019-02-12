@@ -42,7 +42,7 @@ block content
                           tr
                             td.col-3.text-right #{lineitem.caption}
                             if lineitem.link && lineitem.link != undefined
-                              td
+                              td.col-9
                                 a.custom-contact-link(href=lineitem.link, target="_blank")!= lineitem.text
                             else
                               td!= lineitem.text

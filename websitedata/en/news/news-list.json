@@ -1,6 +1,6 @@
 {
   "pagetitle": "NEWS",
-  "newsperpage": 12,
+  "newsperpage": 9,
   "part1visible": "true",
   "part1title": "NEWS",
   "part1subtitle": "",
@@ -10,6 +10,13 @@
   "part2title": "LASTEST NEWS",
   "part2subtitle": "FOLLOW US",
   "part2data": [
+    {
+      "headline": "Holiday week spending over 1 trillion yuan",
+      "faicon": "fas fa-newspaper",
+      "date": "2019-2-13",
+      "shorttext": "Consumers seeking quality products, services, shoring up domestic demand.Chinese consumers opened their wallet during Spring Festival, not only on things like digital home appliances and imported fresh food but also on experiences such as travel and entertainment, government figures showed...",
+      "href": "/news/details/2019021302"
+    },
     {
       "headline": "Pilot strike at Taiwan’s China Airlines drags into 3rd day",
       "faicon": "fas fa-newspaper",
