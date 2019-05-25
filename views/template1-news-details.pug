@@ -25,7 +25,7 @@ block content
         div.container
           div.row.justify-content-center.pt-3.pb-3
             div.col.text-dark.text-center
-              h5.font-weight-bold.custom-text-shadow-1px #{pageinfo.part2data.headline}
+              h3.font-weight-bold.custom-text-shadow-1px #{pageinfo.part2data.headline}
           div.row.pt-3.pb-3
             div.col.text-center
               ui.list-inline
@@ -35,7 +35,7 @@ block content
                   h6.custom-news-content-color #{pageinfo.part2data.date}
           div.row.pt-3.pb-3
             div.col
-              span!= pageinfo.part2data.text
+              span.custom-article!= pageinfo.part2data.text
           div.row.pt-3.pb-3
             div.col.text-center
               button.btn.btn-primary(type="button", onclick="javascript:history.go(-1);") #{pageinfo.part2backtext}

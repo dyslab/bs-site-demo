@@ -24,7 +24,7 @@ block content
             div.card.bg-light.custom-card-offset-y20
               div.card-body.align-center
                 div.pt-5.text-center
-                  h5.card-title.font-weight-bold.custom-text-shadow-1px #{pageinfo.part2data.headline}
+                  h4.card-title.font-weight-bold.custom-text-shadow-1px #{pageinfo.part2data.headline}
                 div.pt-3
                   div.col.text-center
                     ui.list-inline
@@ -33,7 +33,7 @@ block content
                       li.list-inline-item
                         h6.custom-news-content-color #{pageinfo.part2data.date}
                 div.d-flex.justify-content-center
-                  div.card-text.col-12.col-md-10.pl-0.pr-0.pt-3!= pageinfo.part2data.text
+                  div.card-text.col-12.col-md-10.pl-0.pr-0.pt-3.custom-article!= pageinfo.part2data.text
                 div.col.pt-5.pb-5.text-center
                   button.btn.btn-primary(type="button", onclick="javascript:history.go(-1);") #{pageinfo.part2backtext}
   <!-- Part 2 End -->

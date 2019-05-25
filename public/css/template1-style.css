@@ -178,6 +178,10 @@ a.custom-footer-lang:hover {
 .custom-news-content-color {
   color: #666
 }
+.custom-article {
+  line-height: 2.25rem;
+  font-size: 1.2rem;
+}
 
 /*-----------------------------------------------------------------------------------------
   For contact page.
