@@ -11,37 +11,44 @@
   "part2subtitle": "FOLLOW US",
   "part2data": [
     {
+      "headline": "Banana-sucking pop singer jailed for video ‘harmful to Egyptian morality’",
+      "faicon": "fas fa-newspaper",
+      "date": "2019-08-05",
+      "shorttext": "An Egyptian court jailed a pop singer for two years for suggestively eating a banana and appearing in her underwear in a recent music video...",
+      "href": "/news/details/2019080501"
+    },
+    {
       "headline": "Restricting Huawei backfires on US interests, disrupts global telecom industry",
       "faicon": "fas fa-newspaper",
-      "date": "2019-5-25",
+      "date": "2019-05-25",
       "shorttext": "Millions of Americans in rural areas may be denied access to faster and lower-priced broadband connections because of Washington's restrictive moves against Huawei, a Chinese company which has offered equipment to US rural telecom operators for years...",
       "href": "/news/details/2019052502"
     },
     {
       "headline": "Holiday week spending over 1 trillion yuan",
       "faicon": "fas fa-newspaper",
-      "date": "2019-2-13",
+      "date": "2019-02-13",
       "shorttext": "Consumers seeking quality products, services, shoring up domestic demand.Chinese consumers opened their wallet during Spring Festival, not only on things like digital home appliances and imported fresh food but also on experiences such as travel and entertainment, government figures showed...",
       "href": "/news/details/2019021302"
     },
     {
       "headline": "Pilot strike at Taiwan’s China Airlines drags into 3rd day",
       "faicon": "fas fa-newspaper",
-      "date": "2019-2-11",
+      "date": "2019-02-11",
       "shorttext": "A strike among pilots at Taiwan’s flag carrier China Airlines dragged into a third day Sunday, resulting in further flight cancellations...",
       "href": "/news/details/2019021104"
     },
     {
       "headline": "Trump says soon to declare recapture of all IS group territory",
       "faicon": "far fa-newspaper",
-      "date": "2019-2-10",
+      "date": "2019-02-10",
       "shorttext": "U.S. President Donald Trump said on Wednesday he expected a formal announcement as early as next week that the coalition fighting Islamic State militants has reclaimed all of the territory previously held by the extremist group...",
       "href": "/news/details/2019021004"
     },
     {
       "headline": "Guantanamo prison looms as option as IS fight ends",
       "faicon": "far fa-newspaper",
-      "date": "2019-2-9",
+      "date": "2019-02-09",
       "shorttext": "WASHINGTON – The Guantanamo Bay detention center would receive new prisoners for the first time in more than a decade under one option being considered as the U.S. withdraws its forces from Syria and works to resolve the fate of hundreds of captured suspected Islamic State fighters, officials say...",
       "href": "/news/details/2019020904"
     },
@@ -62,28 +69,28 @@
     {
       "headline": "Exactly What to Say to Motivate Someone to Exercise – and Stick With It",
       "faicon": "far fa-newspaper",
-      "date": "2019-2-6",
+      "date": "2019-02-06",
       "shorttext": "FORMER COLLEGE basketball coach John Thompson had it right when he said, \"You can communicate without motivating, but it is impossible to motivate without communicating.\" In other words, if you want to get someone to do something, it's not about simply saying something; it's about saying the right thing in the right way...",
       "href": "/news/details/2019020605"
     },
     {
       "headline": "Chinese scientists make new medical discovery",
       "faicon": "fas fa-newspaper",
-      "date": "2019-1-18",
+      "date": "2019-01-18",
       "shorttext": "Shanghai scientists have discovered that the volume of putamen, a subcortical brain area, in adolescents as an indicator of a higher possibility in the development of schizophrenia after adulthood...",
       "href": "/news/details/2019011803"
     },
     {
       "headline": "Xi, Kim hold talks, reaching important consensus",
       "faicon": "far fa-newspaper",
-      "date": "2019-1-11",
+      "date": "2019-01-11",
       "shorttext": "The two leaders of China and DPRK had an in-depth exchange of views on bilateral relations and issues of common concern, and reached important consensus....",
       "href": "/news/details/2019011100"
     },
     {
       "headline": "First probe lands on moon's 'dark' side",
       "faicon": "far fa-newspaper",
-      "date": "2019-1-4",
+      "date": "2019-01-04",
       "shorttext": "<b>Breakthrough opens new page in historyof space exploration,</b><br> A new chapter opened in mankind's exploration of the moon on Thursday morning as the first probe to land on the moon's far side reached its destination after a 26-day journey...",
       "href": "/news/details/2019010401"
     },
@@ -97,7 +104,7 @@
     {
       "headline": "China, U.S. may meet in January for trade negotiation",
       "faicon": "far fa-newspaper",
-      "date": "2018-9-13",
+      "date": "2018-09-13",
       "shorttext": "The delegations of China and the U.S. have stayed in close communication and have made plans to meet face-to-face in January...",
       "href": "/news/details/2018091300"
     }
