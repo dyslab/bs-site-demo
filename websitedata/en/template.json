@@ -1,11 +1,11 @@
 {
   "siteinfo": {
     "headersitelogo": "/imgs/bootstrap-solid.svg",
-    "headersitename": "BS",
+    "headersitename": "BS Demo Site",
     "footersitelogo": "/imgs/bootstrap-solid.svg",
     "footersitename": "Bootstrap Demonstration Website.",
     "copyrightprefix": "Copyright",
-    "copyrightsuffix": " Powered by Node.js/JQuery/Bootstrap, All rights reserved."
+    "copyrightsuffix": " Powered by Node.js / JQuery / Bootstrap, All rights reserved."
   },
   "templateID": "1",
   "language": {

@@ -115,7 +115,7 @@ exports.getTemplatePageInfo = function (currentpage, cookie) {
   var dateObj = new Date()
   var thisYear = dateObj.getFullYear()
   if (thisYear > 2018) {
-    templatePageInfoObj.siteinfo.copyright = templatePageInfoObj.siteinfo.copyrightprefix + ' © 2018-' + thisYear + '.'
+    templatePageInfoObj.siteinfo.copyright = templatePageInfoObj.siteinfo.copyrightprefix + ' © 2018 - ' + thisYear + '.'
   } else {
     templatePageInfoObj.siteinfo.copyright = templatePageInfoObj.siteinfo.copyrightprefix + ' © ' + thisYear + '.'
   }

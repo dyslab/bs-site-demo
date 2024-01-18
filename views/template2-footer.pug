@@ -1,9 +1,9 @@
 //- For test: setTemplateList Declaration Begin
 mixin setTemplateList
   li.list-inline-item.badge.costom-footer-badge-enable-color
-    a.custom-footer-lang(href="/switch?ep=" + templatepageinfo.language.currentid + '&tempid=1') T1
-  li.list-inline-item.badge.costom-footer-badge-enable-color
-    a.custom-footer-lang(href="/switch?ep=" + templatepageinfo.language.currentid + '&tempid=2') T2
+    a.custom-footer-lang(href="/switch?lang=" + templatepageinfo.language.currentid + '&tempid=1') T1
+  li.list-inline-item.badge.costom-footer-badge-disable-color
+    span.custom-footer-lang T2
 //- For test: setTemplateList Declaration End
 
 <!-- Page Footer Begin -->
@@ -20,7 +20,8 @@ footer.p-0
                     span.custom-footer-lang #{langitem.caption}
                 else
                   li.list-inline-item.badge.costom-footer-badge-enable-color
-                    a.custom-footer-lang(href="/switch?lang=" + langitem.id) #{langitem.caption}
+                    a.custom-footer-lang(href="/switch?tempid=2&lang=" + langitem.id) #{langitem.caption}
+              li.list-inline-item.text-gray ||
               <!-- Template Test Begin -->
               +setTemplateList
               <!-- Template Test End -->
