@@ -2,7 +2,7 @@
 
 [![Powered by node.js](./public/imgs/powered-by-nodejs.svg)](https://nodejs.org/) &nbsp; [![Powered by express](./public/imgs/powered-by-express.svg)](https://expressjs.com/) &nbsp; [![Powered by pug](./public/imgs/powered-by-pug.svg)](https://pugjs.org/) &nbsp; [![Powered by bootstrap](./public/imgs/powered-by-bootstrap.svg)](https://getbootstrap.com/) &nbsp; [![MIT license](./public/imgs/MIT-license.svg)](./LICENSE)
 
-**Project information:**
+## Project Information
 
 - Include website templates: 2 Sets (T1 & T2)
 
@@ -31,7 +31,7 @@ npm run start:pm2   # PM2 installed in advance.
 
 - VCS: git / github
 
-**Install and rebuild packages:**
+### Install & Rebuild
 
 In case you are willing to reinstall or rebuild packages for the app, you are able to try below CLIs under current directory in a terminal/bash window.
 
