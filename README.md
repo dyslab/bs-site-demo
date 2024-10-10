@@ -1,14 +1,14 @@
-## bs-site-demo: A Customize Website Demo powered by Bootstrap and JSON file.
+# bs-site-demo: A Customize Website Demo powered by Express / Pug / Bootstrap with JSON file
 
-![Express](./public/imgs/express.svg) &nbsp;&nbsp;![Powered by bootstrap](./public/imgs/powered-by-bootstrap.svg) &nbsp;&nbsp;![MIT license](./public/imgs/MIT-license.svg)
+[![Powered by node.js](./public/imgs/powered-by-nodejs.svg)](https://nodejs.org/) &nbsp; [![Powered by express](./public/imgs/powered-by-express.svg)](https://expressjs.com/) &nbsp; [![Powered by pug](./public/imgs/powered-by-pug.svg)](https://pugjs.org/) &nbsp; [![Powered by bootstrap](./public/imgs/powered-by-bootstrap.svg)](https://getbootstrap.com/) &nbsp; [![MIT license](./public/imgs/MIT-license.svg)](./LICENSE)
 
-**Website information:**
+**Project information:**
 
-- Template: 2 Sets (T1 & T2)
+- Include website templates: 2 Sets (T1 & T2)
 
-- Fit for: Small Business & Personal Use.
+- Fit for: Small and Medium Sized Business / Personal Use
 
-**Start local web server:**
+## Local Web Server Running
 
 ```bash
 # Start local web server
@@ -16,18 +16,20 @@ npm start
 # or 
 npm run start:pm2   # PM2 installed in advance.
 
-# Then, Check out link `http://localhost:8000/` on Browser. That's all.
+# Then, open url `http://localhost:8000/` on Browser. That's it.
 ```
 
-**Development:**
+## Development Environment
 
-- Platform OS: Ubuntu 18.10 ~ 19.10 / Deepin 15.11 ~ 20.9
+- OS Platform: Deepin OS v15.11 ~ v23
 
 - Coding Tool: Visual Studio Code
 
-- Framework: Node.js + Express + Pug + JQuery + Bootstrap
+- Tested on node.js version: v14 ~ v20
 
-- VCS & PM Tools: git & npm
+- Stacks: Node.js + Express + Pug + JQuery + Bootstrap
+
+- VCS: git / github
 
 **Install and rebuild packages:**
 
@@ -37,5 +39,11 @@ In case you are willing to reinstall or rebuild packages for the app, you are ab
 npm install # or run 'cnpm install' if you're living in China mainland.
 npm rebuild # or run 'cnpm rebuild' 
 ```
+
+## Milestones
+
+Last Modified Date: 2024-10-10
+
+Initial Date: 2018-12-25
 
 :airplane::wink::airplane::wink::airplane::wink:
