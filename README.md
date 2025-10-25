@@ -8,6 +8,14 @@
 
 - Fit for: Small and Medium Sized Business / Personal Use
 
+## Installation
+
+```bash
+# Install dependencies
+npm install
+# or run 'cnpm install' if you're living in China mainland.
+```
+
 ## Local Web Server Running
 
 ```bash
@@ -42,7 +50,7 @@ npm rebuild # or run 'cnpm rebuild'
 
 ## Milestones
 
-Last Modified Date: 2024-10-10
+Last Modified Date: 2025-10-26
 
 Initial Date: 2018-12-25
 
